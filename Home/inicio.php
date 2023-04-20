@@ -1,81 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../Datatables-1.11.3/css/dataTables.bootstrap5.min.css">
-    <title>Inicio</title>
-</head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-danger">
-            <div class="container-fluid">
-              <a class="navbar-brand text-light" href="inicio.php">Sistema berrys</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active text-light" aria-current="page" href="inicio.php">Inicio</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Tienda
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class='dropdown-item' href='Cat.php'>Centro de Acopio Temporal</a></li>
-                          <li><a class='dropdown-item' href='Distribuidores.php'>Distribuidores</a></li>
-                          <li><a class='dropdown-item' href='Productores.php'>Productores</a></li>
-                          <li><a class='dropdown-item' href='Huertos.php'>Huertos</a></li>
-                          <li><a class='dropdown-item' href='TipoQuimico.php'>Tipo Químico</a></li>
-                          <li><a class='dropdown-item' href='Municipio.php'>Municipio</a></li>"
-                      <li><a class='dropdown-item' href='Cat.php'>Centro de Acopio Temporal</a></li>
-                      <li><a class='dropdown-item' href='Contenedores.php'>Contenedores</a></li>
-                      <li><a class='dropdown-item' href='Distribuidores.php'>Distribuidores</a></li>
-                      <li><a class='dropdown-item' href='EmpresaRecPrivada.php'>Empresa Recolectora Privada</a></li>
-                      <li><a class='dropdown-item' href='Municipio.php'>Municipio</a></li>
-                      <li><a class='dropdown-item' href='Productores.php'>Productores</a></li>
-                      <li><a class='dropdown-item' href='ResponsableCAT.php'>Responsable CAT</a></li>
-                      <li><a class='dropdown-item' href='EmpresaDestino.php'>Empresa Destino</a></li>
-                      <li><a class='dropdown-item' href='Huertos.php'>Huertos</a></li>
-                      <li><a class='dropdown-item' href='ErpVehiculos.php'>ERP Vehículos</a></li>
-                      <li><a class='dropdown-item' href='DistVehiculos.php'>Distribuidores Vehículos</a></li>
-                      <li><a class='dropdown-item' href='TiposCont.php'>Tipo Contenedor</a></li>
-                      <li><a class='dropdown-item' href='MuniVehiculos.php'>Vehículos Municipio</a></li>
-                      <li><a class='dropdown-item' href='TipoQuimico.php'>Tipo Químico</a></li>
-                      <li><hr class='dropdown-divider'></li>"
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Nuestras tiendas
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    
-                      <li><hr class="dropdown-divider"></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Contacto$$$
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    
-                      <li><hr class="dropdown-divider"></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active text-light " aria-current="page" href="#">Ayuda</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                <p class="text-light">&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                  <a href="salir.php"><input type="button" value="Salir" onclick="return res()" class="btn btn-primary"></a>
-                </form>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="../Datatables-1.11.3/css/dataTables.bootstrap5.min.css">
+      <link rel="stylesheet" href="./main.scss">
+      <script src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="../Imagenes/tecnm.png">
+      <style>
+        .navbar-brand{
+          width: 98vw;
+          position: absolute;
+          top: 0;
+        }
+        .navbar{
+          text-shadow: #a4232c;
+        }
+        .navbar-brand img{
+          display: block;
+          margin: auto;
+        }
+        .btn{
+          margin: ;
+        }
+        .carousel-inner{
+          display: flex;
+        }
+        .carousel-item{
+          display: block;
+          margin-right: 0;
+          flex: 0 0 calc(100%/3);
+        }
+        .carousel-inner{
+          padding: 1em;
+        }
+        .card{
+          margin: 0 .5em;
+        }
+        .img{
+          max-width: 100%;
+          max-height: 100%;
+        }
+        .image-wrapper{
+          max-width: 100%;
+          height: 20em;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+        }
+        .img-wrapper{
+          height: 23vw;
+        }
+      </style>
+        
+      <title>Inicio</title>
+  </head>
+  <body>
+    <h1>
+    <div
+          class="p-5 text-center bg-image"
+          style="
+            background-image: url('../Imagenes/fondo2.jpg'); 
+            height: 2000px;
+            max-width: auto;
+          "
+        >
+      
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="../Imagenes/tecnm.png"></a>
+        <div class="collapse navbar-collapse m-x" id="top navbar">
+          <div class="navbar-nav">
+            <button type="button" class="btn btn-primary text-center">
+              Sign up
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+               <div class="navbar-nav m-auto  fs-3 text-info">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">Disabled</a>
+                </div>
+                
+        </div>
+    </nav>
+    <div class="contaner my-5">
+      <h2>
+        <div
+          class="p-5 text-center bg-image"
+          style="
+            background-image: url('../Imagenes/berrys3.jpg');
+            height: 700px;
+            width: auto;
+            margin-top: 58px;
+            margin-bottom: 58px;
+            
+          "
+        >
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.1);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white">
+                <h1 class="mb-3">Pedidos a toda la ciudad</h1>
+                <h4 class="mb-3">As tu pedido ya</h4>
               </div>
             </div>
-          </nav>
-</body>
+          </div>
+        </div>
+        <div>
+          <div class="card mb-3 m-auto" style="max-width: auto; background-color: rgba(0, 0, 0, 0.1);">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="../Imagenes/clancheAradano.jpeg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title 1</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </h2>
+    </div>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="../Imagenes/CajaAradanos.png" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card">
+              <div class="image-wrapper">
+                <img src="../Imagenes/clancheZarzamora.jpg""  alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card">
+              <div class="image-wrapper">
+                <img src="../Imagenes/CajaAradanos.png" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+  </div>
+  </h1>
+  </body>
 </html>
