@@ -10,7 +10,10 @@
     $anos=$_POST['anos'];
     $correo=$_POST['correo'];
     $contrasena=$_POST['contrasena'];
-    $comando="INSERT INTO clientes values('$nombre','$direccion',$cp,'$ciudad','$estado',$telp,$tele,$correo,'$anos','$contrasena')";
+    $comando="INSERT INTO clientes (nombre,direccion,cp,ciudad,estado,telefonopersonal,telefonoprivado,correo,anosservicio,password) values('$nombre','$direccion',$cp,'$ciudad','$estado',$telp,$tele,'$correo',$anos,'$contrasena')";
     mysqli_query($enlace, $comando);
+    //if(mysqli_query($enlace, $comando)){
+    //    echo (mysqli_errno(mysqli_query($enlace,$comando)));
+    //}
     mysqli_close($enlace);
 ?>
