@@ -3,7 +3,7 @@
     $puerto="3306";
     $usuario="root";
     $contrasena="";
-    $baseDeDatos="berrysbd";
+    $baseDeDatos="bdberries";
 
     $enlace=mysqli_connect($host.":".$puerto, $usuario, $contrasena, $baseDeDatos);
     if(!$enlace)
@@ -12,5 +12,9 @@
         echo "Errno de depuracion: ".mysqli_connect_errno().PHP_EOL;
         echo "Error de depuracion: ".mysqli_connect_error().PHP_EOL;
         exit();
+    }
+    else
+    {
+        echo"Estamos conectados";
     }
 ?>
