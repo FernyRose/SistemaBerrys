@@ -22,9 +22,7 @@
           display: block;
           margin: auto;
         }
-        .btn{
-          margin: ;
-        }
+        
         .carousel-inner{
           display: flex;
         }
