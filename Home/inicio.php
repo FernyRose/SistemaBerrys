@@ -17,11 +17,13 @@
         }
         .navbar{
           text-shadow: #a4232c;
+
         }
         .navbar-brand img{
           display: block;
           margin: auto;
         }
+        
         .carousel-inner{
           display: flex;
         }
@@ -86,13 +88,13 @@
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav m-auto  fs-3 text-dark">
+              <div class="navbar-nav m-auto fs-3 text-dark">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                    <a class="nav-link" href="#">Disabled</a>
-              </div>
-            </div>   
+                    <a class="nav-link active" href="#">Features</a>
+                    <a class="nav-link active" href="#">Pricing</a>
+                    <a class="nav-link active" href="#">Disabled</a>
+                </div>
+                
         </div>
     </nav>
     <div class="contaner my-5">
