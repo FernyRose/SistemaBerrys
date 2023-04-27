@@ -22,42 +22,23 @@
           </select>
         </div>
         <div class="col-md-4">
-          <label for="inputDes" class="form-label">Cantidad (clanche)</label>
-          <select name="cantidad" id="inCantidadClanche">
-            <option value="0" selected>Selecciona una cantidad</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-          </select>
+          <label for="inConcepto" class="form-label">Concepto</label>
+          <input type="radio" name="concepto" id="inClanche">Clanche
+          <input type="radio" name="concepto" id="inCaja">Caja
         </div>
         <div class="col-md-4">
-          <label for="inputDes" class="form-label">Cantidad (cajas)</label>
-          <select name="" id="inCantidadCaja">
-            <option value="0" selected>Selecciona una cantidad</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
+          <label for="inputDes" class="form-label">Cantidad</label>
+          <select name="cantidad" id="inConcepto">
+            
           </select>
         </div>
         <div class="col-md-4">
           <label for="inputDes" class="form-label">Precio</label>
-          <input type="text" class="form-control" id="inPrecio" disabled name="ciudad" maxlength="50" required>
+          <input type="text" class="form-control" id="inPrecio" name="ciudad" maxlength="50" required>
         </div>
         <div class="col-md-4">
-          <label for="inputDes" class="form-label">Importe</label>
-          <input type="text" class="form-control" id="inImporte" name="estado" maxlength="50" required>
+          <label for="inImporte" class="form-label">Importe</label>
+          <input type="text" class="form-control" id="inImporte" maxlength="50" required value="0">
         </div>
         <div class="col-12">
           <button type="submit" class="btn btn-danger" onclick="" name="Registrar">Agregar a la lista</button>
