@@ -23,14 +23,34 @@
         display: block;
         margin: auto;
       }
-      .login{
+      .container-fluid2{
+        display: flex;
         align-items: center;
         justify-content: center;
-        width: 360px;
+        padding-top: 10px;
+      }
+      .login{
+        
+        width: 760px;
         height: min-content;
+        align-items: center;
+        justify-content: center;
         padding: 20px;
         border-radius: 12px;
         background: #ffffff;
+      }
+      .login h1{
+        font-size: 32px;
+        margin-bottom: 25px;
+        font: Arial;;
+      }
+      .login form{
+        font-size: 18px;
+      }
+      .login form input{
+        font-size: 15px;
+        margin-top: 15px;
+        max-width: auto;
       }
     </style>
 </head>
@@ -70,53 +90,58 @@
               </div>    
           </div>
     </nav>
-    <div class="login">
-      <form class="row g-4" id="frm" method="POST" action="registrarCliente.php">
-              <div class="col-md-4">
-                <label for="inputId" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="inputId" name="nombre" maxlength="20" required>
-              </div>
-              <div class="col-md-4">
-                <label for="inputDes" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="inputDes" name="direccion" maxlength="50" required>
-              </div>
-              <div class="col-md-4">
-                <label for="inputDes" class="form-label">Codigo Postal</label>
-                <input type="number" class="form-control" id="inputDes" name="cp" maxlength="50" required>
-              </div>
-              <div class="col-md-4">
-                <label for="inputDes" class="form-label">Ciudad</label>
-                <input type="text" class="form-control" id="inputDes" name="ciudad" maxlength="50" required>
-              </div>
-              <div class="col-md-4">
-                <label for="inputDes" class="form-label">Estado</label>
-                <input type="text" class="form-control" id="inputDes" name="estado" maxlength="50" required>
-              </div>
-              <div class="col-md-4">
-                <label for="inputDes" class="form-label">Telefono Personal</label>
-                <input type="numberf" class="form-control" id="inputDes" name="telp" maxlength="50" required>
-              </div>
-              <div class="col-md-4">
-                <label for="inputDes" class="form-label">Telefono Empresa</label>
-                <input type="number" class="form-control" id="inputDes" name="tele" maxlength="50" required>
-              </div>
-              <div class="col-md-4">
-                <label for="inputDes" class="form-label">Años de servicio</label>
-                <input type="number" class="form-control" id="inputDes" name="anos" maxlength="50" required>
-              </div>
-              <div class="col-md-4">
-                <label for="inputDes" class="form-label">Correo</label>
-                <input type="text" class="form-control" id="inputDes" name="correo" maxlength="50" required>
-              </div>
-              <div class="col-md-4">
-                <label for="inputDes" class="form-label">Contraseña</label>
-                <input type="text" class="form-control" id="inputDes" name="contrasena" maxlength="50" required>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-danger" onclick="" name="Registrar">Registrar</button>
-              </div>
-      </form>
-    </div>  
+    <div class="container-fluid2">
+      <div class="login">
+        <h1 class="text-center text-primary">Registrarse</h1>
+        <form class="row g-4" id="frm" method="POST" action="registrarCliente.php">
+                
+                  <div class="col-md-5 w-50">
+                    <label for="inputId" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="inputId" name="nombre" maxlength="50" required>
+                  </div>
+                  <div class="col-md-5 w-50">
+                    <label for="inputDes" class="form-label">Dirección</label>
+                    <input type="text" class="form-control" id="inputDes" name="direccion" maxlength="50" required>
+                  </div>
+              
+                <div class="col-md-4">
+                  <label for="inputDes" class="form-label">Codigo Postal</label>
+                  <input type="number" class="form-control" id="inputDes" name="cp" maxlength="50" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="inputDes" class="form-label">Ciudad</label>
+                  <input type="text" class="form-control" id="inputDes" name="ciudad" maxlength="50" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="inputDes" class="form-label">Estado</label>
+                  <input type="text" class="form-control" id="inputDes" name="estado" maxlength="50" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="inputDes" class="form-label">Telefono Personal</label>
+                  <input type="numberf" class="form-control" id="inputDes" name="telp" maxlength="50" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="inputDes" class="form-label">Telefono Empresa</label>
+                  <input type="number" class="form-control" id="inputDes" name="tele" maxlength="50" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="inputDes" class="form-label">Años de servicio</label>
+                  <input type="number" class="form-control" id="inputDes" name="anos" maxlength="50" required>
+                </div>
+                <div class="col-md-4 w-50">
+                  <label for="inputDes" class="form-label">Correo</label>
+                  <input type="text" class="form-control" id="inputDes" name="correo" maxlength="50" required>
+                </div>
+                <div class="col-md-4 w-50">
+                  <label for="inputDes" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="inputDes" name="contrasena" maxlength="50" required>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-success w-100" onclick="" name="Registrar">Registrar</button>
+                </div>
+        </form>
+      </div> 
+    </div>   
   </div>  
 </body>
 </html>
