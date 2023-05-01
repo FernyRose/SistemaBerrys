@@ -14,8 +14,16 @@
           width: 98vw;
           position: absolute;
           top: 0;
+          bottom: 10px;
         }
         .navbar{
+          text-shadow: #a4232c;
+          
+
+        }
+        .navegacion{
+          margin-right: 300px;
+          margin-left: 300px;
           text-shadow: #a4232c;
 
         }
@@ -70,33 +78,35 @@
           >
         
       
-      <nav class="navbar navbar-expand-lg navbar-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark py-4">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="../Imagenes/tecnm.png"></a>
+          <a class="navbar-brand" href="#"><img src="../Imagenes/Logo.jpg"></a>
           <div class="collapse navbar-collapse m-x" id="top navbar">
             <div class="navbar-nav">
               <button type="button" class="btn btn-primary text-center">
-                Sign up
+                Iniciar Sesion
               </button>
             </div>
           </div>
       </div>
     </nav>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav m-auto fs-3 text-dark">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link active" href="#">Features</a>
-                    <a class="nav-link active" href="#">Pricing</a>
-                    <a class="nav-link active" href="#">Disabled</a>
-                </div>
-                
-        </div>
-    </nav>
+    
+      <nav class="navbar navbar-expand-lg navbar-light py-1" style="background-color: #4682B4;">
+          <div class="container-fluid text-white">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav m-auto fs-3 text-white">
+                      <a class="nav-link active mx-3 text-light" aria-current="page" href="#">Home</a>
+                      <a class="nav-link active mx-3 text-light" href="#">Features</a>
+                      <a class="nav-link active mx-3 text-light" href="#">Pricing</a>
+                      <a class="nav-link active mx-3 text-light" href="#">Disabled</a>
+                  </div>
+                  
+          </div>
+      </nav>
+    
     <div class="contaner my-5">
       <h2>
         <div
