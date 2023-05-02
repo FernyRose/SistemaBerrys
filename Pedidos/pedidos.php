@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+    <?php 
+      $_SESSION['n']=0;
+      $arreglo[][]=0;
+      $_SESSION['carrito']=$arreglo;
+    ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,28 +38,36 @@
           </select>
         </div>
         <div class="col-md-4">
-          <label for="inputDes" class="form-label">Precio</label>
-          <input type="text" class="form-control" id="inPrecio" name="ciudad" maxlength="50" required>
+          <label for="inputDes" class="form-label">Precio Caja</label>
+          <input type="text" class="form-control" id="inPrecio1" name="ciudad" maxlength="50" required>
+          <label for="inputDes" class="form-label">Precio Clanche</label>
+          <input type="text" class="form-control" id="inPrecio2" name="" maxlength="50" required>
         </div>
         <div class="col-md-4">
           <label for="inImporte" class="form-label">Importe</label>
           <input type="text" class="form-control" id="inImporte" maxlength="50" required value="0">
         </div>
         <div class="col-12">
-          <button type="submit" class="btn btn-danger" onclick="" name="Registrar">Agregar a la lista</button>
+          <button type="button" id="btnAgregar" class="btn btn-danger" onclick="" name="Registrar">Agregar a la lista</button>
         </div>
       </form>
       <form action="">
         <div class="col-md-4">
-          <table>
+          <table id="tablaPedidos">
+            <thead>
             <tr>
                 <th>Fruta</th>
                 <th>Precio</th>
+                <th>Concepto</th>
                 <th>Cantidad</th>
                 <th>Importe</th>
             </tr>
+            </thead>
+            <tbody id="addPedidos">
+
+            </tbody>
           </table> 
-          <button type="submit" class="btn btn-success" onclick="" name="Registrar">Guardar</button>
+          <button type="button" class="btn btn-success" id="btnGuardar" onclick="" name="Registrar">Guardar</button>
         </div>
       </form>
 </body>

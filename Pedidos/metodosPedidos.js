@@ -9,23 +9,22 @@ $(document).ready(function(){
             type:'POST',
             success:function(response){
                 let prodDat=JSON.parse(response);
-                document.getElementById("inPrecio").value=prodDat.precio;
-                //document.getElementById("inImporte").value=prodDat.existencias;
-                
+                document.getElementById("inPrecio1").value=prodDat.precio1;
+                document.getElementById("inPrecio2").value=prodDat.precio2;
             }
         });
     });
     
     $('#inCaja').click(function(){
         let tipoFuncion="loadConcepto";
-        
-        let id;
-        if(document.getElementById("inCaja").checked=true){
-            id=0;
+        let id=document.getElementById('infruta').value;
+        let concepto;
+        if(document.getElementById("inCaja").checked){
+            concepto="caja";
             console.log("caja");
         }
         
-        let parametros={"tipo": tipoFuncion, "id":id}
+        let parametros={"tipo": tipoFuncion, "id":id, "concepto":concepto}
         $.ajax({
             url:'funcionesPedidos.php',
             data:parametros,
@@ -37,12 +36,13 @@ $(document).ready(function(){
     });
     $('#inClanche').click(function(){
         let tipoFuncion="loadConcepto";
-        let id;
-        if(document.getElementById("inClanche").checked=true){
-            id=1;
+        let id=document.getElementById("inFruta");
+        let concepto;
+        if(document.getElementById("inClanche").checked){
+            concepto="clanche";
             console.log("clanche");
         }
-        let parametros={"tipo": tipoFuncion, "id":id}
+        let parametros={"tipo": tipoFuncion, "id":id, "concepto":concepto}
         $.ajax({
             url:'funcionesPedidos.php',
             data:parametros,
@@ -56,25 +56,62 @@ $(document).ready(function(){
     $('#inConcepto').change(function(){
         let precio=0;
         var importe=0;
-        
-        precio=document.getElementById("inPrecio").value;
-        if(document.getElementById("inCaja").isChecked=true){
-            let caja=0;
+        if(document.getElementById("inCaja").checked){
+            console.log("entro en cajas");
             caja=document.getElementById("inConcepto").value;
-            caja=caja*12;
-            console.log(caja);
+            precio=document.getElementById("inPrecio1").value;
             importe=caja*precio;
-            console.log(importe);
-            //importe=document.getElementById("inImporte").value;
             new Number(importe);
             document.getElementById("inImporte").value=importe;
             console.log(importe);
         }
-        if(document.getElementById("inClanche").isChecked=true){
+        if(document.getElementById("inClanche").checked){
+            console.log("entro en clanches");
             let clanche=0;
             clanche=document.getElementById("inConcepto").value;
-            document.getElementById("inImporte").value=clanche*precio;
+            document.getElementById("inImporte").value=clanche*document.getElementById("inPrecio2").value;
         }
+    });
+
+    $('#btnAgregar').click(function(){
+        let id=document.getElementById("infruta").value;
+        let precio=0;
+        let importe=document.getElementById("inImporte").value;
+        let cantidad = document.getElementById("inConcepto").value;
+        let concepto="";
+        if(document.getElementById("inCaja").checked){
+            concepto="Cajas";
+            precio=document.getElementById("inPrecio1").value;
+        }
+        if(document.getElementById("inClanche").checked){
+            concepto="Clanche";
+            precio=document.getElementById("inPrecio2").value;
+        }
+        let tipoFuncion="agregarTabla";
+        let parametros={"tipo": tipoFuncion, "id":id, "precio":precio, "importe":importe, "concepto":concepto, "cantidad":cantidad}
+        $.ajax({
+            url:'funcionesPedidos.php',
+            data:parametros,
+            type:'POST',
+            success:function(response){
+                $('#addPedidos').html(response);
+            }
+        });
+    });
+
+    $('#btnGuardar').click(function(){
+        let id=0;
+        let tipoFuncion="guardar"
+        let parametros={"tipo": tipoFuncion, "id":id}
+        $.ajax({
+            url:'funcionesPedidos.php',
+            data:parametros,
+            type:'POST',
+            success:function(response){
+                console.log(response);
+                
+        }
+        });
     });
 
 });
