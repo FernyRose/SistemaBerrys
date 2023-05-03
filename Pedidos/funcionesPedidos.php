@@ -80,14 +80,16 @@ session_start();
             else{
                 $fruta="Zarzamora";
             }
-            $precio=$_SESSION['carrito'][$i][1];
             $concepto=$_SESSION['carrito'][$i][2];
+            
+            $precio=$_SESSION['carrito'][$i][1];
             $cantidad=$_SESSION['carrito'][$i][3];
             $importe=$_SESSION['carrito'][$i][4];
             $r="INSERT INTO pedidos(idcliente, fechapedido, importe, status) values(1,'01/05/23',$importe,'realizado')";
             mysqli_query($enlace,$r);
             $idpedido=mysqli_insert_id($enlace);
             $r="INSERT INTO detallepedido(idpedido,idconcepto,fruta,cantidad,precio) values($id,)";
+            mysqli_query($enlace,$r);
         }
         unset($n);
         unset($carrito);
