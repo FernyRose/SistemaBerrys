@@ -9,14 +9,15 @@
         $precio=$_POST['precio'];
         $exi=$_POST['exi'];
         $r="INSERT INTO presentaciones(idfruta,idespecificacion,nombrePresentacion,precio,existencias) 
-        values($idfruta,$idespe,'$nombre',$precio,$existencias)";
+        values($idfruta,$idespe,'$nombre',$precio,$exi)";
         mysqli_query($enlace,$r);
         mysqli_close($enlace);
     }
     if($tipo=="cargarTabla")
     {
-        $r="SELECT p.idpresentacion, p.nombre, f.nombre, e.calibre, e.calidad, p.precio, p.existencias 
-        FROM fruta AS f INNER JOIN especificaciones AS e ON f.idfruta=e.idfruta INNER JOIN presentaciones AS p ON e.idfruta=p.idfruta";
+        $r="SELECT p.idpresentacion, p.nombrePresentacion, f.nombre, e.calibre, e.calidad, p.precio, p.existencias 
+        FROM presentaciones AS p INNER JOIN especificaciones AS e ON p.idespecificacion=e.idespecificacion 
+        INNER JOIN fruta AS f ON f.idfruta=e.idfruta";
         $comando=mysqli_query($enlace,$r);
         while($row=mysqli_fetch_array($comando)){
             echo"
@@ -47,6 +48,7 @@
         $idfruta=$_POST['idfruta'];
         $r="SELECT idespecificacion FROM especificaciones WHERE idfruta=".$idfruta;
         $comando=mysqli_query($enlace,$r);
+        echo"<option value=''>Seleccione...</option>";
         while($row=mysqli_fetch_array($comando)){
             echo"
             <option value='".$row[0]."'>".$row[0]."</option>
