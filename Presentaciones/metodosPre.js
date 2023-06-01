@@ -84,16 +84,12 @@ $(document).ready(function(){
             url:'funcionesPre.php',
             data:parametros,
             type:'POST',
-            success:function(response){
-                console.log(response);
-            }
         });
         cargarTabla();
     });
 
     function cargarTabla(){
         let tipoFuncion="cargarTabla";
-        
         let parametros={"tipo": tipoFuncion}
         $.ajax({
             url:'funcionesPre.php',
