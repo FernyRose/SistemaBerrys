@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./main.scss">
     <script src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../Imagenes/tecnm.png">
-    <title>Document</title>
+    <title>Registrarse</title>
     <style>
       .navbar-brand{
           width: 98vw;
@@ -63,9 +63,9 @@
     min-height: 100vh;
     "
     >
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark py-4">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="../Imagenes/tecnm.png"></a>
+            <a class="navbar-brand" href="#"><img src="../Imagenes/Logo.jpg"></a>
             <div class="collapse navbar-collapse m-x" id="top navbar">
               <div class="navbar-nav">
                 <button type="button" class="btn btn-primary text-center">
@@ -75,17 +75,17 @@
             </div>
         </div>
     </nav>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #4682B4">
+    <nav class="navbar navbar-expand-lg navbar-light py-1" style="background-color: #000000;">
           <div class="container-fluid">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav m-auto  fs-3 text-dark">
-                      <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      <a class="nav-link" href="#">Features</a>
-                      <a class="nav-link" href="#">Pricing</a>
-                      <a class="nav-link" href="#">Disabled</a>
+                      <a class="nav-link active text-light mx-3" aria-current="page" href="#">Home</a>
+                      <a class="nav-link text-light mx-3" href="#">Productos</a>
+                      <a class="nav-link text-light mx-3" href="#">Asociaciones</a>
+                      <a class="nav-link text-light mx-3" href="#">Quienes Somos</a>
                   </div>
               </div>    
           </div>

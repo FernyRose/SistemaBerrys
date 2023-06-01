@@ -31,6 +31,10 @@
           display: block;
           margin: auto;
         }
+        .botonInicio{
+          width: 15vw;
+          position: left;
+        }
         
         .carousel-inner{
           display: flex;
@@ -83,25 +87,28 @@
           <a class="navbar-brand" href="#"><img src="../Imagenes/Logo.jpg"></a>
           <div class="collapse navbar-collapse m-x" id="top navbar">
             <div class="navbar-nav">
-              <button type="button" class="btn btn-primary text-center">
-                Iniciar Sesion
-              </button>
+              
             </div>
           </div>
       </div>
+      <div class="botonInicio">
+        <button type="button" class="btn btn-primary text-center">
+          Iniciar Sesion
+        </button>
+      </div>
     </nav>
     
-      <nav class="navbar navbar-expand-lg navbar-light py-1" style="background-color: #4682B4;">
+      <nav class="navbar navbar-expand-lg navbar-light py-1" style="background-color: #000000;">
           <div class="container-fluid text-white">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #FFFFFF;>
               <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav m-auto fs-3 text-white">
                       <a class="nav-link active mx-3 text-light" aria-current="page" href="#">Home</a>
-                      <a class="nav-link active mx-3 text-light" href="#">Features</a>
-                      <a class="nav-link active mx-3 text-light" href="#">Pricing</a>
-                      <a class="nav-link active mx-3 text-light" href="#">Disabled</a>
+                      <a class="nav-link active mx-3 text-light" href="#">Productos</a>
+                      <a class="nav-link active mx-3 text-light" href="#">Asociaciones</a>
+                      <a class="nav-link active mx-3 text-light" href="#">Quienes Somos</a>
                   </div>
                   
           </div>
