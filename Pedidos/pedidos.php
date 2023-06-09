@@ -3,6 +3,9 @@
       $_SESSION['n']=0;
       $arreglo[][]=0;
       $_SESSION['carrito']=$arreglo;
+      $_SESSION['n2']=0;
+      $arreglo2[][]=0;
+      $_SESSION['carrito2']=$arreglo2;
     ?>
 <html lang="en">
 <head>
@@ -53,7 +56,7 @@
       class="p-0 text-center bg-image"
       style="
       background-image: url('../Imagenes/fondo2.jpg'); 
-      backgorund-size: cover;
+      background-size: cover;
       min-height: 100vh;
       "
       >
@@ -95,22 +98,23 @@
                 <input type="text" class="form-control" id="inputId" name="nombre" maxlength="20" required>
               </div>
               <div class="col-md-4">
-                <label for="inputDes" class="form-label">fruta</label>
-                <select name="fruta" id="infruta">
-                  <option value="0" selected>Selecciona una fruta</option>
-                  <option value="1">Arandano</option>
-                  <option value="2">frambuesa</option>
-                  <option value="3">Zarzamora</option>
+                <label for="inFruta" class="form-label">Frutas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <select name="inFruta" id="inFruta">
+                  
+                  
                 </select>
               </div>
               <div class="col-md-4">
-                <label for="inConcepto" class="form-label">Concepto</label>
-                <input type="radio" name="concepto" id="inClanche">Clanche
-                <input type="radio" name="concepto" id="inCaja">Caja
+              <label for="inEsp" class="form-label">Especificaciones</label>
+                <select name="inEsp" id="inEsp">
+                  
+                  
+                </select>
               </div>
               <div class="col-md-4">
-                <label for="inputDes" class="form-label">Cantidad</label>
-                <select name="cantidad" id="inConcepto">
+              <label for="inPre" class="form-label">Presentacion</label>
+                <select name="inPre" id="inPre">
+                  
                   
                 </select>
               </div>
@@ -119,11 +123,21 @@
                 <input type="text" class="form-control" id="inPrecio" name="ciudad" maxlength="50" required>
               </div>
               <div class="col-md-4">
+                <label for="inCant" class="form-label">Cantidad</label>
+                <select name="inCant" id="inCant">
+                  <option value="1">1 (uno)</option>
+                  <option value="2">2 (dos)</option>
+                  <option value="3">3 (tres)</option>
+                  <option value="4">4 (cuatro)</option>
+                  <option value="5">5 (cinco)</option>
+                </select>
+              </div>
+              <div class="col-md-4">
                 <label for="inImporte" class="form-label">Importe</label>
                 <input type="text" class="form-control" id="inImporte" maxlength="50" required value="0">
               </div>
               <div class="col-12">
-                <button type="submit" class="btn btn-danger" onclick="" name="Registrar">Agregar a la lista</button>
+                <button type="button" id="btnAgregar" class="btn btn-danger" onclick="" name="Agregar">Agregar a la lista</button>
               </div>
             </form>
             <form action="">
@@ -131,12 +145,17 @@
                 <table>
                   <tr>
                       <th>Fruta</th>
+                      <th>Especificacion</th>
+                      <th>Presentacion</th>
                       <th>Precio</th>
                       <th>Cantidad</th>
                       <th>Importe</th>
                   </tr>
+                  <tbody id="addPedido">
+
+                  </tbody>
                 </table> 
-                <button type="submit" class="btn btn-success" onclick="" name="Registrar">Guardar</button>
+                <button type="button" id="btnGuardar" class="btn btn-success" onclick="" name="Guardar">Guardar</button>
               </div>
       </form>
       </div>

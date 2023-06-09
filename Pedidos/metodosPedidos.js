@@ -1,116 +1,111 @@
 $(document).ready(function(){
-    $('#infruta').change(function(){
-        let tipoFuncion="loadFruta";
-        let id=document.getElementById("infruta").value;
-        let parametros={"tipo": tipoFuncion, "id":id}
+    function loadFruta(){
+        let tipo="loadFruta";
+        let parametros={"tipo": tipo}
         $.ajax({
             url:'funcionesPedidos.php',
             data:parametros,
             type:'POST',
             success:function(response){
-                let prodDat=JSON.parse(response);
-                document.getElementById("inPrecio1").value=prodDat.precio1;
-                document.getElementById("inPrecio2").value=prodDat.precio2;
+                $('#inFruta').html(response);
             }
         });
+    }
+    loadFruta();
+    
+    $('#inFruta').change(function(){
+        let idfruta=document.getElementById("inFruta").value;
+        let tipo="loadEspe";
+        let parametros={"tipo": tipo, "idfruta":idfruta}
+        $.ajax({
+            url:'funcionesPedidos.php',
+            data:parametros,
+            type:'POST',
+            success:function(response){
+                $('#inEsp').html(response);
+            }
+        });
+    });
+    $('#inEsp').change(function(){
+        let idfruta=document.getElementById("inFruta").value;
+        let idespe=document.getElementById("inEsp").value;
+        let tipo="loadPrese";
+        let parametros={"tipo": tipo, "idfruta":idfruta, "idespe":idespe}
+        $.ajax({
+            url:'funcionesPedidos.php',
+            data:parametros,
+            type:'POST',
+            success:function(response){
+                $('#inPre').html(response);
+            }
+        });
+    });
+
+    $('#inPre').change(function(){
+        let tipo="mostrarPrecio";
+        let idprese=document.getElementById("inPre").value;
+        let parametros={"tipo": tipo,"idprese":idprese}
+        $.ajax({
+            url:'funcionesPedidos.php',
+            data:parametros,
+            type:'POST',
+            success:function(response){
+                let data=JSON.parse(response);
+                let precio=data.precio;
+                let cantidad=document.getElementById("inCant").value;
+                document.getElementById("inPrecio").value=precio;
+                document.getElementById("inImporte").value=precio*cantidad;
+            }
+        });
+    });
+    $('#inCant').change(function(){
+        let precio=document.getElementById("inPrecio").value;
+        let cantidad=document.getElementById("inCant").value;
+        document.getElementById("inImporte").value=precio*cantidad;
     });
     
-    $('#inCaja').click(function(){
-        let tipoFuncion="loadConcepto";
-        let id=document.getElementById('infruta').value;
-        let concepto;
-        if(document.getElementById("inCaja").checked){
-            concepto="caja";
-            console.log("caja");
-        }
-        
-        let parametros={"tipo": tipoFuncion, "id":id, "concepto":concepto}
-        $.ajax({
-            url:'funcionesPedidos.php',
-            data:parametros,
-            type:'POST',
-            success:function(response){
-                $("#inConcepto").html(response);
-            }
-        });
-    });
-    $('#inClanche').click(function(){
-        let tipoFuncion="loadConcepto";
-        let id=document.getElementById("inFruta");
-        let concepto;
-        if(document.getElementById("inClanche").checked){
-            concepto="clanche";
-            console.log("clanche");
-        }
-        let parametros={"tipo": tipoFuncion, "id":id, "concepto":concepto}
-        $.ajax({
-            url:'funcionesPedidos.php',
-            data:parametros,
-            type:'POST',
-            success:function(response){
-                $("#inConcepto").html(response);   
-            }
-        });
-    });
-
-    $('#inConcepto').change(function(){
-        let precio=0;
-        var importe=0;
-        if(document.getElementById("inCaja").checked){
-            console.log("entro en cajas");
-            caja=document.getElementById("inConcepto").value;
-            precio=document.getElementById("inPrecio1").value;
-            importe=caja*precio;
-            new Number(importe);
-            document.getElementById("inImporte").value=importe;
-            console.log(importe);
-        }
-        if(document.getElementById("inClanche").checked){
-            console.log("entro en clanches");
-            let clanche=0;
-            clanche=document.getElementById("inConcepto").value;
-            document.getElementById("inImporte").value=clanche*document.getElementById("inPrecio2").value;
-        }
-    });
-
     $('#btnAgregar').click(function(){
-        let id=document.getElementById("infruta").value;
-        let precio=0;
+        let idfruta=document.getElementById("inFruta").value;
+        let idespe=document.getElementById("inEsp").value;
+        let idprese=document.getElementById("inPre").value;
+        let precio=document.getElementById("inPrecio").value;
+        let cantidad=document.getElementById("inCant").value;
         let importe=document.getElementById("inImporte").value;
-        let cantidad = document.getElementById("inConcepto").value;
-        let concepto="";
-        if(document.getElementById("inCaja").checked){
-            concepto="Cajas";
-            precio=document.getElementById("inPrecio1").value;
-        }
-        if(document.getElementById("inClanche").checked){
-            concepto="Clanche";
-            precio=document.getElementById("inPrecio2").value;
-        }
+        let comboFruta=document.getElementById("inFruta");
+        let comboEsp=document.getElementById("inEsp");
+        let comboPre=document.getElementById("inPre");
+        let textFruta = comboFruta.options[comboFruta.selectedIndex].text;
+        let textEsp = comboEsp.options[comboEsp.selectedIndex].text;
+        let textPre = comboPre.options[comboPre.selectedIndex].text;
         let tipoFuncion="agregarTabla";
-        let parametros={"tipo": tipoFuncion, "id":id, "precio":precio, "importe":importe, "concepto":concepto, "cantidad":cantidad}
+        let parametros={"tipo": tipoFuncion, 
+                        "idfruta":idfruta,
+                        "idespe":idespe,
+                        "idprese":idprese, 
+                        "precio":precio, 
+                        "cantidad":cantidad, 
+                        "importe":importe,
+                        "textFruta":textFruta,
+                        "textEsp":textEsp,
+                        "textPre":textPre,
+                    }
         $.ajax({
             url:'funcionesPedidos.php',
             data:parametros,
             type:'POST',
             success:function(response){
-                $('#addPedidos').html(response);
-            }
+                $("#addPedido").html(response);
+        }
         });
     });
 
     $('#btnGuardar').click(function(){
-        let id=0;
-        let tipoFuncion="guardar"
-        let parametros={"tipo": tipoFuncion, "id":id}
+        let tipo="Guardar";
+        let parametros={"tipo": tipo}
         $.ajax({
             url:'funcionesPedidos.php',
             data:parametros,
-            type:'POST',
-            success:function(response){
-                console.log(response);
-                
-        }
+            type:'POST'
         });
     });
 
