@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-    <?php 
+    <?php
+    session_start(); 
       $_SESSION['n']=0;
       $arreglo[][]=0;
       $_SESSION['carrito']=$arreglo;
