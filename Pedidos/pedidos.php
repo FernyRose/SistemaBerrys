@@ -92,7 +92,7 @@
       <form class="row g-4 container-fluid" id="frm" method="POST" action="registrarCliente.php">
               <div class="col-md-4">
                 <label for="inputId" class="form-label">idPedido</label>
-                <input type="text" class="form-control" id="inputId" name="nombre" maxlength="20" required>
+                <input type="text" placeholder="Id-Pedido" class="form-control" id="inputId" name="nombre" maxlength="20" required>
               </div>
               <div class="col-md-4">
                 <label for="inputDes" class="form-label">fruta</label>
@@ -104,19 +104,19 @@
                 </select>
               </div>
               <div class="col-md-4">
-                <label for="inConcepto" class="form-label">Concepto</label>
-                <input type="radio" name="concepto" id="inClanche">Clanche
-                <input type="radio" name="concepto" id="inCaja">Caja
+                <label class="row" for="inConcepto" class="form-label">Concepto</label>
+                <input class="mb-3" type="radio" name="concepto" id="inClanche">Clanche
+                <input class="mb-3" type="radio" name="concepto" id="inCaja">Caja
               </div>
               <div class="col-md-4">
                 <label for="inputDes" class="form-label">Cantidad</label>
-                <select name="cantidad" id="inConcepto">
-                  
+                <select name="cantidad" placeholder="Cantidad" id="inConcepto">
+                  <option value="0" selected>Selecciona la Cantidad</option>
                 </select>
               </div>
               <div class="col-md-4">
                 <label for="inputDes" class="form-label">Precio</label>
-                <input type="text" class="form-control" id="inPrecio" name="ciudad" maxlength="50" required>
+                <input type="text" class="form-control" placeholder="Precio $" id="inPrecio" name="ciudad" maxlength="50" required>
               </div>
               <div class="col-md-4">
                 <label for="inImporte" class="form-label">Importe</label>
