@@ -19,38 +19,11 @@
     <link rel="stylesheet" href="./main.scss">
     <script src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
     <title>Document</title>
-    <style>
-      .navbar-brand{
-          width: 98vw;
-          position: absolute;
-          top: 0;
-        }
-      .navbar{
-        text-shadow: #a4232c;
-      }
-      .navbar-brand img{
-        display: block;
-        margin: auto;
-      }
-      .container-fluid2{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 10px;
-      }
-      .login{
-        
-        width: 760px;
-        height: min-content;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        border-radius: 12px;
-        background: #ffffff;
-      }
-
-    </style>
+    
 </head>
+<?php
+      include "../Layouts/nav2.php";
+?>
 <body>
 
   <div
@@ -104,11 +77,6 @@
                   
                   
                 </select>
-              </div>
-              <div class="col-md-4">
-                <label class="row" for="inConcepto" class="form-label">Concepto</label>
-                <input class="mb-3" type="radio" name="concepto" id="inClanche">Clanche
-                <input class="mb-3" type="radio" name="concepto" id="inCaja">Caja
               </div>
               <div class="col-md-4">
                 <label for="inputDes" class="form-label">Cantidad</label>
