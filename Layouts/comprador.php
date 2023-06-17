@@ -69,7 +69,9 @@
       </style>
         
       <title>Comprador</title>
+    
   </head>
+  
   <body>
     
       <div
@@ -80,7 +82,9 @@
               min-height: 60vh;
             "
           >
-        
+          <?php 
+      include ("../Layouts/nav2.php");
+    ?>
       
       <nav class="navbar navbar-expand-lg navbar-dark py-4">
         <div class="container-fluid">
