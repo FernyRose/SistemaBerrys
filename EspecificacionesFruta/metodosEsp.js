@@ -42,6 +42,7 @@ $(document).ready(function(){
             type:'POST',
             success:function(response){
                 $('#addEsp').html(response);
+                $('#tablaEsp').DataTable();
             }
         });
     }

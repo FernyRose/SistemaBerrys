@@ -17,10 +17,10 @@
         while($row=mysqli_fetch_array($comando)){
             echo"
             <tr>
-                <td class='text-light'>".$row[0]."</td>
-                <td class='text-light'>".$row[1]."</td>
-                <td class='text-light'>".$row[2]."</td>
-                <td class='text-light'>".$row[3]."</td>
+                <td class=''>".$row[0]."</td>
+                <td class=''>".$row[1]."</td>
+                <td class=''>".$row[2]."</td>
+                <td class=''>".$row[3]."</td>
             </tr>
             ";
         }
