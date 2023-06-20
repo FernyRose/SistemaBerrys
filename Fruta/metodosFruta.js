@@ -1,9 +1,13 @@
 $(document).ready(function(){
 
+    cargarTabla();
     $('#btnAgregar').click(function(){
         let nom=document.getElementById("inNom").value;
         let tipoFuncion="guardar";
-        console.log("paso por aqui");
+        if(nom.length>20){
+            alert("El Campo nombre no es valido");
+            return;
+        }
         let parametros={"tipo": tipoFuncion, "nombre":nom}
         $.ajax({
             url:'funcionesFruta.php',
@@ -11,10 +15,9 @@ $(document).ready(function(){
             type:'POST',
             success:function(response){
                 console.log(response);
+                cargarTabla();
             }
         });
-        cargarTabla();
-        console.log("paso por aqui 2");
     });
 
     function cargarTabla(){
@@ -27,7 +30,7 @@ $(document).ready(function(){
             type:'POST',
             success:function(response){
                 $('#addfruta').html(response);
-                console.log("paso por aqui 3");
+                $('#tablaPedidos').DataTable();
             }
         });
     }
