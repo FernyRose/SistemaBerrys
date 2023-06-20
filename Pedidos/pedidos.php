@@ -7,7 +7,9 @@
       $_SESSION['n2']=0;
       $arreglo2[][]=0;
       $_SESSION['carrito2']=$arreglo2;
+      
     ?>
+    
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,11 +20,31 @@
     <link rel="stylesheet" href="../Datatables-1.11.3/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="./main.scss">
     <script src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
     <title>Document</title>
     
+    <style>
+      .login{
+        
+        width: 690px;
+        height: 89vh;
+        padding: 20px;
+        border-radius: 12px;
+        background: #e6eaeb;
+      }
+      .login2{
+        height: min-content;
+        width: 690px;
+        background: #ffffff;
+        border-radius: 15px;
+      }
+    </style>
+
 </head>
+
+
 <?php
-      include "../Layouts/nav2.php";
+  include "../Layouts/nav2.php";  
 ?>
 <body>
 
@@ -31,102 +53,165 @@
       style="
       background-image: url('../Imagenes/fondo2.jpg'); 
       background-size: cover;
-      min-height: 100vh;
+      min-height: 97.5vh;
       "
       >
-        <nav class="navbar navbar-expand-lg navbar-dark py-4">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="../Imagenes/Logo.jpg"></a>
-                <div class="collapse navbar-collapse m-x" id="top navbar">
-                  <div class="navbar-nav">
-                    <button type="button" class="btn btn-primary text-center">
-                      Sign up
-                    </button>
-                  </div>
-                </div>
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img src="ruta-al-logo.png" alt="Logo del sitio" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Tienda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Quienes somos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacto</a>
+                </li>
+              </ul>
             </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Iniciar sesión</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
-        <nav class="navbar navbar-expand-lg navbar-light py-1" style="background-color: #000000;">
-              <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav m-auto  fs-3 text-dark">
-                          <a class="nav-link active text-light mx-3" aria-current="page" href="#">Home</a>
-                          <a class="nav-link text-light mx-3" href="#">Pedidos</a>
-                          <a class="nav-link text-light mx-3" href="#">Productos</a>
-                          <a class="nav-link text-light mx-3" href="#">Perfil</a>
-                      </div>
-                  </div>    
-              </div>
-        </nav>
+      </header>
     
-    <div class="container-fluid2">
-      <div class="login">
-
-          
-      <form class="row g-4 container-fluid" id="frm" method="POST" action="registrarCliente.php">
-              <div class="col-md-4">
-                <label for="inputId" class="form-label">idPedido</label>
-                <input type="text" placeholder="Id-Pedido" class="form-control" id="inputId" name="nombre" maxlength="20" required>
-              </div>
-              <div class="col-md-4">
-                <label for="inFruta" class="form-label">Frutas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <select name="inFruta" id="inFruta">
-                  
-                  
-                </select>
-              </div>
-              <div class="col-md-4">
-                <label for="inputDes" class="form-label">Cantidad</label>
-                <select name="cantidad" placeholder="Cantidad" id="inConcepto">
-                  <option value="0" selected>Selecciona la Cantidad</option>
-                </select>
-              </div>
-              <div class="col-md-4">
-                <label for="inputDes" class="form-label">Precio</label>
-                <input type="text" class="form-control" placeholder="Precio $" id="inPrecio" name="ciudad" maxlength="50" required>
-              </div>
-              <div class="col-md-4">
-                <label for="inCant" class="form-label">Cantidad</label>
-                <select name="inCant" id="inCant">
-                  <option value="1">1 (uno)</option>
-                  <option value="2">2 (dos)</option>
-                  <option value="3">3 (tres)</option>
-                  <option value="4">4 (cuatro)</option>
-                  <option value="5">5 (cinco)</option>
-                </select>
-              </div>
-              <div class="col-md-4">
-                <label for="inImporte" class="form-label">Importe</label>
-                <input type="text" class="form-control" id="inImporte" maxlength="50" required value="0">
-              </div>
-              <div class="col-12">
-                <button type="button" id="btnAgregar" class="btn btn-danger" onclick="" name="Agregar">Agregar a la lista</button>
-              </div>
-            </form>
-            <form action="">
-              <div class="col-md-4">
-                <table>
-                  <tr>
-                      <th>Fruta</th>
-                      <th>Especificacion</th>
-                      <th>Presentacion</th>
-                      <th>Precio</th>
-                      <th>Cantidad</th>
-                      <th>Importe</th>
-                  </tr>
-                  <tbody id="addPedido">
-
-                  </tbody>
-                </table> 
-                <button type="button" id="btnGuardar" class="btn btn-success" onclick="" name="Guardar">Guardar</button>
-              </div>
-      </form>
+      <div class="container-fluid2 row">
+        <div class="col-6 login">
+            <form class="row g-4 container-fluid mt-3" id="frm" method="POST" action="registrarCliente.php">
+                  <h1>
+                    Datos del Pedido
+                  </h1>  
+                  <div class="row">
+                      <label for="inputId" class="form-label col-1">IdPedido</label>
+                      <input type="text" placeholder="Id-Pedido" class="form-control form-control-sm col-2" id="inputId" name="nombre" maxlength="20" required>
+                    </div>
+                  |<div class="row m-5">
+                        <div class="col-md-4">
+                          <label for="inFruta" class="form-label row">Frutas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                          <select name="inFruta" id="inFruta">
+                            
+                            
+                          </select>
+                        </div>
+                        <div class="col-md-4">
+                          <label class="row" for="inConcepto" class="form-label center">Concepto</label>
+                          <input class="mb-3" type="radio" name="concepto" id="inClanche">Clanche
+                          <input class="mb-3" type="radio" name="concepto" id="inCaja">Caja
+                        </div>
+                    </div>
+                    <div class="row">    
+                        <div class="col-md-4">
+                          <label for="inputDes" class="form-label">Cantidad</label>
+                          <select name="cantidad" placeholder="Cantidad" id="inConcepto">
+                            <option value="0" selected>Selecciona la Cantidad</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4">
+                          <label for="inputDes" class="form-label">Precio</label>
+                          <input type="text" class="form-control" placeholder="Precio $" id="inPrecio" name="ciudad" maxlength="50" required>
+                        </div>
+                        <div class="col-md-4">
+                          <label for="inCant" class="form-label row">Cantidad</label>
+                          <select name="inCant" id="inCant">
+                            <option value="1">1 (uno)</option>
+                            <option value="2">2 (dos)</option>
+                            <option value="3">3 (tres)</option>
+                            <option value="4">4 (cuatro)</option>
+                            <option value="5">5 (cinco)</option>
+                          </select>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                      <label for="inImporte" class="form-label">Importe</label>
+                      <input type="text" class="form-control" id="inImporte" maxlength="50" required value="0">
+                    </div>
+                    <div class="col-12">
+                      <button type="button" id="btnAgregar" class="btn btn-danger" onclick="" name="Agregar">Agregar a la lista</button>
+                    </div>
+                  </form>
+        </div>
+              <div class="shadow-lg col-sm-12 col-md-12 col-lg-12 login2 m-5"> 
+                <form action="">
+                  <div class="col-md rounded-5">
+                    <table class="table table-bordered table-striped mb-0">
+                      <thead>  
+                        <tr>
+                            <th>Fruta</th>
+                            <th>Especificacion</th>
+                            <th>Presentacion</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Importe</th>
+                        </tr>
+                      </thead>  
+                      <tbody id="addPedido">
+                        <tr>
+                          <th>1</th>
+                        </tr>
+                        <tr>
+                        <th>1</th>
+                        </tr>
+                        <tr>
+                        <th>1</th>
+                        </tr>
+                        <tr>
+                        <th>1</th>
+                        </tr>
+                        <tr>
+                        <th>1</th>
+                        </tr>
+                        <tr>
+                        <th>1</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="p-3">
+                      <button type="button" id="btnGuardar" class="btn btn-success" onclick="" name="Guardar">Guardar</button>
+                    </div>                   
+                    </div>
+                </form>
+              </div>   
+        
+        
       </div>
-      </div>
-    </div>  
   
 </body>
 <script type="text/javascript" src="../Jquery/jquery-3.6.4.min.js"></script>
