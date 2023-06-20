@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Datatables-1.11.3/css/dataTables.bootstrap5.min.css">
+      <link rel="stylesheet" href="./main.scss">
+      <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
+  
+<?php
+      include "../Layouts/nav2.php";
+?>
 <form class="row g-4 container-fluid" id="frm" method="POST">
         <div class="col-md-4">
           <label for="comboFruta" class="form-label">Fruta</label>

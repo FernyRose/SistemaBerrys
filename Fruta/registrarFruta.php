@@ -54,6 +54,7 @@
     </style>
 </head>
 <body>
+  
   <div
       class="p-0 text-center bg-image"
       style="
@@ -84,18 +85,18 @@
                 <div class="navbar-nav m-auto  fs-3 text-dark">
                       <a class="nav-link active text-light mx-3" aria-current="page" href="#">Home</a>
                       <a class="nav-link text-light mx-3" href="#">Productos</a>
-                      <a class="nav-link text-light mx-3" href="#">Asociaciones</a>
+                      <a class="nav-link text-light mx-3" href="#">Hacer Pedido</a>
                       <a class="nav-link text-light mx-3" href="#">Quienes Somos</a>
                   </div>
               </div>    
           </div>
       </nav>
       
-    <div class="container-fluid2">  
+    <div class="container-fluid2 shadow-lg">  
       <div class="login">
 
         <form class="row g-4 container-fluid" id="frm" method="POST">
-                <div class="col-md-4">
+                <div class="col-md-5">
                   <label for="inputNom" class="form-label">Nombre</label>
                   <input type="text" placeholder="Nombre Fruta" class="form-control" id="inNom" name="nombre" maxlength="50" required>
                 </div>
@@ -104,18 +105,21 @@
         </form>
       
       <form action="">
-        <div class="col-md-4">
-                <table id="tablaPedidos">
+        <div class="col-md-4 m-5">
+                <table id="tablaPedidos" class="table table-bordered table-striped mb-0">
                   <thead>
-                  <tr>
+                  <tr class="m-5">
                       <th>idFruta</th>
                       <th>Nombre</th>
+                  </tr>    
                   </thead>
                   <tbody id="addfruta">
-                      
+                  <tr>
+                          <th>1</th>
+                        </tr> 
                   </tbody>
                 </table> 
-                <button type="button" class="btn btn-success" id="btnGuardar" onclick="" name="Registrar">Guardar</button>
+                <button type="button" class="btn btn-success m-5" id="btnGuardar" onclick="" name="Registrar">Guardar</button>
         </div>
       </form>
       </div>
