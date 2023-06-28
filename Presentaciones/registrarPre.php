@@ -61,6 +61,7 @@
                 <th>Calidad</th>
                 <th>Precio</th>
                 <th>Existencias</th>
+                <th>Opciones</th>
             </thead>
             <tbody id="addPre">
                 

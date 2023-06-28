@@ -16,7 +16,7 @@
       class="p-0 text-center bg-image"
       style="
       background-image: url('../Imagenes/fondo2.jpg'); 
-      backgorund-size: cover;
+      background-size: cover;
       min-height: 100vh;
       "
       >

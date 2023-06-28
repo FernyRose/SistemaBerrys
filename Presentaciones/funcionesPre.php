@@ -29,6 +29,7 @@
                 <td class=''>".$row[4]."</td>
                 <td class=''>".$row[5]."</td>
                 <td class=''>".$row[6]."</td>
+                <td class=''><button type='button' id='btnRegistrar' class='btn btn-success' onclick='' name='Registrar'>Editar</button></td>
             </tr>
             ";
         }
