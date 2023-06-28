@@ -70,6 +70,7 @@
         
       <title>Administrador</title>
   </head>
+  
   <body>
     
       <div
@@ -81,7 +82,9 @@
             "
           >
         
-      
+    <?php 
+      include "../Layouts/nav2.php";
+    ?>
       <nav class="navbar navbar-expand-lg navbar-dark py-4">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="../Imagenes/Logo.jpg"></a>
