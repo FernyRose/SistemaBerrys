@@ -97,6 +97,7 @@ $(document).ready(function(){
             type:'POST',
             success:function(response){
                 $('#addPre').html(response);
+                $('#tablaPre').DataTable();
             }
         });
     }

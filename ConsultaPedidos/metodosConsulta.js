@@ -37,12 +37,12 @@ $(document).ready(function(){
         
         let parametros={"tipo": tipoFuncion}
         $.ajax({
-            url:'funcionesEsp.php',
+            url:'funcionesConsulta.php',
             data:parametros,
             type:'POST',
             success:function(response){
-                $('#addEsp').html(response);
-                $('#tablaEsp').DataTable();
+                $('#addpedido').html(response);
+                $('#tablaPedidos').DataTable();
             }
         });
     }
