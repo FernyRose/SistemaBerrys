@@ -31,6 +31,16 @@ $(document).ready(function(){
         });
         cargarTabla();
     });
+    const dataTableOptions = {
+        columnDefs:[
+            //{ width: "10%", targets: [0] },
+            //{ width: "10%", targets: [1,2,3] },
+            //{ orderable: false, targets: [1,2,3] },
+            
+        ],
+        destroy: true,
+        //pageLength: 3,
+    };
 
     function cargarTabla(){
         let tipoFuncion="cargarTabla";
@@ -42,7 +52,7 @@ $(document).ready(function(){
             type:'POST',
             success:function(response){
                 $('#addEsp').html(response);
-                $('#tablaEsp').DataTable();
+                $('#tablaEsp').DataTable(dataTableOptions);
             }
         });
     }
