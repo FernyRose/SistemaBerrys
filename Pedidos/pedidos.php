@@ -44,7 +44,7 @@
 
 
 <?php
-  include "../Layouts/nav2.php";  
+  include "../Layouts/nav.php";  
 ?>
 <body>
 
