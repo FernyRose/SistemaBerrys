@@ -7,64 +7,41 @@
     <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
     <link href="../DataTables/datatables.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="./main.scss">
-    <title>Document</title>
+    <title>Fruta</title>
     
+    <style>
+      .subtitulo{
+        border-bottom: 0.3em solid #F3C577;
+      }
+    </style>
 </head>
 <body>
-  
-  <div
-      class="p-0 text-center bg-image"
-      style="
-      background-image: url('../Imagenes/fondo2.jpg'); 
-      background-size: cover;
-      min-height: 100vh;
-      "
-      >
-
-      <nav class="navbar navbar-expand-lg navbar-dark py-4">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="../Imagenes/Logo.jpg"></a>
-            <div class="collapse navbar-collapse m-x" id="top navbar">
-              <div class="navbar-nav">
-                <button type="button" class="btn btn-primary text-center">
-                  Sign up
-                </button>
-              </div>
-            </div>
-        </div>
-      </nav>
-      <nav class="navbar navbar-expand-lg navbar-light py-1" style="background-color: #000000;">
-          <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav m-auto  fs-3 text-dark">
-                      <a class="nav-link active text-light mx-3" aria-current="page" href="#">Home</a>
-                      <a class="nav-link text-light mx-3" href="#">Productos</a>
-                      <a class="nav-link text-light mx-3" href="#">Hacer Pedido</a>
-                      <a class="nav-link text-light mx-3" href="#">Quienes Somos</a>
-                  </div>
-              </div>    
-          </div>
-      </nav>
+  <?php
+    include "../Layouts/nav2.php";
+  ?>
       
-    <div class="container-fluid2 shadow-lg">  
-      <div class="login">
-
-        <form class="row g-4 container-fluid" id="frm" method="POST">
-                <div class="col-md-5">
-                  <label for="inputNom" class="form-label">Nombre</label>
+  <div class="container-fluid row">  
+    <div class="col-sm-4 pt-5 ps-1 shadow-lg">
+        <div class="text-center pb-2 subtitulo">
+          <h2 class="display-6">Registro de Fruta</h2>
+        </div>
+        <form class="row g-2 container-fluid" id="frm" method="POST">
+                <div class="col-sm-md-lg-4 p-3">
+                  <label for="inputNom" class="form-label lg p-2">Nombre</label>
                   <input type="text" placeholder="Nombre Fruta" class="form-control" id="inNom" name="nombre" maxlength="50" required>
                 </div>
+                <div class="row-2 text-center p-2">
                   <button class="btn btn-primary" type="button" id="btnAgregar" class="btn btn-danger" onclick="" name="Registrar">Agregar a la lista</button>
-                
+                </div>
         </form>
-      
-      <form action="">
-        <div class="col-md-4 m-5">
-                <table id="tablaPedidos" class="table table-bordered table-striped mb-0">
+    </div>
+
+    <div class="col ps-5 pt-5">
+      <form action="" style="width: 90%">
+        <div class="col">
+                <table id="tablaPedidos" class="table table-bordered table-striped compact mb-0" style="width: 90%">
                   <thead>
+                  <h3 class="display-8">Frutas Registradas</h3>
                   <tr class="m-5">
                       <th>idFruta</th>
                       <th>Nombre</th>
@@ -76,25 +53,15 @@
                         </tr> 
                   </tbody>
                 </table> 
-                <button type="button" class="btn btn-success m-5" id="btnGuardar" onclick="" name="Registrar">Guardar</button>
+
         </div>
       </form>
     </div>
-      <center>
-    <div class="container-fluid g-3 mt-3">
-      <table id="tablaPedidos" class="table table-striped">
-        <thead>
-          <tr>
-            <th>idFruta</th>
-            <th>Nombre</th>
-          </tr>
-        </thead>
-        <tbody id="addfruta">
-                      
-        </tbody>
-      </table> 
-    </div>
-    </center>
+      
+    
+  </div>       
+    
+    
 </body>
 <script type="text/javascript" src="../Jquery/jquery-3.6.4.min.js"></script>
 <script type="text/javascript" src="metodosFruta.js"></script>

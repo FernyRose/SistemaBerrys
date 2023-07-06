@@ -88,6 +88,33 @@ $(document).ready(function(){
         cargarTabla();
     });
 
+    const dataTableOptions = {
+        columnDefs:[
+            { width: "10%", targets: [0,3,4,5,6,7] },
+            //{ width: "10%", targets: [1,2,3] },
+            //{ orderable: false, targets: [1,2,3] },
+            
+        ],
+        language: {
+            lengthMenu: "Mostrar _MENU_ registros por pagina",
+            zeroRecords: "Ningun usuario encontrado",
+            info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
+            infoEmpty: "Ningun usuario encontrado",
+            infoFiltered: "(filtrados desde _MAX_ registros totales)",
+            search: "Buscar:",
+            loadingRecords: "Cargando ...",
+            paginate: {
+                first: "Primero",
+                last: "Ultimo",
+                next: "Siguiente",
+                previous: "Anterior",
+
+            }
+        },
+        //destroy: true,
+        pageLength: 8,
+    };
+
     function cargarTabla(){
         let tipoFuncion="cargarTabla";
         let parametros={"tipo": tipoFuncion}
@@ -97,7 +124,7 @@ $(document).ready(function(){
             type:'POST',
             success:function(response){
                 $('#addPre').html(response);
-                $('#tablaPre').DataTable();
+                $('#tablaPre').DataTable(dataTableOptions);
             }
         });
     }

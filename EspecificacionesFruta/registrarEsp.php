@@ -5,18 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../Datatables-1.11.3/css/dataTables.bootstrap5.min.css">
-      <link rel="stylesheet" href="./main.scss">
-      <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
+    <link href="../DataTables/datatables.min.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
     <title>Document</title>
 
     <style>
-      .entrada{
-        background: #fafafb;
-      }
-      .tabla{
-        position: relative;
-      }
       .subtitulo{
         border-bottom: 0.3em solid #F3C577;
       }
@@ -29,7 +22,7 @@
 ?>
     <div class="container-fluid row">  
       
-      <div class="col-4 pt-5 ps-1 entrada shadow-lg">
+      <div class="col-sm-4 pt-5 ps-1 entrada shadow-lg">
         <div class="text-center pb-2 subtitulo">
           <h2 class="display-6">Registro de Especificacion</h2>
         </div>
@@ -52,20 +45,20 @@
               <label for="inCal" class="form-label ps-2">Calidad</label>
               <input type="text" class="form-control" id="inCal" name="inCal" maxlength="50" required>
             </div>
-            <div class="col-12 pt-3">
+            <div class="col-md-12 pt-3 text-center">
               <button type="button" id="btnRegistrar" class="btn btn-primary" onclick="" name="Registrar">Registrar</button>
             </div>
           
         </form>
       </div>
 
-      <div class="col p-5 tabla">
-          <form action="">
+      <div class="col ps-5 pt-5">
+          <form action="" style="width: 80%">
             <div class="col">
-              <table id="tablaEsp" class="table table-striped">
+              <table id="tablaEsp" class="table table-bordered table-striped compact mb-0">
                 <thead>
                   <h3 class="display-8">Especificaciones Registradas</h3>
-                <tr class="">
+                <tr class="m-5">
                     <th>idEspecificacion</th>
                     <th>Fruta</th>
                     <th>Calibre</th>

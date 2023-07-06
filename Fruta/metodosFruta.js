@@ -20,6 +20,33 @@ $(document).ready(function(){
         });
     });
 
+    const dataTableOptions = {
+        /*columnDefs:[
+            //{ width: "10%", targets: [0] },
+            //{ width: "100%", targets: [1,2] },
+            //{ orderable: false, targets: [1,2,3] },
+            
+        ],*/
+        language: {
+            lengthMenu: "Mostrar _MENU_ registros por pagina",
+            zeroRecords: "Ningun usuario encontrado",
+            info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
+            infoEmpty: "Ningun usuario encontrado",
+            infoFiltered: "(filtrados desde _MAX_ registros totales)",
+            search: "Buscar:",
+            loadingRecords: "Cargando ...",
+            paginate: {
+                first: "Primero",
+                last: "Ultimo",
+                next: "Siguiente",
+                previous: "Anterior",
+
+            }
+        },
+        //destroy: true,
+        pageLength: 12,
+    };
+
     function cargarTabla(){
         let tipoFuncion="cargarTabla";
         
@@ -30,7 +57,7 @@ $(document).ready(function(){
             type:'POST',
             success:function(response){
                 $('#addfruta').html(response);
-                $('#tablaPedidos').DataTable();
+                $('#tablaPedidos').DataTable(dataTableOptions);
             }
         });
     }
