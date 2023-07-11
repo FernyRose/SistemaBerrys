@@ -1,13 +1,13 @@
 <!DOCTYPE html>
     <?php
+    include "../Conexion/conexion.php";
     session_start(); 
-      $_SESSION['n']=0;
-      $arreglo[][]=0;
-      $_SESSION['carrito']=$arreglo;
-      $_SESSION['n2']=0;
-      $arreglo2[][]=0;
-      $_SESSION['carrito2']=$arreglo2;
-      
+    $_SESSION['n']=0;
+    $arreglo[][]=0;
+    $_SESSION['carrito']=$arreglo;
+    $_SESSION['n2']=0;
+    $arreglo2[][]=0;
+    $_SESSION['carrito2']=$arreglo2;
     ?>
     
 <html lang="en">
@@ -24,36 +24,55 @@
     <title>Document</title>
 </head>
 <?php
-  include "../Layouts/nav.php";  
+  include "../Layouts/nav.php";
+  $r="SELECT * FROM presentaciones";
+  $nombrePre="fresa";
+  $nombreFruta;
+  $calibre;
+  $calidad;
+  $precio=300;
+  $existencias;  
 ?>
 <body>
     <div class="container-fluid">
         <div class="row">
-        <div class="col">
-            <label for="img1" class="form-label">Box engasse</label>
-            <img src="../Imagenes/LogoP.png" alt="" width="200" height="200" id="img1">
-            <span>$250</span>
-            <button class="btn btn-success">Agregar al carrito</button>
+        <?php
+            $comando= mysqli_query($enlace, $r);
+            while($row=mysqli_fetch_array($comando)){
+                echo"<div class='col'>
+                <label for='img1' class='form-label'>".$nombrePre."</label>
+                <img src='../Imagenes/LogoP.png' alt='' width='200' height='200' id='img1'>
+                <span>$".$precio."</span>
+                <button class='btn btn-success'>Agregar al carrito</button>
+            </div>";
+            }
+        ?>
         </div>
-        <div class="col">
-            <span>Box engasse</span>
-            <img src="../Imagenes/LogoP.png" alt="" width="200" height="200">
-            <span>$250</span>
-            <button class="btn btn-success">Agregar al carrito</button>
-        </div>
-        <div class="col">
-            <span>Box engasse</span>
-            <img src="../Imagenes/LogoP.png" alt="" width="200" height="200">
-            <span>$250</span>
-            <button class="btn btn-success">Agregar al carrito</button>
-        </div>
-        <div class="col">
-            <span>Box engasse</span>
-            <img src="../Imagenes/LogoP.png" alt="" width="200" height="200">
-            <span>$250</span>
-            <button class="btn btn-success">Agregar al carrito</button>
-        </div>
-        </div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 <script type="text/javascript" src="../Jquery/jquery-3.6.4.min.js"></script>

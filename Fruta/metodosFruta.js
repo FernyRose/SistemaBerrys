@@ -15,9 +15,9 @@ $(document).ready(function(){
             type:'POST',
             success:function(response){
                 console.log(response);
-                cargarTabla();
             }
         });
+        cargarTabla();
     });
 
     const dataTableOptions = {
@@ -44,7 +44,7 @@ $(document).ready(function(){
             }
         },
         //destroy: true,
-        pageLength: 12,
+        //pageLength: 12,
     };
 
     function cargarTabla(){
@@ -62,4 +62,20 @@ $(document).ready(function(){
         });
     }
 
+    $('#btnActualizar').click(function(){
+        let nombre =document.getElementById('modalInNom').value;
+        let idfruta = document.getElementById('modalid').value;
+        let tipoFuncion="actualizar";
+        let parametros={"tipo":tipoFuncion, "nombre":nombre, "idfruta":idfruta};
+        $.ajax({
+            url:'funcionesFruta.php',
+            data:parametros,
+            type:'POST',
+            success:function(){
+                alert("Cambios guardados correctamente");
+                location.reload(true);
+            }
+        });
+    });
+        
 });

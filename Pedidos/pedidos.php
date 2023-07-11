@@ -44,8 +44,9 @@
 
 
 <?php
-  include "../Layouts/nav.php";  
-?>
+      include "../Layouts/nav.php";
+?> 
+
 <body>
 
   <div
@@ -161,4 +162,6 @@
 </body>
 <script type="text/javascript" src="../Jquery/jquery-3.6.4.min.js"></script>
 <script type="text/javascript" src="metodosPedidos.js"></script>
+<script src="../DataTables/datatables.min.js"></script>
+<script type="text/javascript" src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
 </html>

@@ -70,7 +70,12 @@ $(document).ready(function(){
             }
         });
     }
-
+    const dataTableOptions = {
+        destroy: true
+    };
+    const dataTableOptions2 = {
+        pageLength: 10
+    };
 
     $('#btnRegistrar').click(function(){
         let idfruta=document.getElementById("comboFruta").value;
@@ -85,35 +90,10 @@ $(document).ready(function(){
             data:parametros,
             type:'POST',
         });
-        cargarTabla();
+        location.reload(true);
     });
 
-    const dataTableOptions = {
-        columnDefs:[
-            { width: "10%", targets: [0,3,4,5,6,7] },
-            //{ width: "10%", targets: [1,2,3] },
-            //{ orderable: false, targets: [1,2,3] },
-            
-        ],
-        language: {
-            lengthMenu: "Mostrar _MENU_ registros por pagina",
-            zeroRecords: "Ningun usuario encontrado",
-            info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
-            infoEmpty: "Ningun usuario encontrado",
-            infoFiltered: "(filtrados desde _MAX_ registros totales)",
-            search: "Buscar:",
-            loadingRecords: "Cargando ...",
-            paginate: {
-                first: "Primero",
-                last: "Ultimo",
-                next: "Siguiente",
-                previous: "Anterior",
-
-            }
-        },
-        //destroy: true,
-        pageLength: 8,
-    };
+    
 
     function cargarTabla(){
         let tipoFuncion="cargarTabla";
@@ -124,9 +104,27 @@ $(document).ready(function(){
             type:'POST',
             success:function(response){
                 $('#addPre').html(response);
-                $('#tablaPre').DataTable(dataTableOptions);
+                $('#tablaPre').DataTable();
             }
         });
     }
+
+    $('#btnActualizar').click(function(){
+        let nombre =document.getElementById('modalnombre').value;
+        let precio =document.getElementById('modalprecio').value;
+        let exi =document.getElementById('modalexi').value;
+        let idprese = document.getElementById('modalid').value;
+        let tipoFuncion="actualizar";
+        let parametros={"tipo":tipoFuncion, "nombre":nombre, "precio":precio, "exi":exi, "idprese":idprese};
+        $.ajax({
+            url:'funcionesPre.php',
+            data:parametros,
+            type:'POST',
+            success:function(){
+                //alert("Cambios guardados correctamente");
+                location.reload(true);
+            }
+        });
+    });
 
 });

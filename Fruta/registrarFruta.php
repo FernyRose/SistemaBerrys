@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
     <link href="../DataTables/datatables.min.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./main.scss">
     <title>Fruta</title>
     
@@ -16,9 +17,9 @@
     </style>
 </head>
 <body>
-  <?php
-    include "../Layouts/nav2.php";
-  ?>
+<?php
+      include "../Layouts/nav.php";
+?>
       
   <div class="container-fluid row">  
     <div class="col-sm-4 pt-5 ps-1 shadow-lg">
@@ -31,7 +32,7 @@
                   <input type="text" placeholder="Nombre Fruta" class="form-control" id="inNom" name="nombre" maxlength="50" required>
                 </div>
                 <div class="row-2 text-center p-2">
-                  <button class="btn btn-primary" type="button" id="btnAgregar" class="btn btn-danger" onclick="" name="Registrar">Agregar a la lista</button>
+                  <button class="btn btn-primary" type="button" id="btnAgregar" class="btn btn-danger" onclick="" name="Registrar">Registrar</button>
                 </div>
         </form>
     </div>
@@ -45,25 +46,57 @@
                   <tr class="m-5">
                       <th>idFruta</th>
                       <th>Nombre</th>
+                      <th>Opciones</th>
                   </tr>    
                   </thead>
                   <tbody id="addfruta">
-                  <tr>
-                          <th>1</th>
-                        </tr> 
+                  
                   </tbody>
                 </table> 
-
         </div>
       </form>
     </div>
-      
-    
   </div>       
-    
-    
+  <!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Fruta</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="">
+                  <label for="modalid" class="form-label lg p-2">idfruta</label>
+                  <input type="text" class="form-control" id="modalid" name="nombre" maxlength="50" disabled>
+      </div>
+      <div class="">
+                  <label for="modalInputNom" class="form-label lg p-2">Nombre</label>
+                  <input type="text" placeholder="Nombre Fruta" class="form-control" id="modalInNom" name="nombre" maxlength="50" required>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" id="btnActualizar" data-target="" class="btn btn-primary">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function modalName(num) {
+        let nombre=document.getElementById(num);
+        document.getElementById("modalInNom").value=nombre.getAttribute("data-btnNombre");
+        document.getElementById("modalid").value=num; 
+        let btnid=document.getElementById("btnActualizar");
+  }
+</script>
 </body>
 <script type="text/javascript" src="../Jquery/jquery-3.6.4.min.js"></script>
 <script type="text/javascript" src="metodosFruta.js"></script>
 <script src="../DataTables/datatables.min.js"></script>
+<script type="text/javascript" src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
 </html>

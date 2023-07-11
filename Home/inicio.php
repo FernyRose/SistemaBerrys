@@ -7,7 +7,7 @@
       <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
       <link rel="stylesheet" href="../Datatables-1.11.3/css/dataTables.bootstrap5.min.css">
       <link rel="stylesheet" href="./main.scss">
-      <script src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+      <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="../Imagenes/tecnm.png">
       <style>
         .navbar-brand{
@@ -71,48 +71,9 @@
       <title>Inicio</title>
   </head>
   <body>
-    
-      <div
-            class="p-0 text-center bg-image"
-            style="
-              background-image: url('../Imagenes/fondo2.jpg'); 
-              backgorund-size: cover;
-              min-height: 60vh;
-            "
-          >
-        
-      
-      <nav class="navbar navbar-expand-lg navbar-dark py-4">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="../Imagenes/Logo.jpg"></a>
-          <div class="collapse navbar-collapse m-x" id="top navbar">
-            <div class="navbar-nav">
-              
-            </div>
-          </div>
-      </div>
-      <div class="botonInicio">
-        <button type="button" class="btn btn-primary text-center">
-          Iniciar Sesion
-        </button>
-      </div>
-    </nav>
-    
-      <nav class="navbar navbar-expand-lg navbar-light py-1" style="background-color: #000000;">
-          <div class="container-fluid text-white">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #FFFFFF;>
-              <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav m-auto fs-3 text-white">
-                      <a class="nav-link active mx-3 text-light" aria-current="page" href="#">Home</a>
-                      <a class="nav-link active mx-3 text-light" href="#">Productos</a>
-                      <a class="nav-link active mx-3 text-light" href="#">Asociaciones</a>
-                      <a class="nav-link active mx-3 text-light" href="#">Quienes Somos</a>
-                  </div>
-                  
-          </div>
-      </nav>
+  <?php
+      include "../Layouts/nav.php";
+?>
     
     <div class="contaner my-5">
       <h2>
@@ -131,7 +92,7 @@
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white">
                 <h1 class="mb-3">Pedidos a toda la ciudad</h1>
-                <h4 class="mb-3">As tu pedido ya</h4>
+                <h4 class="mb-3">Has tu pedido ya</h4>
               </div>
             </div>
           </div>
@@ -274,4 +235,7 @@
       
   </div>
   </body>
+  <script type="text/javascript" src="../Jquery/jquery-3.6.4.min.js"></script>
+<script src="../DataTables/datatables.min.js"></script>
+<script type="text/javascript" src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
 </html>

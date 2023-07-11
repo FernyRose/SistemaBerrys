@@ -29,7 +29,9 @@
                 <td class=''>".$row[4]."</td>
                 <td class=''>".$row[5]."</td>
                 <td class=''>".$row[6]."</td>
-                <td class=''><button type='button' id='btnRegistrar' class='btn btn-success' onclick='' name='Registrar'>Editar</button></td>
+                <td class=''><button type='button' id='".$row[0]."' onclick='modalData(".$row[0].")' class='btn btn-success' data-nombre='".$row[1]."' data-precio='".$row[5]."' data-exi='".$row[6]."' data-bs-toggle='modal' data-bs-target='#exampleModal'>
+                Editar
+                </button></td
             </tr>
             ";
         }
@@ -65,5 +67,13 @@
         $espeDat=array("calibre" => "$row[0]","calidad" => "$row[1]");
         $espeDat=json_encode($espeDat);
         echo $espeDat;
+    }
+    if($tipo=="actualizar"){
+        $nombre=$_POST["nombre"];
+        $precio=$_POST["precio"];
+        $exi=$_POST["exi"];
+        $idprese=$_POST["idprese"];
+        $r="UPDATE presentaciones SET nombrePresentacion='$nombre', precio=$precio, existencias=$exi WHERE idpresentacion=$idprese";
+        mysqli_query($enlace,$r);
     }
 ?>

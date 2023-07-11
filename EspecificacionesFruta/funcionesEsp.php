@@ -21,6 +21,9 @@
                 <td class=''>".$row[1]."</td>
                 <td class=''>".$row[2]."</td>
                 <td class=''>".$row[3]."</td>
+                <td class=''><button type='button' id='".$row[0]."' onclick='modalData(".$row[0].")' class='btn btn-success' data-calibre='".$row[2]."' data-calidad='".$row[3]."' data-bs-toggle='modal' data-bs-target='#exampleModal'>
+                Editar
+                </button></td>
             </tr>
             ";
         }
@@ -34,5 +37,13 @@
             <option value='".$row[0]."'>".$row[1]."</option>
             ";
         }
+    }
+
+    if($tipo=="actualizar"){
+        $id=$_POST["idespe"];
+        $calibre=$_POST["calibre"];
+        $calidad=$_POST["calidad"];
+        $r="UPDATE especificaciones SET calibre='$calibre', calidad='$calidad' WHERE idespecificacion='$id'";
+        mysqli_query($enlace,$r);
     }
 ?>

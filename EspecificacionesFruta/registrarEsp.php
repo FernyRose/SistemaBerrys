@@ -18,7 +18,7 @@
 <body>
   
 <?php
-      include "../Layouts/nav2.php";
+      include "../Layouts/nav.php";
 ?>
     <div class="container-fluid row">  
       
@@ -63,18 +63,60 @@
                     <th>Fruta</th>
                     <th>Calibre</th>
                     <th>Calidad</th>
+                    <th>Opciones</th>
                 </thead>
                 <tbody class="p-2"id="addEsp">
                     
                 </tbody>
               </table> 
-              <button type="button" class="btn btn-success" id="btnGuardar" onclick="" name="Registrar">Guardar</button>
             </div>
           </form>
       </div>  
-    </div>  
+    </div>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Especificacion</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="">
+                  <label for="modalid" class="form-label lg p-2">idEspecificacion</label>
+                  <input type="text" class="form-control" id="modalid" name="nombre" maxlength="50" disabled>
+      </div>
+      <div class="">
+                  <label for="modalcalibre" class="form-label lg p-2">Calibre</label>
+                  <input type="text" class="form-control" id="modalcalibre" name="nombre" maxlength="50" required>
+      </div>
+      <div class="">
+                  <label for="modalcalidad" class="form-label lg p-2">Calidad</label>
+                  <input type="text" class="form-control" id="modalcalidad" name="nombre" maxlength="50" required>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" id="btnActualizar" data-target="" class="btn btn-primary">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>  
+<script>
+  function modalData(num) {
+        let btn=document.getElementById(num);
+        let calibre=btn.getAttribute("data-calibre");
+        let calidad=btn.getAttribute("data-calidad");
+        document.getElementById("modalcalibre").value=calibre;
+        document.getElementById("modalcalidad").value=calidad;
+        document.getElementById("modalid").value=num;
+  }
+</script>
 </body>
 <script type="text/javascript" src="../Jquery/jquery-3.6.4.min.js"></script>
 <script type="text/javascript" src="metodosEsp.js"></script>
 <script src="../DataTables/datatables.min.js"></script>
+<script type="text/javascript" src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
 </html>

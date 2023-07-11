@@ -45,4 +45,21 @@ $(document).ready(function(){
             }
         });
     }
+
+    $('#btnActualizar').click(function(){
+        let calibre =document.getElementById('modalcalibre').value;
+        let calidad =document.getElementById('modalcalidad').value;
+        let idespe = document.getElementById('modalid').value;
+        let tipoFuncion="actualizar";
+        let parametros={"tipo":tipoFuncion, "calibre":calibre, "idespe":idespe, "calidad":calidad};
+        $.ajax({
+            url:'funcionesEsp.php',
+            data:parametros,
+            type:'POST',
+            success:function(){
+                alert("Cambios guardados correctamente");
+                location.reload(true);
+            }
+        });
+    });
 });
