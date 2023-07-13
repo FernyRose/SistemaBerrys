@@ -49,18 +49,10 @@
 
 <body>
 
-  <div
-      class="p-0 text-center bg-image"
-      style="
-      background-image: url('../Imagenes/fondo2.jpg'); 
-      background-size: cover;
-      min-height: 97.5vh;
-      "
-      >
     
-      <div class="container-fluid2 row">
-        <div class="col-6 login">
-            <form class="row g-4 container-fluid mt-3" id="frm" method="POST" action="registrarCliente.php">
+      <div class="container-fluid row">
+        <div class="col-6 pt-5 shadow-lg">
+            <form class="row g-4 container-fluid pt-5" id="frm" method="POST" action="registrarCliente.php">
                   <h1>
                     Datos del Pedido
                   </h1>  
@@ -103,7 +95,7 @@
                             <option value="5">5 (cinco)</option>
                           </select>
                         </div>
-                    </div>
+        </div>
                     
                     <div class="col-md-4">
                       <label for="inImporte" class="form-label">Importe</label>
@@ -113,7 +105,7 @@
                       <button type="button" id="btnAgregar" class="btn btn-danger" onclick="" name="Agregar">Agregar a la lista</button>
                     </div>
                   </form>
-        </div>
+              </div>
               <div class="shadow-lg col-sm-12 col-md-12 col-lg-12 login2 m-5"> 
                 <form action="">
                   <div class="col-md rounded-5">
@@ -155,8 +147,6 @@
                     </div>
                 </form>
               </div>   
-        
-        
       </div>
   
 </body>

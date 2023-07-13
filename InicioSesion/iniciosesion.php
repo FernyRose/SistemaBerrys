@@ -31,7 +31,7 @@
       }
       .login{
         
-        width: 760px;
+        width: 560px;
         height: min-content;
         align-items: center;
         justify-content: center;
@@ -52,62 +52,32 @@
         margin-top: 15px;
         max-width: auto;
       }
+      .subtitulo{
+        border-bottom: 0.1em solid #464649;
+      }
     </style>
 </head>
 <body>
-  <div
-    class="p-0 text-center bg-image"
-    style="
-    background-image: url('../Imagenes/fondo2.jpg'); 
-    backgorund-size: cover;
-    min-height: 100vh;
-    "
-    >
-    <nav class="navbar navbar-expand-lg navbar-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="../Imagenes/tecnm.png"></a>
-            <div class="collapse navbar-collapse m-x" id="top navbar">
-              <div class="navbar-nav">
-                <button type="button" class="btn btn-primary text-center">
-                  Home
-                </button>
-              </div>
-            </div>
-        </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #4682B4">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav m-auto  fs-3 text-dark">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                    <a class="nav-link" href="#">Disabled</a>
-                </div>
-            </div>    
-        </div>
-    </nav>
-    <div class="container-fluid2">
-        <div class="login">
-        <h1 class="text-center text-primary">Iniciar Sesion</h1>
+  <?php
+          include "../Layouts/nav.php";
+  ?>
+    <div class="container-fluid2 mt-5">
+        <div class="login shadow-lg">
+        <h1 class="text-center text-primary p-1 subtitulo">Iniciar Sesion</h1>
         <form class="row g-2" id="frm" method="POST" action="registrarCliente.php">
-                <div class="col-12">
+                <div class="col-12 p-2">
                   <label for="inputDes" class="form-label">Correo</label>
                   <input type="text" class="form-control" id="inputDes" name="correo" maxlength="50" required>
                 </div>
-                <div class="col-12">
+                <div class="col-12 p-2">
                   <label for="inputDes" class="form-label">Contraseña</label>
                   <input type="password" class="form-control" id="inputDes" name="contrasena" maxlength="50" required>
                 </div>
-                <div class="col-12">
+                <div class="col-12 p-3">
                   <button type="submit" class="btn btn-success w-100" onclick="" name="Registrar">Registrar</button>
                 </div>
         </form>
       </div> 
-    </div>   
-  </div>  
+    </div>     
 </body>
 </html>
