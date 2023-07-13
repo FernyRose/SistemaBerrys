@@ -23,7 +23,9 @@
                 <td class=''>".$row[2]."</td>
                 <td class=''>".$row[3]."</td>
                 <td class=''>".$row[4]."</td>
-                <td class=''>boton</td>
+                <td class=''><a href='detallePedido.php?id=".$row[0]."'><button type='button' id='' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#exampleModal'>
+                Editar
+                </button></a></td>
             </tr>
             ";
         }
