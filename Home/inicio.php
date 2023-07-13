@@ -44,9 +44,11 @@
           .card{
             margin: 0 .5em;
             width: calc(100%/3);
+            background-color: #F8F8FF;
           }
           .cards-wrapper{
             display: flex;
+            
           }
           .image-wrapper{
             height: 22vw;
@@ -65,6 +67,9 @@
         .image--wrapper img{
           max-width: 100%;
           max-height: 100%;
+        }
+        .subtitulo{
+        border-bottom: 0.3em solid #F3C577;
         }
       </style>
         
@@ -101,13 +106,13 @@
           <div class="card2 mb-3 m-auto" style="max-width: auto; background-color: rgba(0, 0, 0, 0.1);">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="../Imagenes/blueberries.png" class="img-fluid rounded-start" alt="...">
+                <img src="../Imagenes/berrieCaja.png" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Card title 1</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <h5 class="card-title">Caja de Zarzamora</h5>
+                  <p class="card-text">Haz  pedidos de Arandanos desde 5 clanches hasta multiples cajas.</p>
+                  <p class="card-text"><small class="text-muted">Pedidos a toda la Ciudad</small></p>
                 </div>
               </div>
             </div>
@@ -122,7 +127,7 @@
           <div class="cards-wrapper">
             <div class="card">
               <div class="image-wrapper">
-                <img src="../Imagenes/blue4.jpg" alt="...">
+                <img src="../Imagenes/fresaCaja.png" alt="...">
               </div>
               <div class="card-body">
                 <h5 class="card-title">1</h5>
@@ -132,7 +137,7 @@
             </div>
             <div class="card">
               <div class="image-wrapper">
-                <img src="../Imagenes/ble3.png" alt="...">
+                <img src="../Imagenes/frambuesaClanche.png" alt="...">
               </div>
               <div class="card-body">
                 <h5 class="card-title">2</h5>
@@ -156,7 +161,7 @@
           <div class="cards-wrapper">
             <div class="card">
                 <div class="image-wrapper">
-                  <img src="../Imagenes/ble3.png" alt="...">
+                  <img src="../Imagenes/clancheBerries.png" alt="...">
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">4</h5>
@@ -166,7 +171,7 @@
               </div>
               <div class="card">
                 <div class="image-wrapper">
-                  <img src="../Imagenes/ble3.png" alt="...">
+                  <img src="../Imagenes/platanoIndividual.png" alt="...">
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">5</h5>
@@ -176,7 +181,7 @@
               </div>
               <div class="card">
                 <div class="image-wrapper">
-                  <img src="../Imagenes/ble3.png" alt="...">
+                  <img src="../Imagenes/manzanaIndividual.png" alt="...">
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">6</h5>
@@ -200,7 +205,7 @@
               </div>
               <div class="card">
                 <div class="image-wrapper">
-                  <img src="../Imagenes/ble3.png" alt="...">
+                  <img src="../Imagenes/zarzamoraIndividual.png" alt="...">
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">8</h5>
@@ -210,7 +215,7 @@
               </div>
               <div class="card">
                 <div class="image-wrapper">
-                  <img src="../Imagenes/ble3.png" alt="...">
+                  <img src="../Imagenes/zarzamoraClanche.png" alt="...">
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">9</h5>

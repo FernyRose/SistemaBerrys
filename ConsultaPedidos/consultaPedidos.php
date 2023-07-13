@@ -9,33 +9,39 @@
     <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./main.scss">
     <title>Document</title>
-    
+    <style>
+        .subtitulo{
+            border-bottom: 0.2em solid #F3C577;
+        }
+    </style>
 </head>
 <body>
 <?php
-      include "../Layouts/nav.php";
+    include "../Layouts/nav.php";
 ?>    
-    <div class="container-fluid">  
-      <h3>Pedidos por realizar</h3>
-    </div>
-    <center>
-    <div class="container-fluid g-3 mt-3">
-    <table id="tablaPedidos" class="table table-striped">
-        <thead>
-        <tr>
-            <th>idPedido</th>
-            <th>idCliente</th>
-            <th>Nombre Cliente</th>
-            <th>Fecha Pedido</th>
-            <th>Importe</th>
-            <th>Opciones</th>
-        </tr>
-        </thead>
-        <tbody id="addpedido">      
-        </tbody>
-    </table> 
-    </div>
-    </center>
+    <div class="row pt-5">
+        <div class="container-fluid col-10 p-5 shadow-lg">
+            <div class="col-5  pb-2 subtitulo">  
+                <h3>Pedidos por realizar</h3>
+            </div>
+            <div class="row pt-3 container-fluid g-3 mt-3">
+                <table id="tablaPedidos" class="table table-bordered table-striped compact mb-0">
+                    <thead>
+                    <tr>
+                        <th>idPedido</th>
+                        <th>idCliente</th>
+                        <th>Nombre Cliente</th>
+                        <th>Fecha Pedido</th>
+                        <th>Importe</th>
+                        <th>Opciones</th>
+                    </tr>
+                    </thead>
+                    <tbody id="addpedido">      
+                    </tbody>
+                </table> 
+            </div>
+        </div>
+    </div>    
 </body>
 <script type="text/javascript" src="../Jquery/jquery-3.6.4.min.js"></script>
 <script type="text/javascript" src="metodosConsulta.js"></script>
