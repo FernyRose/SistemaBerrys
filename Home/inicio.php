@@ -80,7 +80,7 @@
       include "../Layouts/nav.php";
 ?>
     
-    <div class="contaner my-5">
+    <div class="p-2">
       <h2>
         <div
           class="p-5 text-center bg-image"
@@ -96,7 +96,7 @@
           <div class="mask" style="background-color: rgba(0, 0, 0, 0.1);">
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white">
-                <h1 class="mb-3">Pedidos a toda la ciudad</h1>
+                <h1 class="mb-3">Pedidos a toda la ciudad8</h1>
                 <h4 class="mb-3">Has tu pedido ya</h4>
               </div>
             </div>
