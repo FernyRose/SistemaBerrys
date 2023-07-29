@@ -18,7 +18,14 @@
 </head>
 <body>
 <?php
-      include "../Layouts/nav.php";
+      session_start();
+      error_reporting(0);
+      if($_SESSION["usuario"]=="admin"){
+        include "../Layouts/nav.php";
+      }
+      else{
+        include "../Layouts/nav2.php";
+      }
 ?>
       
   <div class="container-fluid row">  

@@ -24,14 +24,17 @@
     <title>Document</title>
 </head>
 <?php
-  include "../Layouts/nav.php";
-  $r="SELECT * FROM presentaciones";
-  $nombrePre="fresa";
-  $nombreFruta;
-  $calibre;
-  $calidad;
-  $precio=300;
-  $existencias;  
+  error_reporting(0);
+  if($_SESSION["usuario"]=="admin"){
+    include "../Layouts/nav.php";
+  }
+  else{
+    include "../Layouts/nav2.php";
+  }
+  $r="SELECT p.nombrepresentacion, f.nombre, e.calibre, e.calidad, p.precio FROM presentaciones AS p INNER JOIN
+  especificaciones AS e ON p.idespecificacion=e.idespecificacion INNER JOIN fruta AS f
+  ON p.idfruta=f.idfruta";
+   
 ?>
 <body>
     <div class="container-fluid">
@@ -39,8 +42,14 @@
         <?php
             $comando= mysqli_query($enlace, $r);
             while($row=mysqli_fetch_array($comando)){
+                $nombrePre=$row[0];
+                $nombreFruta=$row[1];
+                $calibre=$row[2];
+                $calidad=$row[3];
+                $precio=$row[4];
+                $existencias; 
                 echo"<div class='col'>
-                <label for='img1' class='form-label'>".$nombrePre."</label>
+                <label for='img1' class='form-label'>".$nombrePre." ".$nombreFruta." ".$calibre." ".$calidad."</label>
                 <img src='../Imagenes/LogoP.png' alt='' width='200' height='200' id='img1'>
                 <span>$".$precio."</span>
                 <button class='btn btn-success'>Agregar al carrito</button>

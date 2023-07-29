@@ -8,17 +8,11 @@
     <link rel="stylesheet" href="../Datatables-1.11.3/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="./main.scss">
     <script src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../Imagenes/tecnm.png">
     <title>Sesion</title>
     <style>
-        .navbar-brand{
-            width: 98vw;
-            position: absolute;
-            top: 0;
-        }
-        .navbar{
-            text-shadow: #a4232c;
-      }
+        
       .navbar-brand img{
         display: block;
         margin: auto;
@@ -59,12 +53,20 @@
 </head>
 <body>
   <?php
-          include "../Layouts/nav.php";
+    session_start();
+          error_reporting(0);
+          if($_SESSION["usuario"]=="admin"){
+            include "../Layouts/nav.php";
+          }
+          else{
+            include "../Layouts/nav2.php";
+          }
+          
   ?>
     <div class="container-fluid2 mt-5">
         <div class="login shadow-lg">
         <h1 class="text-center text-primary p-1 subtitulo">Iniciar Sesion</h1>
-        <form class="row g-2" id="frm" method="POST" action="registrarCliente.php">
+        <form class="row g-2" id="frm" method="POST" action="../validarUsuario.php">
                 <div class="col-12 p-2">
                   <label for="inputDes" class="form-label">Correo</label>
                   <input type="text" class="form-control" id="inputDes" name="correo" maxlength="50" required>
@@ -74,10 +76,18 @@
                   <input type="password" class="form-control" id="inputDes" name="contrasena" maxlength="50" required>
                 </div>
                 <div class="col-12 p-3">
-                  <button type="submit" class="btn btn-success w-100" onclick="" name="Registrar">Registrar</button>
+                  <button type="submit" class="btn btn-primary w-100" onclick="" name="Registrar">Iniciar</button>
+                </div>
+                <div class="col-12 p-3">
+                  <button type="button" class="btn btn-success w-100" onclick="cuenta()" name="Registrar">Crear cuenta</button>
                 </div>
         </form>
       </div> 
-    </div>     
+    </div>
+    <script>
+      function cuenta(){
+        window.location.href="../Registro/registro.php";
+      }
+    </script>     
 </body>
 </html>

@@ -14,24 +14,41 @@
 <body>
 <?php
       include "../Layouts/nav.php";
+      include "../Conexion/conexion.php";
+      $idpedido=$_GET["id"];
+      $r="SELECT pe.idpedido, f.nombre, p.nombrePresentacion, e.calibre, e.calidad, pe.cantidad FROM 
+      detallepedido AS pe INNER JOIN presentaciones AS p ON pe.idpresentacion = p.idpresentacion 
+      inner join especificaciones AS e ON e.idespecificacion=p.idespecificacion inner join 
+      fruta AS f ON f.idfruta = p.idfruta where pe.idpedido=".$idpedido;
+      $comando=mysqli_query($enlace,$r);
 ?>     
     <div class="container-fluid g-3 mt-3">
         <div class="row">
         <h3>Detalle del pedido</h3>
             <div class="col-12">
             <table id="tablaPedidos" class="table table-striped">
-            <thead>
             <tr>
                 <th>idPedido</th>
-                <th>idCliente</th>
-                <th>Nombre Cliente</th>
-                <th>Fecha Pedido</th>
-                <th>Importe</th>
-                <th>Opciones</th>
+                <th>Fruta</th>
+                <th>Presentacion</th>
+                <th>Calibre</th>
+                <th>Calidad</th>
+                <th>Cantidad</th>
             </tr>
-                </thead>
-                <tbody id="addpedido">      
-                </tbody>
+            <tr>
+                <?php
+                    while($row=mysqli_fetch_array($comando)){
+                ?>
+                    <td class=""><?php echo $row[0];?></td>
+                    <td><?php echo $row[1];?></td>
+                    <td><?php echo $row[2];?></td>
+                    <td><?php echo $row[3];?></td>
+                    <td><?php echo $row[4];?></td>
+                    <td><?php echo $row[5];?></td>
+            </tr>
+                <?php
+                    }   
+                ?>      
             </table> 
             </div>
             <div class="col-3">
@@ -41,7 +58,7 @@
     </div>
 </body>
 <script type="text/javascript" src="../Jquery/jquery-3.6.4.min.js"></script>
-<script type="text/javascript" src="metodosConsulta.js"></script>
+<script type="text/javascript" src=""></script>
 <script src="../DataTables/datatables.min.js"></script>
 <script type="text/javascript" src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
 </html>

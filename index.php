@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,27 +14,7 @@
       <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="../Imagenes/tecnm.png">
       <style>
-        .navbar-brand{
-          width: 98vw;
-          position: absolute;
-          top: 0;
-          bottom: 10px;
-        }
-        .navbar{
-          text-shadow: #a4232c;
-          
-
-        }
-        .navegacion{
-          margin-right: 300px;
-          margin-left: 300px;
-          text-shadow: #a4232c;
-
-        }
-        .navbar-brand img{
-          display: block;
-          margin: auto;
-        }
+        
         .botonInicio{
           width: 15vw;
           position: left;
@@ -71,81 +55,17 @@
       <title>Inicio</title>
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="inicio.php">
-          <img src="Imagenes/Nlogo.png" width="170" height="40" class="">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Home/inicio.php">Inicio</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Catalagos
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="Fruta/registrarFruta.php">Frutas</a></li>
-                <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="EspecificacionesFruta/registrarEsp.php">Especificaciones</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="Presentaciones/registrarPre.php">Presentaciones</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Pedidos
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="ConsultaPedidos/consultaPedidos.php">Pedidos pendientes</a></li>
-                
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Ayuda</a>
-              </li>
-            </ul>
-          </div>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="">
-              <i class="fa-solid fa-user"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-        </div>
-      </nav>
+  <?php
+  error_reporting(0);
+    if($_SESSION["usuario"]=="admin"){
+      include "Layouts/navIndex.php";
+    }
+    else{
+      include "Layouts/navIndex2.php";
+    }
     
-    <div class="contaner my-5">
+  ?>
+    <div class="container my-5">
       <h2>
         <div
           class="p-5 text-center bg-image"

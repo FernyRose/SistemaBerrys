@@ -8,21 +8,13 @@
     <link rel="stylesheet" href="../Datatables-1.11.3/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="./main.scss">
     <script src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../Imagenes/tecnm.png">
     <title>Registrarse</title>
     <style>
-      .navbar-brand{
-          width: 98vw;
-          position: absolute;
-          top: 0;
-        }
-      .navbar{
-        text-shadow: #a4232c;
-      }
-      .navbar-brand img{
-        display: block;
-        margin: auto;
-      }
+      
+      
+      
       .container-fluid2{
         display: flex;
         align-items: center;
@@ -52,14 +44,12 @@
         margin-top: 15px;
         max-width: auto;
       }
-      .subtitulo{
-        border-bottom: 0.1em solid #464649;
-      }
+       
     </style>
 </head>
 <body>
   <?php
-        include "../Layouts/nav.php";
+        include "../Layouts/nav2.php";
   ?>
   
     <div class="container-fluid2">

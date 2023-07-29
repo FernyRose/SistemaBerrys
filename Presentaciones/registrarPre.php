@@ -17,7 +17,14 @@
 </head>
 <body>
 <?php
-      include "../Layouts/nav.php";
+      session_start();
+      error_reporting(0);
+      if($_SESSION["usuario"]=="admin"){
+        include "../Layouts/nav.php";
+      }
+      else{
+        include "../Layouts/nav2.php";
+      }
 ?> 
 
   <div class="container-fluid row">
@@ -65,6 +72,12 @@
                 <div class="col-md-5">
                   <label for="inEx" class="form-label">Existencias</label>
                   <input type="text" class="form-control" id="inEx" name="inEx" maxlength="50" required>
+                </div>
+              </div>
+              <div class="row p-3">
+                <div class="col-md-12">
+                  <label for="inEx" class="form-label">Imagen</label>
+                  <input type="file" name="inimagen" id="inimagen" class="form-control">
                 </div>
               </div>
               <div class="row pt-3 pb-4">  

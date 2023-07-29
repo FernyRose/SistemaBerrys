@@ -29,7 +29,7 @@ $(document).ready(function(){
                 console.log(response);
             }
         });
-        cargarTabla();
+        location.reload(true);
     });
     function cargarTabla(){
         let tipoFuncion="cargarTabla";

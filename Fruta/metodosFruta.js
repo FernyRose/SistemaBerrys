@@ -17,7 +17,7 @@ $(document).ready(function(){
                 console.log(response);
             }
         });
-        cargarTabla();
+        location.reload(true);
     });
 
     const dataTableOptions = {
