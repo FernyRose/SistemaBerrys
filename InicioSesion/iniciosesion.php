@@ -27,8 +27,7 @@
         
         width: 560px;
         height: min-content;
-        align-items: center;
-        justify-content: center;
+        
         padding: 20px;
         border-radius: 12px;
         background: #ffffff;
@@ -69,18 +68,18 @@
         <form class="row g-2" id="frm" method="POST" action="../validarUsuario.php">
                 <div class="col-12 p-2">
                   <label for="inputDes" class="form-label">Correo</label>
-                  <input type="text" class="form-control" id="inputDes" name="correo" maxlength="50" required>
+                  <input type="text" class="form-control" placeholder="Correo electrónico"  id="inputDes" name="correo" maxlength="50" required>
                 </div>
                 <div class="col-12 p-2">
                   <label for="inputDes" class="form-label">Contraseña</label>
-                  <input type="password" class="form-control" id="inputDes" name="contrasena" maxlength="50" required>
+                  <input type="password" class="form-control" placeholder="Contraseña"  id="inputDes" name="contrasena" maxlength="50" required>
                 </div>
-                <div class="col-12 p-3">
-                  <button type="submit" class="btn btn-primary w-100" onclick="" name="Registrar">Iniciar</button>
-                </div>
-                <div class="col-12 p-3">
-                  <button type="button" class="btn btn-success w-100" onclick="cuenta()" name="Registrar">Crear cuenta</button>
-                </div>
+                  <div class="row-5 p-3">
+                    <button type="submit" class="btn btn-primary w-100" onclick="" name="Registrar">Iniciar</button>
+                  </div>
+                  <div class="row-5 p-3 text-center">
+                    <button type="button" class="btn btn-success w-100" onclick="cuenta()" name="Registrar">Crear cuenta</button>
+                  </div>
         </form>
       </div> 
     </div>
@@ -90,4 +89,9 @@
       }
     </script>     
 </body>
+<div class="pt-5">
+  <?php
+      include "../Layouts/footer.php";
+  ?> 
+</div>
 </html>
