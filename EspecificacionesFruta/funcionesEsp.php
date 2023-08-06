@@ -32,6 +32,7 @@
     {
         $r="SELECT * FROM fruta";
         $comando=mysqli_query($enlace,$r);
+        echo "<option selected>Seleccione...</option>";
         while($row=mysqli_fetch_array($comando)){
             echo"
             <option value='".$row[0]."'>".$row[1]."</option>

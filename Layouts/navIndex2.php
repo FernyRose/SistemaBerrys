@@ -18,10 +18,10 @@
                 <a class="nav-link active" aria-current="page" href="#">Sobre Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Pedidos/pedidos2.php">Tienda</a>
+                <a class="nav-link active" aria-current="page" href="Pedidos/pedidos3.php">Tienda</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Ubicanos</a>
+                <a class="nav-link active" aria-current="page" href="Ubicacion/ubicacion.php">Ubicanos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Ayuda</a>

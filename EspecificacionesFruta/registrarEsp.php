@@ -34,13 +34,11 @@
           <h2 class="display-6">Registro de Especificacion</h2>
         </div>
         <form class="row g-4 container-fluid pt-5" id="frm" method="POST">
-          <div class="row-4">
-            <label for="comboFruta" class="form-label">Fruta</label>
-            <div class="">
-              <select name="comboFruta" id="comboFruta">
+          <div class="col-12">
+            <label for="comboFruta" class="input-group-text">Fruta</label>
+              <select name="comboFruta" id="comboFruta" class="form-select">
                 
               </select>
-            </div>
           </div>
           
           

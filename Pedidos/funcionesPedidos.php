@@ -1,60 +1,18 @@
 <?php
 session_start();
     include "../Conexion/conexion.php";
-    
-    $tipo=$_POST['tipo'];
-    if($tipo=="loadFruta")
-    {
-        $r="SELECT * FROM fruta";
-        $comando= mysqli_query($enlace, $r);
-        echo"<option value=''>Seleccione...</option>";
-        while($row=mysqli_fetch_array($comando)){
-            echo"
-            <option value='".$row[0]."'>".$row[1]."</option>";
-        }
-    }
-    if($tipo=='loadEspe'){
-        $idfruta=$_POST["idfruta"];
-        $r="SELECT idespecificacion, calibre, calidad FROM especificaciones where idfruta=$idfruta";
-        $comando=mysqli_query($enlace,$r);
-        echo("<option value=''>Seleccione...</option>");
-        while($row=mysqli_fetch_array($comando)){
-            echo"
-            <option value='".$row[0]."'>".$row[1]."-/-".$row[2]."</option>";
-        }
-    }
-    if($tipo=='loadPrese'){
-        $idfruta=$_POST["idfruta"];
-        $idespe=$_POST["idespe"];
-        $r="SELECT idpresentacion, nombrePresentacion FROM presentaciones WHERE idfruta=$idfruta AND idespecificacion=$idespe";
-        $comando=mysqli_query($enlace,$r);
-        echo("<option value=''>Seleccione...</option>");
-        while($row=mysqli_fetch_array($comando)){
-            echo"
-            <option value='".$row[0]."'>".$row[1]."</option>";
-        }
-    }
-    if($tipo=='mostrarPrecio'){
-        $idprese=$_POST["idprese"];
-        $r="SELECT precio FROM presentaciones WHERE idpresentacion=$idprese";
-        $comando=mysqli_query($enlace,$r);
-        $row=mysqli_fetch_array($comando);
-        $datarray=array("precio" => "$row[0]");
-        $dat=json_encode($datarray);
-        echo $dat;
-    }
-    if($tipo=='agregarTabla'){
-        $idfruta=$_POST['idfruta'];
-        $idespe=$_POST['idespe'];
+
+    $fechaActual = date('d-m-Y');
+    $idCliente=$_SESSION["idCliente"];
+    $importe=0;
+    $status="";
+
+    if($tipo=='agregarCarrito'){
+        
         $idprese=$_POST['idprese'];
         $cantidad=$_POST['cantidad'];
         $precio=$_POST['precio'];
-        $importe=$_POST['importe'];
 
-        $textFruta=$_POST['textFruta'];
-        $textEsp=$_POST['textEsp'];
-        $textPre=$_POST['textPre'];
-        
         $_SESSION['carrito'][$_SESSION['n']][0]=$idfruta;
         $_SESSION['carrito'][$_SESSION['n']][1]=$idespe;
         $_SESSION['carrito'][$_SESSION['n']][2]=$idprese;

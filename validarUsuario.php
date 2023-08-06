@@ -21,6 +21,7 @@
         $_SESSION["correo"]=$cliente[8];
         $_SESSION["as"]=$cliente[9];
         $_SESSION["contra"]=$contrasena;
+
         header("location:index.php");
     }
     else{
@@ -33,7 +34,13 @@
             $_SESSION["nombre"]=$cliente[1];
             $_SESSION["usuario"]=$usuario;
             $_SESSION["contra"]=$contrasena;
+
             header("location:index.php");
+        }
+        else{
+            echo "<script>alert('El usuario o contrasena son incorrectos');
+                location.href='InicioSesion/iniciosesion.php';
+                </script>";
         }
     }
 ?>

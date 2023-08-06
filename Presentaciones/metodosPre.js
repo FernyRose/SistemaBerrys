@@ -76,25 +76,7 @@ $(document).ready(function(){
     const dataTableOptions2 = {
         pageLength: 10
     };
-
-    $('#btnRegistrar').click(function(){
-        let idfruta=document.getElementById("comboFruta").value;
-        let idespe=document.getElementById("comboEspe").value;
-        let precio=document.getElementById("inPre").value;
-        let exi=document.getElementById("inEx").value;
-        let nombre=document.getElementById("inNom").value;
-        let tipoFuncion="Registrar";
-        let parametros={"tipo": tipoFuncion, "idfruta":idfruta, "idespe":idespe, "precio":precio, "exi":exi, "nombre":nombre}
-        $.ajax({
-            url:'funcionesPre.php',
-            data:parametros,
-            type:'POST',
-        });
-        location.reload(true);
-    });
-
     
-
     function cargarTabla(){
         let tipoFuncion="cargarTabla";
         let parametros={"tipo": tipoFuncion}

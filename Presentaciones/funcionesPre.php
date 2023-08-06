@@ -3,11 +3,11 @@
     $tipo=$_POST['tipo'];
     if($tipo=="Registrar")
     {
-        $idfruta=$_POST['idfruta'];
-        $idespe=$_POST['idespe'];
-        $nombre=$_POST['nombre'];
-        $precio=$_POST['precio'];
-        $exi=$_POST['exi'];
+        $idfruta=$_POST['comboFruta'];
+        $idespe=$_POST['comboEspe'];
+        $nombre=$_POST['inNom'];
+        $precio=$_POST['inPre'];
+        $exi=$_POST['inExi'];
         $r="INSERT INTO presentaciones(idfruta,idespecificacion,nombrePresentacion,precio,existencias) 
         values($idfruta,$idespe,'$nombre',$precio,$exi)";
         mysqli_query($enlace,$r);
@@ -19,6 +19,7 @@
         FROM presentaciones AS p INNER JOIN especificaciones AS e ON p.idespecificacion=e.idespecificacion 
         INNER JOIN fruta AS f ON f.idfruta=e.idfruta";
         $comando=mysqli_query($enlace,$r);
+        
         while($row=mysqli_fetch_array($comando)){
             echo"
             <tr>
@@ -40,6 +41,7 @@
     {
         $r="SELECT * FROM fruta";
         $comando=mysqli_query($enlace,$r);
+        echo "<option selected>Seleccione...</option>";
         while($row=mysqli_fetch_array($comando)){
             echo"
             <option value='".$row[0]."'>".$row[1]."</option>
@@ -51,7 +53,7 @@
         $idfruta=$_POST['idfruta'];
         $r="SELECT idespecificacion FROM especificaciones WHERE idfruta=".$idfruta;
         $comando=mysqli_query($enlace,$r);
-        echo"<option value=''>Seleccione...</option>";
+        echo"<option selected>Seleccione...</option>";
         while($row=mysqli_fetch_array($comando)){
             echo"
             <option value='".$row[0]."'>".$row[0]."</option>

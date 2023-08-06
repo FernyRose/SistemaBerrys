@@ -1,0 +1,10 @@
+<?php
+    session_start();
+    if(isset($_SESSION["carrito"])){
+        unset($_SESSION["carrito"]);
+        unset($_SESSION["carrito2"]);
+        unset($_SESSION["n"]);
+        unset($_SESSION["n2"]);
+    }
+    header("location:".$_SERVER["HTTP_REFERER"]."");
+?>

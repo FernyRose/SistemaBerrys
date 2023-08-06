@@ -31,7 +31,7 @@
   else{
     include "../Layouts/nav2.php";
   }
-  $r="SELECT p.nombrepresentacion, f.nombre, e.calibre, e.calidad, p.precio FROM presentaciones AS p INNER JOIN
+  $r="SELECT p.nombrepresentacion, f.nombre, e.calibre, e.calidad, p.precio, p.img FROM presentaciones AS p INNER JOIN
   especificaciones AS e ON p.idespecificacion=e.idespecificacion INNER JOIN fruta AS f
   ON p.idfruta=f.idfruta";
    
@@ -47,10 +47,11 @@
                 $calibre=$row[2];
                 $calidad=$row[3];
                 $precio=$row[4];
+                $img=$row[5];
                 $existencias; 
                 echo"<div class='col'>
                 <label for='img1' class='form-label'>".$nombrePre." ".$nombreFruta." ".$calibre." ".$calidad."</label>
-                <img src='../Imagenes/LogoP.png' alt='' width='200' height='200' id='img1'>
+                <img src='../Presentaciones/imagenes/".$img."' alt='' width='200' height='200' id='img1'>
                 <span>$".$precio."</span>
                 <button class='btn btn-success'>Agregar al carrito</button>
             </div>";
@@ -64,10 +65,6 @@
 </button>
 
   <div class="row-4 ps-3">
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Launch demo modal
-    </button>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

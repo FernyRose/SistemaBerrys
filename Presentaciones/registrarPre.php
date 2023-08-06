@@ -33,16 +33,16 @@
             <h2 class="display-6">Registro de Presentacion</h2>
       </div>
 
-      <form class="row g-4 container-fluid pt-5" id="frm" method="POST">
+      <form class="row g-4 container-fluid pt-5" id="frm" method="POST" action="pre.php" enctype="multipart/form-data">
               <div class="col-6">
-                <label for="comboFruta" class="form-label">Fruta</label>
-                <select name="comboFruta" id="comboFruta">
+                <label for="comboFruta" class="input-group-text">Fruta</label>
+                <select name="comboFruta" id="comboFruta" class="form-select">
                   
                 </select>
               </div>
               <div class="col-6">
-              <label for="comboEspe" class="form-label ps-3">Especificacion</label>
-                <select name="comboEspe" id="comboEspe">
+              <label for="comboEspe" class="input-group-text ps-3">Especificacion</label>
+                <select name="comboEspe" id="comboEspe" class="form-select">
                     
                 </select>
               </div>
@@ -77,11 +77,11 @@
               <div class="row p-3">
                 <div class="col-md-12">
                   <label for="inEx" class="form-label">Imagen</label>
-                  <input type="file" name="inimagen" id="inimagen" class="form-control">
+                  <input type="file" name="img" id="img" class="form-control">
                 </div>
               </div>
               <div class="row pt-3 pb-4">  
-                <button type="button" id="btnRegistrar" class="btn btn-primary" onclick="" name="Registrar">Registrar</button>
+                <button type="submit" id="btnRegistrar" class="btn btn-primary" onclick="" name="Registrar">Registrar</button>
               </div>
       </form>
     </div>      

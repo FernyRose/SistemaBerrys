@@ -16,10 +16,10 @@
                 <a class="nav-link active" aria-current="page" href="#">Sobre Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Tienda</a>
+                <a class="nav-link active" aria-current="page" href="../Pedidos/pedidos3.php">Tienda</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Ubicanos</a>
+                <a class="nav-link active" aria-current="page" href="../Ubicacion/ubicacion.php">Ubicanos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Ayuda</a>
@@ -69,8 +69,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fa-solid fa-xmark"></i>
+            <a class="nav-link" href="../Pedidos/verCarrito.php">Carrito
+            <i class="fa-solid fa-cart-shopping"></i> 2
             </a>
           </li>
         </ul>
