@@ -14,7 +14,9 @@
       <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="../Imagenes/tecnm.png">
       <style>
-        
+        body{
+          font-family: 'Roboto', sans-serif !important;
+        }
         .botonInicio{
           width: 15vw;
           position: left;

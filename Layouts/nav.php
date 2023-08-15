@@ -1,4 +1,29 @@
+<?php error_reporting(0);?>
+<style>
+  .nav-link{
+    position: relative;
+  }
+  .nav-link:hover{
+    /*text-decoration: underline;*/
+  }
+  .nav-link::after{
+    content: '';
+    opacity: 0;
+    transition: all 0.2s;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .nav-link:hover::after{
+    opacity: 5;
+  }
+  </style>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+
         <div class="container-fluid">
           <a class="navbar-brand" href="inicio.php">
           <img src="../Imagenes/Nlogo.png" width="170" height="40" class="">
@@ -9,7 +34,7 @@
           <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.php">Inicio</a>
+                <a class="nav-link" aria-current="page" href="../index.php">Inicio</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

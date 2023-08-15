@@ -11,6 +11,16 @@
     <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../Imagenes/tecnm.png">
     <title>Sesion</title>
+
+    <style>
+        .subtitulo{
+        border-bottom: 0.1em solid #464649;
+        
+      }
+      h1{
+        font-family: 'Roboto', sans-serif !important;
+      }
+    </style>
 </head>
 <body>
 <?php
@@ -37,16 +47,25 @@
         });
 }
     </script>
-    <div class="container-fluid">
-        <div class="row">
-        <div class="col-12">
-            <h1>Nuestra Ubicacion</h1>
-        </div>
-            <div class="col" id="map" style="width:100%; height:500px;">
-            
+    <div class="row-md-12 p-5">
+        <div class=" d-flex flex-row align-items-center justify-content-center">
+            <div class="container-fluid">
+                <div class="row col-12">
+                    <div class="col-4 pb-5">
+                        <h1 class="subtitulo">Nuestra Ubicacion</h1>
+                    </div>
+                    <div class="col-12 shadow-lg" id="map" style="width:100%; height:450px;">
+                        
+                    </div>
+                </div>
             </div>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMyOsp5r4pG7Uh7gGRp6QonZU2P91cOeg&callback=iniciarMap"></script>
         </div>
     </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMyOsp5r4pG7Uh7gGRp6QonZU2P91cOeg&callback=iniciarMap"></script>
-</body>
+    </body>
+<div class="pt-3">
+    <?php
+        include "../Layouts/footer.php";
+    ?> 
+</div>
 </html>
