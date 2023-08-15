@@ -25,22 +25,31 @@
       
   <div class="container-fluid">
     <br>
-    <div class="container">
-        <h3>Datos del Usuario</h3>
-    </div>
-    <br>
-    <div class="row">
-        <?php
-            if($_SESSION["usuario"]=="admin"){
-                include "admin.php";
-            }
-            else{
-                include "cliente.php";
-            }
-        ?>
-    </div>
+    <div class="row-10 d-flex flex-row align-items-center justify-content-center">
+      <div class="col-10 pb-3">
+        <div class="container">
+            <h2>Datos del Usuario</h2>
+        </div>
+        <br>
+        <div class="row">
+            <?php
+                if($_SESSION["usuario"]=="admin"){
+                    include "admin.php";
+                }
+                else{
+                    include "cliente.php";
+                }
+            ?>
+        </div>
+      </div>  
+    </div>  
   </div>       
 </body>
+<div class="pt-3">
+    <?php
+        include "../Layouts/footer.php";
+    ?> 
+</div>
 <script type="text/javascript" src="../Jquery/jquery-3.6.4.min.js"></script>
 <script type="text/javascript" src="metodosFruta.js"></script>
 <script src="../DataTables/datatables.min.js"></script>

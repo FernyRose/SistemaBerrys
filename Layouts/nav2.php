@@ -2,6 +2,7 @@
   session_start();
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
         <div class="container-fluid">
           <a class="navbar-brand" href="inicio.php">
           <img src="../Imagenes/Nlogo.png" width="170" height="40" class="">

@@ -150,6 +150,11 @@
       </div>
   
 </body>
+<div class="pt-3">
+    <?php
+        include "../Layouts/footer.php";
+    ?> 
+</div>
 <script type="text/javascript" src="../Jquery/jquery-3.6.4.min.js"></script>
 <script type="text/javascript" src="metodosPedidos.js"></script>
 <script src="../DataTables/datatables.min.js"></script>
