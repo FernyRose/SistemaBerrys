@@ -1,0 +1,14 @@
+$(document).ready(function(){
+    $('#rbDir2').click(function(){
+        document.getElementById("comboEstado").disabled=false;
+        document.getElementById("comboCiudad").disabled=false;
+        document.getElementById("txtCp").disabled=false;
+        document.getElementById("txtDir").disabled=false;
+    });
+    $('#rbDir').click(function(){
+        document.getElementById("comboEstado").disabled=true;
+        document.getElementById("comboCiudad").disabled=true;
+        document.getElementById("txtCp").disabled=true;
+        document.getElementById("txtDir").disabled=true;
+    });
+});

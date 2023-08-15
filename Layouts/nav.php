@@ -42,32 +42,7 @@
           </div>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-        <?php
-            if($_SESSION["usuario"]!=NULL){
-              echo "<li class='nav-item'>
-              <a class='nav-link' href='../cerrarsesion.php'>Salir
-                <i class='fa-solid fa-right-to-bracket'></i>
-              </a>
-            </li>";
-            }
-            else{
-              echo "<li class='nav-item'>
-              <a class='nav-link' href='../InicioSesion/iniciosesion.php'>Iniciar
-                <i class='fa-solid fa-right-to-bracket'></i>
-              </a>
-            </li>";
-            }
-          ?>
-          <?php
-            if($_SESSION["usuario"]){
-              echo "<li class='nav-item'>
-              <a class='nav-link' href='../Usuario/datosUsuario.php'>Perfil
-                <i class='fa-solid fa-user'></i>
-              </a>
-            </li>";
-            }
-          ?>
-          <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link" href="">
               <i class="fab fa-facebook-f"></i>
             </a>
@@ -82,6 +57,33 @@
               <i class="fab fa-instagram"></i>
             </a>
           </li>
+        <?php
+            if(isset($_SESSION["usuario"])){
+              if($_SESSION["usuario"]!=NULL){
+                echo "<li class='nav-item'>
+                <a class='nav-link' href='../cerrarsesion.php'>Salir
+                  <i class='fa-solid fa-right-to-bracket'></i>
+                </a>
+              </li>";
+              }
+            }
+            else{
+              echo "<li class='nav-item'>
+              <a class='nav-link' href='../InicioSesion/iniciosesion.php'>Iniciar
+                <i class='fa-solid fa-right-to-bracket'></i>
+              </a>
+            </li>";
+            }
+          ?>
+          <?php
+            if(isset($_SESSION["usuario"])){
+              echo "<li class='nav-item'>
+              <a class='nav-link' href='../Usuario/datosUsuario.php'>Perfil
+                <i class='fa-solid fa-user'></i>
+              </a>
+            </li>";
+            }
+          ?>
           <li class="nav-item">
             <a class="nav-link" href="../cerrarSesion.php">
               <i class="fa-solid fa-xmark"></i>

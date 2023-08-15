@@ -1,6 +1,4 @@
-<?php 
-  session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +13,10 @@
 </head>
 <body class="body bg-light">
 <?php 
-      if($_SESSION["usuario"]=="admin"){
-        include "../Layouts/nav.php";
+      if(isset($_SESSION["usuario"])){
+        if($_SESSION["usuario"]=="admin"){
+          include "../Layouts/nav.php";
+        } 
       }
       else{
         include "../Layouts/nav2.php";

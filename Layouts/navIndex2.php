@@ -30,6 +30,21 @@
           </div>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
           <?php
             if($_SESSION["usuario"]!=NULL){
               echo "<li class='nav-item'>
@@ -55,26 +70,6 @@
             </li>";
             }
           ?>
-          <li class="nav-item">
-            <a class="nav-link" href="">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cerrarSesion.php">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </li>
         </ul>
       </div>
         </div>

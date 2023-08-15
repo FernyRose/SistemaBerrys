@@ -1,6 +1,5 @@
 <?php
     include "../Conexion/conexion.php";
-    session_start();
     ?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
@@ -20,11 +19,11 @@
   <body>
 
     <?php
-  if(isset($_SESSION["usuario"])){
-    if($_SESSION["usuario"]=="admin"){
-    include "../Layouts/nav.php";
+    if(isset($_SESSION["usuario"])){
+      if($_SESSION["usuario"]=="admin"){
+        include "../Layouts/nav.php";
+        }
     }
-  }
   else{
     include "../Layouts/nav2.php";
   }
@@ -80,9 +79,18 @@
     </div>
     
     <div class="row">
-        <div class="col">
-            <a type="button" href="vaciarCarrito.php">Vaciar carrito</a>
+        <div class="col-2">
+            <a type="button" href="vaciarCarrito.php"><input type="button" class="btn btn-danger" value="Vaciar carrito"></a>
         </div>
+        <?php 
+      if(isset($_SESSION["n2"])){
+        if($_SESSION["n2"]>0){
+          echo"
+          <div class='col-2'>
+            <a type='button' href='finalPedido.php'><input type='button' class='btn btn-primary' value='Continuar Pedido'></a>
+        </div>";
+        }
+      }?>
     </div>
   </div>
 </main>

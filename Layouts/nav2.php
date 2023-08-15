@@ -1,4 +1,6 @@
-<?php error_reporting(0);?>
+<?php
+  session_start();
+?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="inicio.php">
@@ -28,32 +30,7 @@
           </div>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-        <?php
-            if($_SESSION["usuario"]!=NULL){
-              echo "<li class='nav-item'>
-              <a class='nav-link' href='../cerrarsesion.php'>Salir
-                <i class='fa-solid fa-right-to-bracket'></i>
-              </a>
-            </li>";
-            }
-            else{
-              echo "<li class='nav-item'>
-              <a class='nav-link' href='../InicioSesion/iniciosesion.php'>Iniciar
-                <i class='fa-solid fa-right-to-bracket'></i>
-              </a>
-            </li>";
-            }
-          ?>
-        <?php
-            if($_SESSION["usuario"]!=NULL){
-              echo "<li class='nav-item'>
-              <a class='nav-link' href='../Usuario/datosUsuario.php'>Perfil
-                <i class='fa-solid fa-user'></i>
-              </a>
-            </li>";
-            }
-          ?>
-          <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link" href="">
               <i class="fab fa-facebook-f"></i>
             </a>
@@ -68,11 +45,50 @@
               <i class="fab fa-instagram"></i>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../Pedidos/verCarrito.php">Carrito
-            <i class="fa-solid fa-cart-shopping"></i> 2
+        <?php
+          if(isset($_SESSION["usuario"])){
+            if($_SESSION["usuario"]!=NULL){
+              echo "<li class='nav-item'>
+              <a class='nav-link' href='../cerrarsesion.php'>Salir
+                <i class='fa-solid fa-right-to-bracket'></i>
+              </a>
+            </li>";
+            }
+          }
+            
+            else{
+              echo "<li class='nav-item'>
+              <a class='nav-link' href='../InicioSesion/iniciosesion.php'>Iniciar
+                <i class='fa-solid fa-right-to-bracket'></i>
+              </a>
+            </li>";
+            }
+          ?>
+        <?php
+          if(isset($_SESSION["usuario"])){
+            if($_SESSION["usuario"]!=NULL){
+              echo "<li class='nav-item'>
+              <a class='nav-link' href='../Usuario/datosUsuario.php'>Perfil
+                <i class='fa-solid fa-user'></i>
+              </a>
+            </li>";
+            }
+          }
+          if(isset($_SESSION["n"])){
+            $var=$_SESSION["n"];
+          }
+          else {$var=0;}
+          if(isset($_SESSION["usuario"])){
+            if($_SESSION["usuario"]!=NULL){
+              echo"
+              <li class='nav-item'>
+            <a class='nav-link'href='../Pedidos/verCarrito.php'>Carrito
+            <i class='fa-solid fa-cart-shopping'></i> ".$var."
             </a>
-          </li>
+            </li>";
+            }
+          }
+            ?>
         </ul>
       </div>
         </div>

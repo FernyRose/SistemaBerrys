@@ -82,6 +82,9 @@
                     <option value="10">10</option>
                   </select>
                   </div>
+                  <div class="col mb-3">
+                  <h3 class='fw-light' id='txPrecio'>$<?php echo $precio;?></h3>
+                  </div>
                   <input type="hidden" name="txtIdpre" id="txtIdpre" value="<?php echo $idpre;?>">
                   <input type="hidden" name="txtNomPre" id="txtNomPre" value="<?php echo $nombrePre;?>">
                   <input type="hidden" name="txtFruta" id="txtFruta" value="<?php echo $nombreFruta;?>">
@@ -92,7 +95,7 @@
                     <div class='btn-group'>
                       <button type='submit' class='btn btn-primary' id='btnAgregar'>Agregar al carrito</button>
                     </div>
-                    <small class='text-body-secondary' id='txPrecio'>Precio: $<?php echo $precio;?></small>
+                    <small class='text-body-secondary' id='txPrecio'>Envio Gratis</small>
                   </div>
                 </div>
               </div>

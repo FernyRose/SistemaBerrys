@@ -41,4 +41,24 @@
         <div class="col-12">
             <br>
             <input type="button" class="btn btn-primary lg p-2" value="Guardar cambios">
+            <br>
+        </div>
+        <div class="container my-3">
+            <div class="row">
+                <div class="col">
+                    <table id="tablaEsp" class="table table-bordered table-striped compact mb-0">
+                        <thead>
+                            <center>
+                            <h3 class="">Mis Pedidos</h3>
+                            </center>
+                            </thead>
+                        <tr>
+                            <th>idPedido</th>
+                            <th>Fecha del pedido</th>
+                            <th>importe</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </table> 
+                </div>
+            </div>
         </div>
