@@ -24,7 +24,7 @@
         include "../Layouts/nav.php";
         }
     }
-  }
+  
     include "../Layouts/nav2.php";
   
 
