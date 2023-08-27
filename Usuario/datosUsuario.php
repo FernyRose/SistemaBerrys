@@ -1,6 +1,9 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<div class="bg-image" 
+    style="background-image: url('Imagenes/fondo5.jpg');
+            height: 70vh">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +11,14 @@
     <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
     <link href="../DataTables/datatables.min.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./main.scss">
     <title>Usuario</title>
+    <style>
+      body{
+          font-family: 'Inter', sans-serif !important;
+        }
+    </style>
 </head>
 <body class="body bg-light">
 <?php 
@@ -22,28 +31,29 @@
         include "../Layouts/nav2.php";
       }
 ?>
-      
-  <div class="container-fluid">
-    <br>
-    <div class="row-10 d-flex flex-row align-items-center justify-content-center">
-      <div class="col-10 pb-3">
-        <div class="container">
-            <h2>Datos del Usuario</h2>
-        </div>
-        <br>
-        <div class="row">
-            <?php
-                if($_SESSION["usuario"]=="admin"){
-                    include "admin.php";
-                }
-                else{
-                    include "cliente.php";
-                }
-            ?>
-        </div>
+  
+    <div class="container-fluid">
+      <br>
+      <div class="row-10 d-flex flex-row align-items-center justify-content-center">
+        <div class="col-10 pb-3">
+          <div class="container">
+              <h2>Datos del Usuario</h2>
+          </div>
+          <br>
+          <div class="row">
+              <?php
+                  if($_SESSION["usuario"]=="admin"){
+                      include "admin.php";
+                  }
+                  else{
+                      include "cliente.php";
+                  }
+              ?>
+          </div>
+        </div>  
       </div>  
-    </div>  
-  </div>       
+    </div>       
+         
 </body>
 <div class="pt-3">
     <?php
@@ -54,4 +64,5 @@
 <script type="text/javascript" src="metodosFruta.js"></script>
 <script src="../DataTables/datatables.min.js"></script>
 <script type="text/javascript" src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+</div>
 </html>

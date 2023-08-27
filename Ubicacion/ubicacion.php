@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./main.scss">
     <script src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Imagenes/tecnm.png">
     <title>Sesion</title>
 
@@ -18,7 +21,7 @@
         
       }
       h1{
-        font-family: 'Roboto', sans-serif !important;
+        font-family: 'Inter', sans-serif !important;
       }
     </style>
 </head>
