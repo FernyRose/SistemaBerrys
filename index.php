@@ -12,10 +12,13 @@
       <link rel="stylesheet" href="Datatables-1.11.3/css/dataTables.bootstrap5.min.css">
       <link rel="stylesheet" href="main.scss">
       <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="../Imagenes/tecnm.png">
       <style>
         body{
-          font-family: 'Roboto', sans-serif !important;
+          font-family: 'Inter', sans-serif !important;
         }
         .botonInicio{
           width: 15vw;
@@ -56,164 +59,188 @@
         
       <title>Inicio</title>
   </head>
-  <body>
-  <?php
-  error_reporting(0);
-    if($_SESSION["usuario"]=="admin"){
-      include "Layouts/navIndex.php";
-    }
-    else{
-      include "Layouts/navIndex2.php";
-    } 
-  ?>  
-  <div class="contaner p-5">
-      <h2>
-        
-        
+  <body  class="bg-light">
+      <?php
+      error_reporting(0);
+        if($_SESSION["usuario"]=="admin"){
+          include "Layouts/navIndex.php";
+        }
+        else{
+          include "Layouts/navIndex2.php";
+        } 
+      ?>  
+      
+            <div class="row p-1 bg-light d-flex flex-row align-items-center justify-content-center">
+                  
+                  <div
+                  class="bg-image p-1 text-center rounded mb-1"
+                  style="background-image: url('Imagenes/f14.png');height:27vh;width:200px;"
+                >
 
-        <div class="card2 mb-3 m-auto" style="max-width: auto; background-color: rgba(0, 0, 0, 0);">
-            <div class="row g-0">
-              <div class="col-md-5">
-                <div class="card-body">
-                  <br>
-                  <br>
-                  <br>
-                  <h5> </h5>
-                  <h1 class="card-title text-decoration-underline">Frutas de temporada</h1>
-                  <br>
-                  <p class="card-text fs-3">Compra la fruta de temporada mas fresca de toda la region.</p>
-                  <p class="card-text fs-3">Realiza tu pedido y lo entrgamos en cualquier parte de la ciudad.</p>
-                  <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-                </div>
+            </div> 
+            <div class="row">  
+                <div class="col  p-1 bg-light d-flex flex-row align-items-center justify-content-center">
+                    
+                <div
+                class="bg-image text-center shadow-lg rounded mb-5 "
+                style="background-image: url('Imagenes/homeP6.jpg');height:70vh;width:1450px;"
+              >
+              <h1 class="card-title text-decoration-underline p-3 text-dark">Frutas de temporada</h1>
+                <br>
+                <p class="h4 text-secondary">
+                  Compra la fruta de temporada mas fresca de toda la region.
+                </p>
+                <p class="h4 text-secondary">
+                  Realiza tu pedido y lo entrgamos en cualquier parte de la ciudad.
+                </p>
               </div>
-              <div class="col-md-7" style="background-color: rgba(0, 0, 0, 0);">
-                <img src="Imagenes/ff2.png" class="img-fluid rounded-start" alt="...">
+            </div>  
+            <!--<div class="card2 mb-3 " style="background-image: url('../Imagenes/indexP1.jpg');">
+                <div class="row g-0">
+                  <div class="col-md-5">
+                    <div class="card-body">
+                      <br>
+                      <br>
+                      <br>
+                      <h5> </h5>
+                      <h1 class="card-title text-decoration-underline">Frutas de temporada</h1>
+                      <br>
+                      <p class="card-text fs-3">Compra la fruta de temporada mas fresca de toda la region.</p>
+                      <p class="card-text fs-3">Realiza tu pedido y lo entrgamos en cualquier parte de la ciudad.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>-->
+                  <!--<div class="col-md-7" style="background-color: rgba(0, 0, 0, 0);">
+                    <img src="Imagenes/ff2.png" class="img-fluid rounded-start" alt="...">
+                  </div>-->
+
+                <!--</div>
               </div>
-            </div>
-          </div>
-        </div>
-      </h2>
-    
-    <div class="p-5 row-md-8 shadow-lg">
-        <div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="cards-wrapper">
-                <div class="card">
-                  <div class="image-wrapper">
-                    <img src="Imagenes/zarzamoraP.png" alt="...">
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">1</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Comprar</a>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="image-wrapper">
-                    <img src="Imagenes/frambuezaIndi.png" alt="...">
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">2</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Comprar</a>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="image-wrapper">
-                    <img src="Imagenes/arandanoIndi.png" alt="...">
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">3</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Comprar</a>
-                  </div>
-                </div>
-              </div>
-              </div>
-                <div class="carousel-item">
+            </div>-->
+          
+        
+        <div class="p-5 row-md-8 shadow-md bg-light">
+        <h2 class="card-title text-decoration-underline p-3 text-dark">La major selecion de frutas de la region!</h2>
+            <div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
                   <div class="cards-wrapper">
                     <div class="card">
-                        <div class="image-wrapper">
-                          <img src="Imagenes/zarzamoraP.png" alt="...">
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">4</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Comprar</a>
-                        </div>
+                      <div class="image-wrapper">
+                        <img src="Imagenes/zarzamoraP.png" alt="...">
                       </div>
-                      <div class="card">
-                        <div class="image-wrapper">
-                          <img src="Imagenes/zarzamoraP.png" alt="...">
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">5</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Comprar</a>
-                        </div>
+                      <div class="card-body">
+                        <h5 class="card-title">1</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
                       </div>
-                      <div class="card">
-                        <div class="image-wrapper">
-                          <img src="Imagenes/zarzamoraP.png" alt="...">
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">6</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                    <div class="card">
+                      <div class="image-wrapper">
+                        <img src="Imagenes/frambuezaIndi.png" alt="...">
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">2</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="image-wrapper">
+                        <img src="Imagenes/arandanoIndi.png" alt="...">
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">3</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                      </div>
                     </div>
                   </div>
                   </div>
+                    <div class="carousel-item">
+                      <div class="cards-wrapper">
+                        <div class="card">
+                            <div class="image-wrapper">
+                              <img src="Imagenes/zarzamoraP.png" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">4</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="image-wrapper">
+                              <img src="Imagenes/zarzamoraP.png" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">5</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="image-wrapper">
+                              <img src="Imagenes/zarzamoraP.png" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">6</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Comprar</a>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                  <div class="carousel-item">
+                    <div class="cards-wrapper">
+                      <div class="card">
+                          <div class="image-wrapper">
+                            <img src="Imagenes/berrieCaja.png" alt="...">
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">7</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="image-wrapper">
+                            <img src="Imagenes/ble3.png" alt="...">
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">8</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="image-wrapper">
+                            <img src="Imagenes/zarzamoraIndividual.png" alt="...">
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">9</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                        </div>
+                      </div>  
+                    </div> 
+                  <!-- acaba aqui--> 
                 </div>
-              <div class="carousel-item">
-                <div class="cards-wrapper">
-                  <div class="card">
-                      <div class="image-wrapper">
-                        <img src="Imagenes/berrieCaja.png" alt="...">
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title">7</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="image-wrapper">
-                        <img src="Imagenes/ble3.png" alt="...">
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title">8</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="image-wrapper">
-                        <img src="Imagenes/zarzamoraIndividual.png" alt="...">
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title">9</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
-                    </div>
-                  </div>  
-                </div> 
-              <!-- acaba aqui--> 
+              </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
             </div>
-          </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            </div>
         </div>
-        </div>
-    </div>
-      
-  </div>
+          
+      </div>
+    </div>    
   </body>
   <footer class="bg-dark text-white py-4">
   <div class="container">

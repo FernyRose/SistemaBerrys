@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Datatables-1.11.3/css/dataTables.bootstrap5.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./main.scss">
     <script src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
@@ -29,7 +30,7 @@
         justify-content: center;
         padding: 20px;
         border-radius: 12px;
-        background: #ffffff;
+        background: #f8f8ff;
       }
       .login h1{
         font-size: 32px;
@@ -52,6 +53,9 @@
         font-size: 45px;
         font-weight: 600;
       }
+      body{
+          font-family: 'Inter', sans-serif !important;
+        }
 
     </style>
 </head>

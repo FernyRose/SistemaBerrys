@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./main.scss">
     <script src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Imagenes/tecnm.png">
     <title>Sesion</title>
     <style>
@@ -30,7 +31,7 @@
         
         padding: 20px;
         border-radius: 12px;
-        background: #ffffff;
+        background: #f8f8ff;
       }
       .login h1{
         font-size: 32px;
@@ -48,6 +49,9 @@
       .subtitulo{
         border-bottom: 0.1em solid #464649;
       }
+      body{
+          font-family: 'Inter', sans-serif !important;
+        }
     </style>
 </head>
 <body>
@@ -62,6 +66,10 @@
           }
           
   ?>
+  <div class="bg-image" 
+    style="background-image: url('Imagenes/fondo5.jpg');
+            height: 70vh">
+
     <div class="container-fluid2 mt-5">
         <div class="login shadow-lg">
         <h1 class="text-center text-primary p-1 subtitulo">Iniciar Sesion</h1>
@@ -87,7 +95,8 @@
       function cuenta(){
         window.location.href="../Registro/registro.php";
       }
-    </script>     
+    </script>    
+  </div>
 </body>
 <div class="pt-5">
   <?php

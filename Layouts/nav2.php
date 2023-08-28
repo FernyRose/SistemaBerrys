@@ -5,7 +5,9 @@
   .nav-link{
     position: relative;
   }
-  
+  .nav-link:hover{
+    /*text-decoration: underline;*/
+  }
   .nav-link::after{
     content: '';
     opacity: 0;
