@@ -31,7 +31,7 @@
         
         padding: 20px;
         border-radius: 12px;
-        background: #ffffff;
+        background: #f8f8ff;
       }
       .login h1{
         font-size: 32px;

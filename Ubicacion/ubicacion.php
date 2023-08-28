@@ -50,7 +50,7 @@
         });
 }
     </script>
-    <div class="row-md-12 p-5">
+    <div class="row-md-12 p-5 bg-light">
         <div class=" d-flex flex-row align-items-center justify-content-center">
             <div class="container-fluid">
                 <div class="row col-12">

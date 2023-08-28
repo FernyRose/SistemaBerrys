@@ -1,9 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<div class="bg-image" 
-    style="background-image: url('Imagenes/fondo5.jpg');
-            height: 70vh">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +18,6 @@
         }
     </style>
 </head>
-<body class="body bg-light">
 <?php 
       if(isset($_SESSION["usuario"])){
         if($_SESSION["usuario"]=="admin"){
@@ -64,5 +61,5 @@
 <script type="text/javascript" src="metodosFruta.js"></script>
 <script src="../DataTables/datatables.min.js"></script>
 <script type="text/javascript" src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
-</div>
+
 </html>

@@ -12,12 +12,16 @@
     <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Datatables-1.11.3/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="./main.scss">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
     <title>Pedidos</title>
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">    
   </head>
   <style>
+    body{
+          font-family: 'Inter', sans-serif !important;
+        }
     /*<h1 class="fw-light">Nuestra Tienda</h1>
         <p class="lead text-body-secondary">Le ofrecemos diversos tipos de fruta en diferentes modos de presentacion, calidad, y calibre. Siempre cuidando la calidad que nos distingue.</p>*/
   </style>
@@ -129,13 +133,7 @@
 </main>
 
 <footer class="text-body-secondary py-5">
-  <div class="container">
-    <p class="float-end mb-1">
-      <a href="#">Back to top</a>
-    </p>
-    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
-  </div>
+  
 </footer>
 </div>   
 </div>

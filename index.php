@@ -59,7 +59,7 @@
         
       <title>Inicio</title>
   </head>
-  <body>
+  <body  class="bg-light">
       <?php
       error_reporting(0);
         if($_SESSION["usuario"]=="admin"){
@@ -70,21 +70,31 @@
         } 
       ?>  
       
-
-              <div class="contaner p-5">
+            <div class="row p-1 bg-light d-flex flex-row align-items-center justify-content-center">
                   
-              <div
-              class="bg-image p-5 text-center shadow-lg rounded mb-5 text-white"
-              style="background-image: url('Imagenes/homeP6.jpg');height:70vh;width:1400px;"
-            >
-            <h1 class="card-title text-decoration-underline">Frutas de temporada</h1>
-              <br>
-              <br>
-              <p>
-                Compra la fruta de temporada mas fresca de toda la region.
-                Realiza tu pedido y lo entrgamos en cualquier parte de la ciudad.
-              </p>
-            </div>
+                  <div
+                  class="bg-image p-1 text-center rounded mb-1"
+                  style="background-image: url('Imagenes/f14.png');height:27vh;width:200px;"
+                >
+
+            </div> 
+            <div class="row">  
+                <div class="col  p-1 bg-light d-flex flex-row align-items-center justify-content-center">
+                    
+                <div
+                class="bg-image text-center shadow-lg rounded mb-5 "
+                style="background-image: url('Imagenes/homeP6.jpg');height:70vh;width:1450px;"
+              >
+              <h1 class="card-title text-decoration-underline p-3 text-dark">Frutas de temporada</h1>
+                <br>
+                <p class="h4 text-secondary">
+                  Compra la fruta de temporada mas fresca de toda la region.
+                </p>
+                <p class="h4 text-secondary">
+                  Realiza tu pedido y lo entrgamos en cualquier parte de la ciudad.
+                </p>
+              </div>
+            </div>  
             <!--<div class="card2 mb-3 " style="background-image: url('../Imagenes/indexP1.jpg');">
                 <div class="row g-0">
                   <div class="col-md-5">
@@ -109,7 +119,8 @@
             </div>-->
           
         
-        <div class="p-5 row-md-8 shadow-lg">
+        <div class="p-5 row-md-8 shadow-md bg-light">
+        <h2 class="card-title text-decoration-underline p-3 text-dark">La major selecion de frutas de la region!</h2>
             <div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
