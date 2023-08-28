@@ -24,7 +24,7 @@
         include "../Layouts/nav.php";
         }
     }
-  }
+  
     include "../Layouts/nav2.php";
   
 
@@ -35,7 +35,7 @@
         <div class="container-fluid mb-3 py-3 px-3">
           <div class="row mb-3">
               <div class="col mb-3">
-                  <table id="tablaPedidos" class="table table-bordered border-dark table-striped compact mb-0  table-hover caption-top" style="width: 100%">
+                  <table id="tablaPedidos" class="table table-bordered border-dark compact mb-0  table-hover caption-top" style="width: 100%">
                       <thead>
                           <h3 class="display-8 pb-3">Mi Carrito</h3>
                       </thead>
@@ -80,14 +80,32 @@
           </div>
           
           <div class="row">
-              <div class="col">
-                  <a type="button" href="vaciarCarrito.php">Vaciar carrito</a>
+              <div class="col-sm-2">
+                  <a type="button" href="vaciarCarrito.php" class="btn btn-danger" onclick="return delCar()">Vaciar carrito</a>
               </div>
+              <?php
+                if(isset($_SESSION["n"])){
+                  if($_SESSION["n"]>0){
+                    echo"<div class='col-sm-2'>
+                    <a type='button' href='finalPedido.php' class='btn btn-primary'>Continuar Pedido</a>
+                    </div>";
+                  }
+                }
+              ?>
           </div>
         </div>
+        <script>
+          function delCar(){
+                let res=confirm("Esta seguro de eliminar todos los productos del carrito?");
+                if(res==true){
+                  return true;
+                }
+                else{
+                  return false;
+                }
+          }
+        </script>
       </main>
-    
-
       <footer class="text-body-secondary py-3">
         <div class="container">
           <p class="float-end mb-1">

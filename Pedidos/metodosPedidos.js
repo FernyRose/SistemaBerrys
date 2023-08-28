@@ -1,11 +1,6 @@
 $(document).ready(function(){
+    
     $('#btnAgregar').click(function(){
-        let txtPrecio=document.getElementById("txtPrecio");
-        let precio=txtPrecio.getAttribute("data-txtPrecio");
-        console.log(precio)
-        
-    });
-    $('#btnAgrega').click(function(){
         let txtidpre=document.getElementById("txtPre");
         let idPre=txtidpre.getAttribute("data-idpre");
         let txtPrecio=document.getElementById("txtPrecio");
@@ -14,7 +9,7 @@ $(document).ready(function(){
         let parametros={"tipo": tipoFuncion, 
                         "idPre":idPre,
                         "precio":precio,
-                    }
+                        }
         $.ajax({
             url:'funcionesPedidos.php',
             data:parametros,
@@ -24,15 +19,4 @@ $(document).ready(function(){
         }
         });
     });
-
-    $('#btnGuardar').click(function(){
-        let tipo="Guardar";
-        let parametros={"tipo": tipo}
-        $.ajax({
-            url:'funcionesPedidos.php',
-            data:parametros,
-            type:'POST'
-        });
-    });
-
 });

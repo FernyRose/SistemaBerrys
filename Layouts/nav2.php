@@ -1,7 +1,27 @@
 <?php
   session_start();
 ?>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<style>
+  .nav-link{
+    position: relative;
+  }
+  
+  .nav-link::after{
+    content: '';
+    opacity: 0;
+    transition: all 0.2s;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .nav-link:hover::after{
+    opacity: 5;
+  }
+  </style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
 
         <div class="container-fluid">
           <a class="navbar-brand" href="inicio.php">
@@ -94,3 +114,4 @@
       </div>
         </div>
       </nav>
+      <br><br><br>

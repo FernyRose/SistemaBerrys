@@ -35,28 +35,33 @@
   ON p.idfruta=f.idfruta";
    
 ?>
-<div class="row pt-3 d-flex flex-row align-items-center justify-content-center"">
+<div class="row pt-3 d-flex flex-row align-items-center justify-content-center">
     <div class="col-11 shadow-lg">
 <main>
   
       <section class="py-1 d-flex flex-row align-items-center justify-content-center">
-        <div class="row-8">
-          <div class="col-8 ">
+        <div class="row">
+          <div class="col-12 ">
             <!-- Jumbotron -->
             <div
-              class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
-              style="background-image: url('../Imagenes/campo.jpg');height:70vh;width:1400px;"
+              class="img-fluid p-5 text-center shadow-1-strong rounded mb-5 text-white"
+              alt="Responsive image"
+              style="background-image: url('../Imagenes/campo.jpg'); height:100%; width:auto;"
             >
               <h1 class="mb-3 h2">Nuestra Tienda</h1>
-
-              <p>
-              Le ofrecemos diversos tipos de fruta en diferentes modos de presentacion, calidad, y calibre. Siempre cuidando la calidad que nos distingue.
-              </p>
+              <p>Le ofrecemos diversos tipos de fruta en diferentes modos de presentacion, calidad, y calibre. Siempre cuidando la calidad que nos distingue.</p>
             </div>
             <!-- Jumbotron -->
           </div>
         </div>
+        
       </section>
+      <?php 
+          if(!isset($_SESSION["usuario"]))
+          { 
+            echo"<p>Nota: Inicia sesion o registrate para comprar </p>";
+          }
+        ?>
 
       <div class="album py-3 bg-body-tertiary">
         <div class="container">
@@ -74,7 +79,7 @@
                     $idpre=$row[6];
                     $existencias;
                     ?>
-              <form action="agregarCarrito.php" method="POST">
+              <form action="agregarCarrito.php" method="POST" id="myForm">
                 <div class='col'>
                   <div class='card shadow-sm'>
                   <img src='../Presentaciones/imagenes/<?php echo $img;?>'  width='100%' height='225' id='img1'>
@@ -101,11 +106,33 @@
                       <input type="hidden" name="txtCalibre" id="txtCalibre" value="<?php echo $calibre;?>">
                       <input type="hidden" name="txtCalidad" id="txtCalidad" value="<?php echo $calidad;?>">
                       <input type="hidden" name="txtPrecio" id="txtPrecio" value="<?php echo $precio;?>">
+                      <h4 class='text-body-secondary' id='txPrecio'>Precio: $<?php echo $precio;?></h4>
                       <div class='d-flex justify-content-between align-items-center'>
                         <div class='btn-group'>
-                          <button type='submit' class='btn btn-primary' id='btnAgregar'>Agregar al carrito</button>
+                          <?php
+                            $bandera="0";
+                            if(!isset($_SESSION["usuario"])){
+                              echo"<button type='submit' class='btn btn-primary' id='btnAgregar' data-bs-toggle='modal' disabled>Agregar al carrito</button>";
+                            }
+                            else{
+                              if(isset($_SESSION["carrito"])){
+                                for($i=0; $i<$_SESSION['n']; $i++){
+                                  if($_SESSION["carrito"][$i][0]==$idpre){
+                                    $bandera="1";
+                                  }
+                                }
+                                if($bandera=="1"){
+                                  echo"<button type='submit' class='btn btn-success' id='btnAgregar' disabled>Agregado al carrito</button>";
+                                }else{
+                                  echo"<button type='submit' class='btn btn-primary' id='btnAgregar' onclick='return viewModal();'>Agregar al carrito</button>";
+                                }
+                              }else{
+                                echo"<button type='submit' class='btn btn-primary' id='btnAgregar' onclick='return viewModal();'>Agregar al carrito</button>";
+                              }
+                            }
+                          ?>
                         </div>
-                        <small class='text-body-secondary' id='txPrecio'>Precio: $<?php echo $precio;?></small>
+                        <small class='text-body-secondary' id='txPrecio'>Envio Gratis</small>
                       </div>
                     </div>
                   </div>
@@ -113,32 +140,26 @@
               </form>
             <?php   
             }
-            ?>
-            <script>
-              function getButton(boton){
-                let butt=document.getElementById(boton);
-                butt.setAttribute("id", "btnAgregar");
-                console.log(butt.getAttribute("id"));
-              }
-            </script>
+            ?>            
           </div>
         </div>
       </div>
     
 
 </main>
-
-<footer class="text-body-secondary py-5">
-  <div class="container">
-    <p class="float-end mb-1">
-      <a href="#">Back to top</a>
-    </p>
-    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
-  </div>
-</footer>
 </div>   
 </div>
+<script>
+              function viewModal(){
+                let res=confirm("Agregar producto al carrito?");
+                if(res==true){
+                  return true;
+                }
+                else{
+                  return false;
+                }
+              }
+            </script>
 </body>
 <div class="pt-3">
     <?php

@@ -16,4 +16,6 @@
     //    echo (mysqli_errno(mysqli_query($enlace,$comando)));
     //}
     mysqli_close($enlace);
+    header("location:InicioSesion/iniciosesion.php");
+
 ?>

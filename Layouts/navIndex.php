@@ -23,7 +23,7 @@
     opacity: 5;
   }
   </style>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="">
           <img src="Imagenes/Nlogo.png" width="170" height="40" class="">
@@ -116,3 +116,4 @@
       </div>
         </div>
       </nav>
+      <br><br><br>

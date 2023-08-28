@@ -3,9 +3,7 @@
   .nav-link{
     position: relative;
   }
-  .nav-link:hover{
-    /*text-decoration: underline;*/
-  }
+  
   .nav-link::after{
     content: '';
     opacity: 0;
@@ -21,7 +19,7 @@
     opacity: 5;
   }
   </style>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
 
 
         <div class="container-fluid">
@@ -118,3 +116,4 @@
       </div>
         </div>
       </nav>
+      <br><br><br>
