@@ -51,12 +51,11 @@
                   Pedidos
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item " href="../ConsultaPedidos/consultaPedidos.php">Pedidos pendientes</a></li>
-                
+                <li><a class="dropdown-item" href="../ConsultaPedidos/consultaPedidos.php">Pedidos pendientes</a></li>
+                <li><a class="dropdown-item" href="../PedidosSurtidos/pedidosSurtidos.php">Pedidos Surtidos</a></li>
+                <li><a class="dropdown-item" href="../PedidosEnviados/pedidosEnviados.php">Pedidos Enviados</a></li>
+                <li><a class="dropdown-item" href="../PedidosEntregados/pedidosEntregados.php">Pedidos Entregados</a></li>
                 </ul>
-              </li>
-              <li class="nav-item dropdown">
-                
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Ayuda</a>

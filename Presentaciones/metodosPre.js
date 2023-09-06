@@ -91,22 +91,22 @@ $(document).ready(function(){
         });
     }
 
-    $('#btnActualizar').click(function(){
-        let nombre =document.getElementById('modalnombre').value;
-        let precio =document.getElementById('modalprecio').value;
-        let exi =document.getElementById('modalexi').value;
-        let idprese = document.getElementById('modalid').value;
-        let tipoFuncion="actualizar";
-        let parametros={"tipo":tipoFuncion, "nombre":nombre, "precio":precio, "exi":exi, "idprese":idprese};
-        $.ajax({
-            url:'funcionesPre.php',
-            data:parametros,
-            type:'POST',
-            success:function(){
+    //$('#btnActualizar').click(function(){
+      //  let nombre =document.getElementById('modalnombre').value;
+        //let precio =document.getElementById('modalprecio').value;
+        //let exi =document.getElementById('modalexi').value;
+        //let idprese = document.getElementById('modalid').value;
+        //let tipoFuncion="actualizar";
+        //let parametros={"tipo":tipoFuncion, "nombre":nombre, "precio":precio, "exi":exi, "idprese":idprese};
+        //$.ajax({
+         //   url:'funcionesPre.php',
+           // data:parametros,
+           // type:'POST',
+            //success:function(){
                 //alert("Cambios guardados correctamente");
-                location.reload(true);
-            }
-        });
-    });
+             //   location.reload(true);
+            //}
+       // });
+    //});
 
 });
