@@ -55,7 +55,7 @@
             <div class="col-3">
                 <form action="surtirPedido.php" method="post">
                     <input type="hidden" id="txtId" name="txtId" value="<?php echo $id;?>">
-                    <button type="submit" id="" class="btn btn-primary">Surtir Pedido</button>
+                    <button type="submit" id="" class="btn btn-primary">Finalizar pedido</button>
                 </form>
             </div>
         </div>

@@ -115,6 +115,7 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+    <form action="updateImg.php" method="POST" enctype="multipart/form-data">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Editar Especificacion</h5>
         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
@@ -122,40 +123,51 @@
         </button>
       </div>
       <div class="modal-body">
+        
       <div class="">
                   <label for="modalid" class="form-label lg p-2">idPresentacion</label>
-                  <input type="text" class="form-control" id="modalid" name="nombre" maxlength="50" disabled>
+                  <input type="text" class="form-control" id="modalid" name="modalid" maxlength="50" disabled>
       </div>
       <div class="">
                   <label for="modalnombre" class="form-label lg p-2">Nombre</label>
-                  <input type="text" class="form-control" id="modalnombre" name="nombre" maxlength="50" required>
+                  <input type="text" class="form-control" id="modalnombre" name="modalnombre" maxlength="50" required>
       </div>
       <div class="">
                   <label for="modalprecio" class="form-label lg p-2">Precio</label>
-                  <input type="text" class="form-control" id="modalprecio" name="nombre" maxlength="50" required>
+                  <input type="text" class="form-control" id="modalprecio" name="modalprecio" maxlength="50" required>
       </div>
       <div class="">
                   <label for="modalexi" class="form-label lg p-2">Existencias</label>
-                  <input type="text" class="form-control" id="modalexi" name="nombre" maxlength="50" required>
+                  <input type="text" class="form-control" id="modalexi" name="modalexi" maxlength="50" required>
       </div>
+      <div class="">
+                  <label for="modalimg" class="form-label lg p-2">Imagen</label>
+                  <input type="file" name="modalimg" id="modalimg" class="form-control">
+                  <input type="hidden" id="txtimg" name="txtimg" value="">
+      </div>
+      
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" id="btnActualizar" data-target="" class="btn btn-primary">Guardar Cambios</button>
+        <button type="submit" id="btnActualizar" data-target="" class="btn btn-primary">Guardar Cambios</button>
       </div>
+      </form>
     </div>
   </div>
 </div>  
 <script>
   function modalData(num) {
+        document.getElementById("modalid").disabled=false;
         let btn=document.getElementById(num);
         let nombre=btn.getAttribute("data-nombre");
         let precio=btn.getAttribute("data-precio");
         let exi=btn.getAttribute("data-exi");
+        let img=btn.getAttribute("data-img");
         document.getElementById("modalnombre").value=nombre;
         document.getElementById("modalprecio").value=precio;
         document.getElementById("modalexi").value=exi;
         document.getElementById("modalid").value=num;
+        document.getElementById("txtimg").value=img;
   }
 </script>    
 </body>

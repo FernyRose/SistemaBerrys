@@ -33,11 +33,30 @@
                     <td>".$row[5]."</td>
                     <td>
                     <form action='detallePedido.php' method='POST'>
-                        <input type='hidden' name='txtid' id='txtid' value=''></input>
+                        <input type='hidden' name='txtid' id='txtid' value='$row[0]'></input>
                         <button type='submit' class='btn btn-primary'>Ver detalles</button>
                     </form>
                     </td>
                 </tr>";
         }
+    }
+    if($tipo=="contra"){
+        $contraA=$_POST["contraActual"];
+        $contraN=$_POST["contraNueva"];
+        $idcliente=$_SESSION['idcliente'];
+        $r="SELECT * FROM clientes AS c WHERE c.password='$contraA' AND c.idcliente=$idcliente";
+        $comando=mysqli_query($enlace ,$r);
+        $cliente=mysqli_fetch_array($comando);
+        $num=0;
+        if($cliente!=Null){
+            $r="UPDATE clientes SET password='$contraN' WHERE idcliente=$idcliente";
+            mysqli_query($enlace ,$r);
+            $num=1;
+            $data=array("bandera"=>$num);
+        }
+        else{
+            $data=array("bandera"=>$num);
+        }
+        echo json_encode($data);
     }
 ?>

@@ -17,10 +17,11 @@
             mysqli_close($enlace);
         }
         else{
-            echo("alert('Error al subir el archivo');");
+            echo("<script>alert('Error al subir el archivo');</script>");
         }
     }
     else{
-        echo("alert('El tipo de archivo no es compatible');");
+        echo("<script>alert('El tipo de archivo seleccionado no es compatible'); 
+        location.href='registrarPre.php';</script>");
     }
 ?>

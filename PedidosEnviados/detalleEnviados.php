@@ -8,7 +8,7 @@
     <link href="../DataTables/datatables.min.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./main.scss">
-    <title>Document</title>
+    <title>Detalle Pedido</title>
     
 </head>
 <body>
@@ -53,9 +53,9 @@
             </table> 
             </div>
             <div class="col-3">
-                <form action="surtirPedido.php" method="post">
+                <form action="finalizarPedido.php" method="post">
                     <input type="hidden" id="txtId" name="txtId" value="<?php echo $id;?>">
-                    <button type="submit" id="" class="btn btn-primary">Surtir Pedido</button>
+                    <button type="submit" id="" class="btn btn-primary">Marcar Como Entregado</button>
                 </form>
             </div>
         </div>

@@ -41,11 +41,6 @@
             <label for="txtAs" class="form-label lg p-2">Anos de servicio</label>
             <input type="text" class="form-control" id="txtAs" name="txtAs" maxlength="50" value="<?php echo $_SESSION["as"]?>" disabled>
         </div>
-        <div class="col-3">
-            <label for="txtContra" class="form-label lg p-2">Contrasena</label>
-            <input type="text" class="form-control" id="txtContra" name="txtContra" maxlength="50" value="<?php echo $_SESSION["contra"]?>" disabled>
-        </div>
-        <div class="col-8"></div>
         <div class="col-sm-3 my-3">
             <input type="button" id="btnEditar" class="btn btn-success lg p-2" value="Editar" onclick="habilitarTxt()">
         </div>
@@ -83,17 +78,17 @@
                 </div>
                 <div class="modal-body">
                 <div class="">
-                    <label for="modalid" class="form-label lg p-2">Contrasena Actual</label>
-                    <input type="text" class="form-control" id="modalid" name="nombre" maxlength="50" required>
+                    <label for="txtActual" class="form-label lg p-2">Contrasena Actual</label>
+                    <input type="text" class="form-control" id="txtActual" name="txtActual" maxlength="50" required>
                 </div>
                 <div class="">
-                    <label for="modalInputNom" class="form-label lg p-2">Nueva Contrasena</label>
-                    <input type="text" class="form-control" id="modalInNom" name="nombre" maxlength="50" required>
+                    <label for="txtNueva" class="form-label lg p-2">Nueva Contrasena</label>
+                    <input type="text" class="form-control" id="txtNueva" name="txtNueva" maxlength="50" required>
                 </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" id="btnActualizar" data-target="" class="btn btn-primary">Guardar Cambios</button>
+                    <button type="button" id="btnContra" data-target="" class="btn btn-primary">Guardar Cambios</button>
                 </div>
                 </div>
             </div>

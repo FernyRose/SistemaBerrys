@@ -4,7 +4,7 @@ $(document).ready(function(){
         let tipoFuncion="cargarTabla";
         let parametros={"tipo": tipoFuncion}
         $.ajax({
-            url:'funcionesConsulta.php',
+            url:'funcionesEnviados.php',
             data:parametros,
             type:'POST',
             success:function(response){

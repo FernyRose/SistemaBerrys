@@ -15,7 +15,7 @@
     }
     if($tipo=="cargarTabla")
     {
-        $r="SELECT p.idpresentacion, p.nombrePresentacion, f.nombre, e.calibre, e.calidad, p.precio, p.existencias 
+        $r="SELECT p.idpresentacion, p.nombrePresentacion, f.nombre, e.calibre, e.calidad, p.precio, p.existencias, p.img 
         FROM presentaciones AS p INNER JOIN especificaciones AS e ON p.idespecificacion=e.idespecificacion 
         INNER JOIN fruta AS f ON f.idfruta=e.idfruta";
         $comando=mysqli_query($enlace,$r);
@@ -30,7 +30,7 @@
                 <td class=''>".$row[4]."</td>
                 <td class=''>".$row[5]."</td>
                 <td class=''>".$row[6]."</td>
-                <td class=''><button type='button' id='".$row[0]."' onclick='modalData(".$row[0].")' class='btn btn-success' data-nombre='".$row[1]."' data-precio='".$row[5]."' data-exi='".$row[6]."' data-bs-toggle='modal' data-bs-target='#exampleModal'>
+                <td class=''><button type='button' id='".$row[0]."' onclick='modalData(".$row[0].")' class='btn btn-success' data-nombre='".$row[1]."' data-precio='".$row[5]."' data-exi='".$row[6]."' data-img='".$row[7]."' data-bs-toggle='modal' data-bs-target='#exampleModal'>
                 Editar
                 </button></td
             </tr>
