@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
     <link href="../DataTables/datatables.min.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
     <title>Presentacion</title>
 
     <style>

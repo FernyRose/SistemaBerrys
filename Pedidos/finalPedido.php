@@ -24,7 +24,7 @@
         }
 ?>
 <br>
-<div class="container">
+<div class="container pb-5">
   <main>
     <div class="row g-5">
       <div class="col-md-5 col-lg-4 order-md-last">
@@ -144,14 +144,20 @@
     </div>
   </main>
 
-  <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+  <!--<footer class="my-5 pt-5 text-body-secondary text-center text-small">
     <p class="mb-1">&copy; 2017–2023 Company Name</p>
     <ul class="list-inline">
       <li class="list-inline-item"><a href="#">Privacy</a></li>
       <li class="list-inline-item"><a href="#">Terms</a></li>
       <li class="list-inline-item"><a href="#">Support</a></li>
     </ul>
-  </footer>
+  </footer>-->
+  
+</div>
+<div class="pt-3">
+    <?php
+        include "../Layouts/footer.php";
+    ?> 
 </div>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="../Jquery/jquery-3.6.4.min.js"></script>

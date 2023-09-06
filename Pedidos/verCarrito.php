@@ -15,6 +15,11 @@
     <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
     <title>Mi carrito</title>
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">    
+    <style>
+      .subtitulo{
+        border-bottom: 0.1em solid #F3C577;
+    }
+    </style>
   </head>
   <body>
 
@@ -29,15 +34,17 @@
   
 
 ?>
-  <div class="row p-3 d-flex flex-row align-items-center justify-content-center"">
+  <div class="row p-3 d-flex flex-row align-items-center justify-content-center">
     <div class="col-11 p-5 shadow-lg">
       <main>
         <div class="container-fluid mb-3 py-3 px-3">
           <div class="row mb-3">
-              <div class="col mb-3">
-                  <table id="tablaPedidos" class="table table-bordered border-dark compact mb-0  table-hover caption-top" style="width: 100%">
+              <div class="col mb-3 rounded-3">
+                  <table id="tablaPedidos" class="table table-bordered border-dark compact mb-0  table-hover caption-top rounded-3" style="width: 100%">
                       <thead>
-                          <h3 class="display-8 pb-3">Mi Carrito</h3>
+                        <div class="pb-4">
+                          <h3 class="col-2 display-6 pb-2 subtitulo">Mi Carrito</h3>
+                        </div>
                       </thead>
                       <tr class=" table-dark">
                           <th>Presentacion</th>
@@ -106,15 +113,6 @@
           }
         </script>
       </main>
-      <footer class="text-body-secondary py-3">
-        <div class="container">
-          <p class="float-end mb-1">
-            <a href="#">Back to top</a>
-          </p>
-          <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-          <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
-        </div>
-      </footer>
       </div>
   </div>    
 </body>

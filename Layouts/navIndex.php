@@ -5,9 +5,7 @@
   .nav-link{
     position: relative;
   }
-  .nav-link:hover{
-    text-decoration: underline;
-  }
+  
   .nav-link::after{
     content: '';
     opacity: 0;
@@ -23,10 +21,11 @@
     opacity: 5;
   }
   </style>
+  <!-- Index de admin-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="">
-          <img src="Imagenes/Nlogo.png" width="170" height="40" class="">
+          <img src="Imagenes/f18.png" width="75" height="40" class="">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,7 +36,7 @@
                 <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Catalagos
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -49,7 +48,7 @@
                 </ul>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Pedidos
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

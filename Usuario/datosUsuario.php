@@ -16,6 +16,9 @@
       body{
           font-family: 'Inter', sans-serif !important;
         }
+        .subtitulo{
+        border-bottom: 0.1em solid #424343;
+      }
     </style>
 </head>
 <?php 
@@ -28,35 +31,48 @@
         include "../Layouts/nav2.php";
       }
 ?>
+<body>
+  
   
     <div class="container-fluid">
       <br>
       <div class="row-10 d-flex flex-row align-items-center justify-content-center">
-        <div class="col-10 pb-3">
-          <div class="container">
-              <h2>Datos del Usuario</h2>
-          </div>
-          <br>
-          <div class="row">
-              <?php
-                  if($_SESSION["usuario"]=="admin"){
-                      include "admin.php";
-                  }
-                  else{
-                      include "cliente.php";
-                  }
-              ?>
-          </div>
-        </div>  
+        <div class="col-11 shadow-sm d-flex flex-row align-items-center justify-content-center">
+          <div class="col-10 pb-3 ">
+            <div class="col-3  subtitulo">
+                <h2>Datos del Usuario</h2>
+            </div>
+            <br>
+            <div class="row">
+                <?php
+                    if($_SESSION["usuario"]=="admin"){
+                        include "admin.php";
+                    }
+                    else{
+                        include "cliente.php";
+                    }
+                ?>
+            </div>
+          </div>  
+        </div>    
       </div>  
-    </div>       
-         
-</body>
-<div class="pt-3">
-    <?php
+    </div>
+</body>           
+<footer>
+<?php 
+      if(isset($_SESSION["usuario"])){
+        if($_SESSION["usuario"]=="admin"){
+          
+        } 
+      }
+      else{
+        
         include "../Layouts/footer.php";
-    ?> 
-</div>
+      }
+?>
+</footer>    
+
+
 <script type="text/javascript" src="../Jquery/jquery-3.6.4.min.js"></script>
 <script type="text/javascript" src="dataCliente.js"></script>
 <script src="../DataTables/datatables.min.js"></script>

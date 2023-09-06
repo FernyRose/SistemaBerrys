@@ -14,11 +14,11 @@
         <div class="col-md-4 p-2">
             <h5>Colaboradores</h5>
             <ul class="list-inline">
-            <li class="list-inline-item"><a href="https://www.facebook.com/ababormarisqueriabar/?locale=es_LA">Grupo A Babor</a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/ababormarisqueriabar/?locale=es_LA" target="_blank">Grupo  Babor</a></li>
             <br>
-            <li class="list-inline-item"><a href="#">Grupo de Guzman</a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/deguzmanrc" target="_blank">Grupo de Guzman</a></li>
             <br>
-            <li class="list-inline-item"><a href="#">Meztiza</a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/lamestizatragosychupes" target="_blank">Meztiza</a></li>
             </ul>
         </div>
         </div>
