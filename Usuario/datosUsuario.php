@@ -15,8 +15,8 @@
           font-family: 'Inter', sans-serif !important;
         }
         .subtitulo{
-        border-bottom: 0.1em solid #424343;
-      }
+        border-bottom: 0.2em solid #F3C577;
+        }
     </style>
 </head>
 <?php 
