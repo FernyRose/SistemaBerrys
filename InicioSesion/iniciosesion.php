@@ -28,7 +28,7 @@
       .login{
         
         width: 560px;
-        height: min-content;
+        height: auto;
         
         padding: 20px;
         border-radius: 12px;
@@ -68,8 +68,8 @@
           
   ?>
   <div class="bg-image" 
-    style="background-image: url('Imagenes/fondo5.jpg');
-            height: 70vh">
+    style="background-image: url('/Imagenes/fondo5.jpg');
+            ">
 
     <div class="container-fluid2 mt-5">
         <div class="login shadow-lg">

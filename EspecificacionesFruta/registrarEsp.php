@@ -63,7 +63,7 @@
             <div class="col">
               <table id="tablaEsp" class="table table-bordered table-striped compact mb-0">
                 <thead>
-                  <h3 class="display-8">Especificaciones Registradas</h3>
+                  <h3 class="display-8 text-decoration-underline pb-2">Especificaciones Registradas</h3>
                 <tr class="m-5">
                     <th>idEspecificacion</th>
                     <th>Fruta</th>
@@ -83,23 +83,23 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar Especificacion</h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-light" id="exampleModalLabel">Editar Especificacion</h5>
+        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
       <div class="">
-                  <label for="modalid" class="form-label lg p-2">idEspecificacion</label>
+                  <label for="modalid" class="form-label lg p-2 fw-bolder">idEspecificacion</label>
                   <input type="text" class="form-control" id="modalid" name="nombre" maxlength="50" disabled>
       </div>
       <div class="">
-                  <label for="modalcalibre" class="form-label lg p-2">Calibre</label>
+                  <label for="modalcalibre" class="form-label lg p-2 fw-bolder">Calibre</label>
                   <input type="text" class="form-control" id="modalcalibre" name="nombre" maxlength="50" required>
       </div>
       <div class="">
-                  <label for="modalcalidad" class="form-label lg p-2">Calidad</label>
+                  <label for="modalcalidad" class="form-label lg p-2 fw-bolder">Calidad</label>
                   <input type="text" class="form-control" id="modalcalidad" name="nombre" maxlength="50" required>
       </div>
       </div>

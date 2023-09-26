@@ -1,5 +1,5 @@
-<div class="col-4">
-    <form action="actualizarCliente.php" method="POST">
+<div class="col-4" >
+    <form action="actualizarCliente.php" method="POST" >
             <label for="txtNombre" class="form-label lg p-2">Nombre</label>
             <input type="text" class="form-control" id="txtNombre" name="txtNombre" maxlength="50" value="<?php echo $_SESSION['nombre']?>" disabled>
         </div>
@@ -41,31 +41,40 @@
             <label for="txtAs" class="form-label lg p-2">Anos de servicio</label>
             <input type="text" class="form-control" id="txtAs" name="txtAs" maxlength="50" value="<?php echo $_SESSION["as"]?>" disabled>
         </div>
-        <div class="col-sm-3 my-3">
-            <input type="button" id="btnEditar" class="btn btn-success lg p-2" value="Editar" onclick="habilitarTxt()">
-        </div>
-        <script>
-            function habilitarTxt(){
-                document.getElementById("txtNombre").disabled=false;
-                document.getElementById("txtDir").disabled=false;
-                document.getElementById("txtCp").disabled=false;
-                document.getElementById("txtCiudad").disabled=false;
-                document.getElementById("txtEstado").disabled=false;
-                document.getElementById("txtTel").disabled=false;
-                document.getElementById("txtTelp").disabled=false;
-                document.getElementById("txtCorreo").disabled=false;
-                document.getElementById("txtAs").disabled=false;
-                document.getElementById("txtContra").disabled=false;
-                document.getElementById("btnGuardar").disabled=false;
-            }
-        </script>
-        <div class="col-sm-3 my-3">
-        <input type="button" id="btnGuardar" class="btn btn-primary lg p-2" value="Guardar cambios" disabled>
-        </div>
+        <div class="row">
+            <div class="col-12 p-2 d-flex flex-row align-items-center justify-content-center">
+                <div class="row">    
+                    <div class="col p-4">
+                        <input type="button" id="btnEditar" class="btn btn-success lg p-2" style=" width: 175px;" value="Editar" onclick="habilitarTxt()">
+                    </div>
+                    <script>
+                        function habilitarTxt(){
+                            document.getElementById("txtNombre").disabled=false;
+                            document.getElementById("txtDir").disabled=false;
+                            document.getElementById("txtCp").disabled=false;
+                            document.getElementById("txtCiudad").disabled=false;
+                            document.getElementById("txtEstado").disabled=false;
+                            document.getElementById("txtTel").disabled=false;
+                            document.getElementById("txtTelp").disabled=false;
+                            document.getElementById("txtCorreo").disabled=false;
+                            document.getElementById("txtAs").disabled=false;
+                            document.getElementById("txtContra").disabled=false;
+                            document.getElementById("btnGuardar").disabled=false;
+                        }
+                    </script>
+                    <div class="col p-4 ">
+                    <input type="button" id="btnGuardar" class="btn btn-primary lg p-2" style=" width: 175px;" value="Guardar cambios" disabled>
+                    </div>
+                    <div class="col p-4">
+                        <input type="button" class="btn btn-danger lg p-2" value="Cambiar Contrasena" style=" width: 175px;" data-bs-toggle='modal' data-bs-target='#exampleModal'>
+                    </div>
+                </div>    
+            </div>    
+        </div>    
     </form>
-        <div class="col-sm-3 my-3">
-        <input type="button" class="btn btn-danger lg p-2" value="Cambiar Contrasena" data-bs-toggle='modal' data-bs-target='#exampleModal'>
-        </div>
+    <div style="border-bottom: 0.1em solid #050505;">
+
+    </div>    
 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -92,27 +101,33 @@
                 </div>
                 </div>
             </div>
-        </div>
-            <div class="container my-3">
+        </div>    
+            <div class="container my-3 pt-5">
                 <div class="row">
                     <div class="col">
                         <table id="tablaEsp" class="table table-bordered table-striped compact mb-0">
-                            <thead>
-                                <center>
-                                <h3 class="">Mis Pedidos</h3>
-                                </center>
+                            <div>    
+                                <thead class="pb-5" >
+                                    <div style=" border-bottom: 0.2em solid #F3C577;">
+                                        <center>
+                                        <h3 class="display-5">Mis Pedidos</h3>
+                                        </center>
+                                    </div>    
                                 </thead>
-                            <tr>
-                                <th>idPedido</th>
-                                <th>Fecha del pedido</th>
-                                <th>Importe</th>
-                                <th>Direccion</th>
-                                <th>Estado</th>
-                                <th>Opciones</th>
-                            </tr>
-                            <tbody id="bodyPedido">
+                                <div class="pt-5">
+                                    <tr class="">
+                                        <th>idPedido</th>
+                                        <th>Fecha del pedido</th>
+                                        <th>Importe</th>
+                                        <th>Direccion</th>
+                                        <th>Estado</th>
+                                        <th>Opciones</th>
+                                    </tr>
+                                    <tbody id="bodyPedido">
 
-                            </tbody>
+                                    </tbody>
+                                </div>
+                                </div>        
                         </table> 
                     </div>
                 </div>

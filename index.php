@@ -22,15 +22,26 @@
           font-family: 'Inter', sans-serif !important;
          
         }
-        h1{
+        .titulo{
           font-family: 'Satisfy', cursive !important;
-          font-size: 450%;
-          font-weight: bold;
+          font-size: 550%;
+          font-weight: 900;
+          font-color: #000000;
+          text-shadow: 3px 2px 1px #ffff;
+        }
+        .bg{
+          background-image: url("Imagenes/granjero.jpg");
+          height:90vh;
+          width:1450px;
+          
+          filter: blur(1px);
+          text-filter: none !important;
         }
         .portada{
           font-family: 'Roboto Slab', serif !important;
-          font-weight: 500 !important;
+          font-weight: 900 !important;
           font-size: 175% !important;
+          color: #ebf4f5;
         }
         .subtitulo{
         border-bottom: 0.2em solid #F3C577;
@@ -85,7 +96,10 @@
         } 
       ?>  
       
-            <!--<div class="row">
+            
+      
+          
+          <!--<div class="row">
                   
                   <div
                   class="bg-image p-1 text-center rounded mb-1"
@@ -96,26 +110,27 @@
                 </div>
             </div> -->
             <div class="row bg-light">  
-                <div class="col  p-1 bg-light d-flex flex-row align-items-center justify-content-center">
+                <div class="col-12 p-1 bg-light d-flex flex-row align-items-center justify-content-center">
                     
                 <div
                 class="bg-image text-center shadow-md rounded mb-2 "
-                style="background-image: url('Imagenes/berries20.jpg');height:80vh;width:1450px;"
+                style="background-image: url('Imagenes/granjero.jpg');height:90vh;width:1450px;"
               >
               <img src="Imagenes/f14.png" alt="...">
-              <div class="row d-flex flex-row align-items-left justify-content-left">
-                <div class="col-7">
-                  <h1 class="card-title text-decoration-underline p-3 text-dark">Frutas de temporada</h1>
+              <div class="row d-flex flex-row align-items-center justify-content-center">
+                <div class="col-10">
+                  <h1 class="card-title text-decoration-underline p-3 titulo">Frutas de temporada</h1>
                   <br>
-                  <p class="portada h4 text-light">
+                  <p class="portada h4">
                     La mejor seleccion de frutas de toda la region.
                   </p>
-                  <p class="portada h4 text-light">
+                  <p class="portada h4">
                     Entregamos en cualquier parte de la ciudad.
                   </p>
                 </div>
               </div>
               </div>
+      
             </div>  
             <!--<div class="card2 mb-3 " style="background-image: url('../Imagenes/indexP1.jpg');">
                 <div class="row g-0">
@@ -153,8 +168,8 @@
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"></h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Comprar</a>
+                          <p class="card-text lead ">Clanche de Zarsamora.</p>
+                          <a href="#" class="btn btn-primary">Ir a la Tienda</a>
                         </div>
                       </div>
                       <div class="card">
@@ -163,7 +178,7 @@
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"></h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p class="card-text lead">Kilo de aguacate.</p>
                           <a href="#" class="btn btn-primary">Comprar</a>
                         </div>
                       </div>
@@ -173,7 +188,7 @@
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"></h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p class="card-text lead">Clanche de Frambuesa.</p>
                           <a href="#" class="btn btn-primary">Comprar</a>
                         </div>
                       </div>
@@ -187,7 +202,7 @@
                               </div>
                               <div class="card-body">
                                 <h5 class="card-title"></h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text lead">Caja de Zarsamora.</p>
                                 <a href="#" class="btn btn-primary">Comprar</a>
                               </div>
                             </div>
@@ -197,7 +212,7 @@
                               </div>
                               <div class="card-body">
                                 <h5 class="card-title"></h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text lead">Caja de Aguacate Haas.</p>
                                 <a href="#" class="btn btn-primary">Comprar</a>
                               </div>
                             </div>
@@ -207,7 +222,7 @@
                               </div>
                               <div class="card-body">
                                 <h5 class="card-title"></h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text lead">Caja de Frambuesa.</p>
                                 <a href="#" class="btn btn-primary">Comprar</a>
                           </div>
                         </div>
@@ -221,7 +236,7 @@
                             </div>
                             <div class="card-body">
                               <h5 class="card-title"></h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                               <a href="#" class="btn btn-primary">Comprar</a>
                             </div>
                           </div>
@@ -231,7 +246,7 @@
                             </div>
                             <div class="card-body">
                               <h5 class="card-title"></h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                               <a href="#" class="btn btn-primary">Comprar</a>
                             </div>
                           </div>
@@ -240,7 +255,7 @@
                               <img src="Imagenes/zarzamoraIndividual.png" alt="...">
                             </div>
                             <div class="card-body">
-                              <h5 class="card-title"></h5>
+                              <h5 class="card-title lead"></h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                               <a href="#" class="btn btn-primary">Comprar</a>
                           </div>

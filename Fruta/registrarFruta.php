@@ -8,7 +8,7 @@
     <link href="../DataTables/datatables.min.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./main.scss">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Fruta</title>
     
     <style>
@@ -50,7 +50,7 @@
         <div class="col">
                 <table id="tablaPedidos" class="table table-bordered table-striped compact mb-0" style="width: 90%">
                   <thead>
-                  <h3 class="display-8">Frutas Registradas</h3>
+                  <h3 class="display-8 text-decoration-underline pb-2">Frutas Registradas</h3>
                   <tr class="m-5">
                       <th>idFruta</th>
                       <th>Nombre</th>
@@ -71,9 +71,9 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar Fruta</h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-light" id="exampleModalLabel">Editar Fruta</h5>
+        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>

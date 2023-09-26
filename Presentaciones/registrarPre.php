@@ -92,7 +92,7 @@
           <div class="col">
             <table id="tablaPre" class="table table-bordered table-striped compact mb-0" style="width: 50%">
               <thead>
-              <h3 class="display-8">Presentaciones Registradas</h3>
+              <h3 class="display-8 text-decoration-underline pb-2">Presentaciones Registradas</h3>
               <tr class="">
                   <th>id</th>
                   <th>Nombre</th>
@@ -116,32 +116,32 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
     <form action="updateImg.php" method="POST" enctype="multipart/form-data">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar Especificacion</h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title  text-light" id="exampleModalLabel fw-bold">Editar Especificacion</h5>
+        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         
       <div class="">
-                  <label for="modalid" class="form-label lg p-2">idPresentacion</label>
+                  <label for="modalid" class="form-label lg p-2 fw-bolder">idPresentacion</label>
                   <input type="text" class="form-control" id="modalid" name="modalid" maxlength="50" disabled>
       </div>
       <div class="">
-                  <label for="modalnombre" class="form-label lg p-2">Nombre</label>
+                  <label for="modalnombre" class="form-label lg p-2 fw-bolder">Nombre</label>
                   <input type="text" class="form-control" id="modalnombre" name="modalnombre" maxlength="50" required>
       </div>
       <div class="">
-                  <label for="modalprecio" class="form-label lg p-2">Precio</label>
+                  <label for="modalprecio" class="form-label lg p-2 fw-bolder">Precio</label>
                   <input type="text" class="form-control" id="modalprecio" name="modalprecio" maxlength="50" required>
       </div>
       <div class="">
-                  <label for="modalexi" class="form-label lg p-2">Existencias</label>
+                  <label for="modalexi" class="form-label lg p-2 fw-bolder">Existencias</label>
                   <input type="text" class="form-control" id="modalexi" name="modalexi" maxlength="50" required>
       </div>
       <div class="">
-                  <label for="modalimg" class="form-label lg p-2">Imagen</label>
+                  <label for="modalimg" class="form-label lg p-2 fw-bolder">Imagen</label>
                   <input type="file" name="modalimg" id="modalimg" class="form-control">
                   <input type="hidden" id="txtimg" name="txtimg" value="">
       </div>
