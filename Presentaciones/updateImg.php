@@ -7,7 +7,9 @@
     $txtimg=$_POST["txtimg"];
     $directorio="imagenes/";
     $txtimg2=$directorio.$txtimg;
-    if(isset($_FILES["modalimg"]["tmp_name"])){
+    $tempo=$_FILES["modalimg"]["tmp_name"];
+    if(strlen($tempo)>0){
+        
         $archivo=$directorio.basename($_FILES["modalimg"]["name"]);
         $ext=strtolower(pathinfo($archivo, PATHINFO_EXTENSION));
         if($ext=="jpg" || $ext=="png" || $ext=="jpeg"){
@@ -47,13 +49,14 @@
         }
         else{
             echo("<script>alert('El tipo de archivo seleccionado no es compatible'); 
-            location.href='registrarPre.php';</script>");
+            </script>");
         }
     }
     else{
         $r="UPDATE presentaciones SET nombrePresentacion='$nombre', precio=$precio, existencias=$exi WHERE idpresentacion=$idprese";
         mysqli_query($enlace,$r);
         mysqli_close($enlace);
-        echo("<script>alert('Cambios guardados correctamente');</script>");
+        echo("<script>alert('Cambios guardados correctamente');
+        location.href='registrarPre.php';</script>");
     }
 ?>

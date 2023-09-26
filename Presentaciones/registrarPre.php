@@ -19,7 +19,6 @@
 <body>
 <?php
       session_start();
-      error_reporting(0);
       if($_SESSION["usuario"]=="admin"){
         include "../Layouts/nav.php";
       }
