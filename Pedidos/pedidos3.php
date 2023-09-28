@@ -34,9 +34,9 @@
   else{
     include "../Layouts/nav2.php";
   }
-  $r="SELECT p.nombrepresentacion, f.nombre, e.calibre, e.calidad, p.precio, p.img, p.idpresentacion FROM presentaciones AS p INNER JOIN
+  $r="SELECT p.nombrepresentacion, f.nombre, e.calibre, e.calidad, p.precio, p.img, p.idpresentacion, p.existencias FROM presentaciones AS p INNER JOIN
   especificaciones AS e ON p.idespecificacion=e.idespecificacion INNER JOIN fruta AS f
-  ON p.idfruta=f.idfruta";
+  ON p.idfruta=f.idfruta WHERE p.existencias>0";
    
 ?>
 <div class="row pt-3 d-flex flex-row align-items-center justify-content-center">
@@ -81,7 +81,7 @@
                     $precio=$row[4];
                     $img=$row[5];
                     $idpre=$row[6];
-                    $existencias;
+                    $existencias=$row[7];
                     ?>
               <form action="agregarCarrito.php" method="POST" id="myForm">
                 <div class='col'>
@@ -89,6 +89,7 @@
                   <img src='../Presentaciones/imagenes/<?php echo $img;?>'  width='100%' height='225' id='img1'>
                     <div class='card-body'>
                       <p class='card-text' id='txtPre'><?php echo $nombrePre;?> de <?php echo $nombreFruta; ?> calibre: <?php echo $calibre;?> Calidad: <?php echo $calidad;?>.</p>
+                      <p>Existencias: <?php echo $existencias;?></p>
                       <div class="input-group mb-3">
                       <label for="comboCant" class="input-group-text">Cantidad</label>
                       <select name="comboCant" id="comboCant" class="form-select">
@@ -136,7 +137,7 @@
                             }
                           ?>
                         </div>
-                        <small class='text-body-secondary' id='txPrecio'>Envio Gratis</small>
+                        <small class='text-body-secondary' id='txPrecio'></small>
                       </div>
                     </div>
                   </div>

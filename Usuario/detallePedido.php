@@ -1,8 +1,8 @@
 <?php
 include "../Conexion/conexion.php";
     $id=$_POST["txtid"];
-    $r="SELECT pe.idpedido, f.nombre, p.nombrePresentacion, e.calibre, e.calidad, pe.cantidad, p.precio FROM 
-      detallepedido AS pe INNER JOIN presentaciones AS p ON pe.idpresentacion = p.idpresentacion 
+    $r="SELECT pe.idpedido, f.nombre, p.nombrePresentacion, e.calibre, e.calidad, pe.cantidad, p.precio, ped.estado FROM 
+      pedidos AS ped INNER JOIN detallepedido AS pe on ped.idpedido=pe.idpedido INNER JOIN presentaciones AS p ON pe.idpresentacion = p.idpresentacion 
       inner join especificaciones AS e ON e.idespecificacion=p.idespecificacion inner join 
       fruta AS f ON f.idfruta = p.idfruta where pe.idpedido=".$id;
       $comando=mysqli_query($enlace,$r);
@@ -55,6 +55,7 @@ include "../Conexion/conexion.php";
             <tr>
                 <?php
                     while($row=mysqli_fetch_array($comando)){
+                        $estado=$row[7];
                 ?>
                     <td class=""><?php echo $row[0];?></td>
                     <td><?php echo $row[1];?></td>
@@ -63,6 +64,7 @@ include "../Conexion/conexion.php";
                     <td><?php echo $row[4];?></td>
                     <td><?php echo $row[5];?></td>
                     <td><?php echo $row[6];?></td>
+                    
             </tr>
                 <?php
                     }   
@@ -72,7 +74,21 @@ include "../Conexion/conexion.php";
             <div class="col-12">
                 <h3>Estado del pedido</h3>
                 <div class="col">
-                    <p>El pedido ah sido realizado y enviado al equipo de selectos del sur para ser surtido</p>
+                    <?php
+                        if($estado=="Realizado"){
+                            echo"<p>El pedido ah sido realizado y enviado al equipo de selectos del sur para ser surtido.</p>";
+                        }
+                        if($estado=="Entregado"){
+                            echo"<p>El pedido ah sido entregado en la direccion del envio.</p>";
+                        }
+                        if($estado=="Enviado"){
+                            echo"<p>El pedido ah sido realizado y enviado para ser entregado.</p>";
+                        }
+                        if($estado=="Surtido"){
+                            echo"<p>El pedido ah sido surtido y esta en espera de ser enviado.</p>";
+                        }
+                    ?>
+                    
                 </div>
             </div>
         </div>

@@ -20,6 +20,8 @@ session_start();
             $pre=$_SESSION["carrito"][$i][2];
             $r="INSERT INTO detallepedido(idpedido,idpresentacion,cantidad,precio) VALUES($id,$idpre,$cant,$pre)";
             mysqli_query($enlace, $r);
+            $r="UPDATE presentaciones SET existencias=existencias-$cant WHERE idpresentacion=$idpre";
+            mysqli_query($enlace, $r);
         }
         unset($_SESSION["carrito"]);
         unset($_SESSION["carrito2"]);
@@ -37,6 +39,8 @@ session_start();
             $cant=$_SESSION["carrito"][$i][1];
             $pre=$_SESSION["carrito"][$i][2];
             $r="INSERT INTO detallepedido(idpedido,idpresentacion,cantidad,precio) VALUES($id,$idpre,$cant,$pre)";
+            mysqli_query($enlace, $r);
+            $r="UPDATE presentaciones SET existencias=existencias-$cant WHERE idpresentacion=$idpre";
             mysqli_query($enlace, $r);
         }
         unset($_SESSION["carrito"]);

@@ -59,6 +59,7 @@
                       <tbody id="addfruta" class=" border-dark">
                           <?php
                               if(isset($_SESSION["carrito2"])){
+                                $impo=0;
                                   for($i=0; $i<$_SESSION['n2']; $i++){
                                       echo "<tr>
                                           <td>".$_SESSION['carrito2'][$i][0]."</td>
@@ -78,6 +79,7 @@
                                           </form>
                                           </td>
                                       </tr>";
+                                      $impo=$impo+$_SESSION['carrito2'][$i][4]*$_SESSION['carrito2'][$i][5];
                                   }
                               }
                           ?>
@@ -85,8 +87,21 @@
                   </table>
               </div>
           </div>
-          
           <div class="row">
+            <?php
+            if(isset($impo)){
+              if($impo>=50){
+                echo"<div class='col'>
+                <h4>Envio:$0</h4>
+              </div>";
+              }
+              else{
+                echo"<div class='col'>
+                <h4>Envio:$50</h4>
+              </div>";
+              }
+            }
+            ?>
               <div class="col-sm-2">
                   <a type="button" href="vaciarCarrito.php" class="btn btn-danger" onclick="return delCar()">Vaciar carrito</a>
               </div>

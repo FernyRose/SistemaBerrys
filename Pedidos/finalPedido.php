@@ -49,10 +49,22 @@
                 <?php
                 $total=$total+$_SESSION['carrito2'][$i][4]*$_SESSION['carrito2'][$i][5];
                 }?>
-          
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Envio</span>
+            <?php
+            if($total>=50){
+              $envio=0;
+              echo "$$envio";
+            }
+            else{
+              $envio=50;
+              echo "$$envio";
+            }
+            ?>
+          </li>
           <li class="list-group-item d-flex justify-content-between">
             <span>Total (MXN)</span>
-            <strong>$<?php echo $total?></strong>
+            <strong>$<?php $total=$total+$envio; echo $total?></strong>
           </li>
         </ul>
       </div>
