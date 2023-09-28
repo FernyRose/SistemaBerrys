@@ -35,13 +35,15 @@ include "../Conexion/conexion.php";
         include "../Layouts/nav2.php";
       }
 ?>
-  
-    <div class="container-fluid">
+<body>  
+    <div class="container d-flex flex-column min-vh-100">
       <br>
       <div class="row-10 d-flex flex-row align-items-center justify-content-center">
-        <div class="row">
-        <h3>Detalle del pedido</h3>
-            <div class="col-12">
+        <div class="row p-5">
+            <div class="pb-5">
+                <h3 class="text-decoration-underline">Detalle del pedido</h3>
+            </div>
+            <div class="col-12 pb-5">
             <table id="tablaPedidos" class="table table-striped">
             <tr>
                 <th>idPedido</th>
@@ -72,7 +74,9 @@ include "../Conexion/conexion.php";
             </table> 
             </div>
             <div class="col-12">
-                <h3>Estado del pedido</h3>
+                <div class="pb-3">
+                    <h3 class="text-decoration-underline">Estado del pedido</h3>
+                </div>    
                 <div class="col">
                     <?php
                         if($estado=="Realizado"){
@@ -96,7 +100,7 @@ include "../Conexion/conexion.php";
     </div>       
          
 </body>
-<div class="pt-3">
+<div class="pt-3 mt-auto">
     <?php
         include "../Layouts/footer.php";
     ?> 
