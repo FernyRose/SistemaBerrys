@@ -89,6 +89,7 @@
                   <img src='../Presentaciones/imagenes/<?php echo $img;?>'  width='100%' height='225' id='img1'>
                     <div class='card-body'>
                       <p class='card-text' id='txtPre'><?php echo $nombrePre;?> de <?php echo $nombreFruta; ?> calibre: <?php echo $calibre;?> Calidad: <?php echo $calidad;?>.</p>
+                      
                       <div class="input-group mb-3">
                       <label for="comboCant" class="input-group-text">Cantidad</label>
                       <select name="comboCant" id="comboCant" class="form-select">

@@ -29,14 +29,7 @@
           font-color: #000000;
           text-shadow: 3px 2px 1px #ffff;
         }
-        .bg{
-          background-image: url("Imagenes/granjero.jpg");
-          height:90vh;
-          width:1450px;
-          
-          filter: blur(1px);
-          text-filter: none !important;
-        }
+        
         .portada{
           font-family: 'Roboto Slab', serif !important;
           font-weight: 900 !important;
@@ -65,13 +58,14 @@
           }
           .image-wrapper{
             height: 22vw;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
           }
 
         }  
-        @media screen and (max-width: 567px) {
+        @media screen and (max-width: 468px) {
           .card:not(:first-child){
             display: none;
           }
@@ -109,29 +103,38 @@
                     <img src="Imagenes/f14.png" alt="...">
                 </div>
             </div> -->
-            <div class="row bg-light">  
-                <div class="col-12 p-1 bg-light d-flex flex-row align-items-center justify-content-center">
-                    
-                <div
-                class="bg-image text-center shadow-md rounded mb-2 "
-                style="background-image: url('Imagenes/granjero.jpg');height:90vh;width:1450px;"
-              >
-              <img src="Imagenes/f14.png" alt="...">
-              <div class="row d-flex flex-row align-items-center justify-content-center">
-                <div class="col-10">
-                  <h1 class="card-title text-decoration-underline p-3 titulo">Frutas de temporada</h1>
-                  <br>
-                  <p class="portada h4">
-                    La mejor seleccion de frutas de toda la region.
-                  </p>
-                  <p class="portada h4">
-                    Entregamos en cualquier parte de la ciudad.
-                  </p>
-                </div>
-              </div>
-              </div>
-      
-            </div>  
+            <section class="row p-1 bg-light d-flex flex-row align-items-center justify-content-center">
+              
+              <div class="row">
+                <div class="col-12">
+                  <div
+                    class="bg-image text-center shadow-md rounded mb-2 img-responsive"
+                    style="background-image: url('Imagenes/granjero.jpg');height:auto; width:auto;"
+                  >
+                    <img src="Imagenes/f14.png" alt="...">
+                    <div class="row d-flex flex-row align-items-center justify-content-center">
+                      <div class="col-10">
+                        <br>
+                        <br>
+                        <h1 class="card-title text-decoration-underline p-3 titulo">Frutas de temporada</h1>
+                        <br>
+                        <br>
+                        <br>
+                        <p class="portada h4">
+                          La mejor seleccion de frutas de toda la region.
+                        </p>
+                        <p class="portada  pb-5">
+                          Entregamos en cualquier parte de la ciudad.
+                        </p>
+                      </div>
+                  </div>
+                </div>   
+              </div>  
+                
+                
+        
+              
+            </section> 
             <!--<div class="card2 mb-3 " style="background-image: url('../Imagenes/indexP1.jpg');">
                 <div class="row g-0">
                   <div class="col-md-5">
@@ -164,17 +167,17 @@
                     <div class="cards-wrapper">
                       <div class="card">
                         <div class="image-wrapper">
-                          <img src="Imagenes/zarzamoraP.png" alt="...">
+                          <img src="Presentaciones/imagenes/index/arandano.jpg" alt="...">
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"></h5>
-                          <p class="card-text lead ">Clanche de Zarsamora.</p>
+                          <p class="card-text lead ">Clanche de Arandano.</p>
                           <a href="#" class="btn btn-primary">Ir a la Tienda</a>
                         </div>
                       </div>
                       <div class="card">
                         <div class="image-wrapper">
-                          <img src="Imagenes/frambuezaIndi.png" alt="...">
+                          <img src="Presentaciones/imagenes/index/aguacate.jpg" alt="...">
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"></h5>
@@ -184,11 +187,11 @@
                       </div>
                       <div class="card">
                         <div class="image-wrapper">
-                          <img src="Imagenes/arandanoIndi.png" alt="...">
+                          <img src="Presentaciones/imagenes/index/frambuesa.jpeg" alt="...">
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"></h5>
-                          <p class="card-text lead">Clanche de Frambuesa.</p>
+                          <p class="card-text lead">Kilo Frambuesa.</p>
                           <a href="#" class="btn btn-primary">Comprar</a>
                         </div>
                       </div>
@@ -198,31 +201,31 @@
                         <div class="cards-wrapper">
                           <div class="card">
                               <div class="image-wrapper">
-                                <img src="Imagenes/zarzamoraP.png" alt="...">
+                                <img src="Presentaciones/imagenes/index/manzanas.jpg" alt="...">
                               </div>
                               <div class="card-body">
                                 <h5 class="card-title"></h5>
-                                <p class="card-text lead">Caja de Zarsamora.</p>
+                                <p class="card-text lead">Kilo de Manzana.</p>
                                 <a href="#" class="btn btn-primary">Comprar</a>
                               </div>
                             </div>
                             <div class="card">
                               <div class="image-wrapper">
-                                <img src="Imagenes/zarzamoraP.png" alt="...">
+                                <img src="Presentaciones/imagenes/index/fresa.jpg" alt="...">
                               </div>
                               <div class="card-body">
                                 <h5 class="card-title"></h5>
-                                <p class="card-text lead">Caja de Aguacate Haas.</p>
+                                <p class="card-text lead">Kilo de Fresa</p>
                                 <a href="#" class="btn btn-primary">Comprar</a>
                               </div>
                             </div>
                             <div class="card">
                               <div class="image-wrapper">
-                                <img src="Imagenes/zarzamoraP.png" alt="...">
+                                <img src="Presentaciones/imagenes/index/pepino.jpeg" alt="...">
                               </div>
                               <div class="card-body">
                                 <h5 class="card-title"></h5>
-                                <p class="card-text lead">Caja de Frambuesa.</p>
+                                <p class="card-text lead">Kilo de Pepino.</p>
                                 <a href="#" class="btn btn-primary">Comprar</a>
                           </div>
                         </div>
