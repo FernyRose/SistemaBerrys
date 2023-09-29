@@ -1,15 +1,15 @@
 <div class="col-4" >
     <form action="actualizarCliente.php" method="POST" >
             <label for="txtNombre" class="form-label lg p-2">Nombre</label>
-            <input type="text" class="form-control" id="txtNombre" name="txtNombre" maxlength="50" value="<?php echo $_SESSION['nombre']?>" disabled>
+            <input type="text" class="form-control" id="txtNombre" name="txtNombre" maxlength="50" value="<?php echo $_SESSION['nombre']?>" required disabled>
         </div>
         <div class="col-4">
             <label for="txtDir" class="form-label lg p-2">Direccion</label>
-            <input type="text" class="form-control" id="txtDir" name="txtDir" maxlength="50" value="<?php echo $_SESSION["direccion"]?>" disabled>
+            <input type="text" class="form-control" id="txtDir" name="txtDir" maxlength="50" value="<?php echo $_SESSION["direccion"]?>" required disabled>
         </div>
         <div class="col-4">
             <label for="txtCp" class="form-label lg p-2">Codigo postal</label>
-            <input type="text" class="form-control" id="txtCp" name="txtCp" maxlength="50" value="<?php echo $_SESSION["cp"]?>" disabled>
+            <input type="number" class="form-control" id="txtCp" name="txtCp" maxlength="5" value="<?php echo $_SESSION["cp"]?>" required disabled>
         </div>
         <div class="col-4">
             <label for="txtCiudad" class="form-label lg p-2">Ciudad</label>
@@ -27,19 +27,19 @@
         </div>
         <div class="col-4">
             <label for="txtTel" class="form-label lg p-2">Telefono Personal</label>
-            <input type="text" class="form-control" id="txtTel" name="txtTel" maxlength="50" value="<?php echo $_SESSION["tel"]?>" disabled>
+            <input type="number" class="form-control" id="txtTel" name="txtTel" maxlength="10" value="<?php echo $_SESSION["tel"]?>" required disabled>
         </div>
         <div class="col-4">
             <label for="txtTelp" class="form-label lg p-2">Telefono Privado</label>
-            <input type="text" class="form-control" id="txtTelp" name="txtTelp" maxlength="50" value="<?php echo $_SESSION["telp"]?>" disabled>
+            <input type="number" class="form-control" id="txtTelp" name="txtTelp" maxlength="10" value="<?php echo $_SESSION["telp"]?>" required disabled>
         </div>
         <div class="col-4">
             <label for="txtCorreo" class="form-label lg p-2">Correo</label>
-            <input type="text" class="form-control" id="txtCorreo" name="txtCorreo" maxlength="50" value="<?php echo $_SESSION["correo"]?>" disabled>
+            <input type="text" class="form-control" id="txtCorreo" name="txtCorreo" maxlength="50" value="<?php echo $_SESSION["correo"]?>" required disabled>
         </div>
         <div class="col-4">
-            <label for="txtAs" class="form-label lg p-2">Anos de servicio</label>
-            <input type="text" class="form-control" id="txtAs" name="txtAs" maxlength="50" value="<?php echo $_SESSION["as"]?>" disabled>
+            <label for="txtAs" class="form-label lg p-2">Años de servicio</label>
+            <input type="number" class="form-control" id="txtAs" name="txtAs" maxlength="2" value="<?php echo $_SESSION["as"]?>" required disabled>
         </div>
         <div class="row">
             <div class="col-12 p-2 d-flex flex-row align-items-center justify-content-center">
@@ -47,8 +47,20 @@
                     <div class="col p-4">
                         <input type="button" id="btnEditar" class="btn btn-success lg p-2" style=" width: 175px;" value="Editar" onclick="habilitarTxt()">
                     </div>
-                    <script>
+                    
+                    <div class="col p-4 ">
+                    <input type="submit" id="btnGuardar" name="btnGuardar" class="btn btn-primary lg p-2" style=" width: 175px;" value="Guardar cambios" disabled>
+                    </div>
+                    <div class="col p-4">
+                        <input type="button" class="btn btn-danger lg p-2" value="Cambiar Contrasena" style=" width: 175px;" data-bs-toggle='modal' data-bs-target='#exampleModal'>
+                    </div>
+                </div>    
+            </div>    
+        </div>    
+    </form>
+    <script>
                         function habilitarTxt(){
+                            document.getElementById("btnGuardar").disabled=false;
                             document.getElementById("txtNombre").disabled=false;
                             document.getElementById("txtDir").disabled=false;
                             document.getElementById("txtCp").disabled=false;
@@ -59,19 +71,9 @@
                             document.getElementById("txtCorreo").disabled=false;
                             document.getElementById("txtAs").disabled=false;
                             document.getElementById("txtContra").disabled=false;
-                            document.getElementById("btnGuardar").disabled=false;
+                            
                         }
                     </script>
-                    <div class="col p-4 ">
-                    <input type="button" id="btnGuardar" class="btn btn-primary lg p-2" style=" width: 175px;" value="Guardar cambios" disabled>
-                    </div>
-                    <div class="col p-4">
-                        <input type="button" class="btn btn-danger lg p-2" value="Cambiar Contrasena" style=" width: 175px;" data-bs-toggle='modal' data-bs-target='#exampleModal'>
-                    </div>
-                </div>    
-            </div>    
-        </div>    
-    </form>
     <div style="border-bottom: 0.1em solid #050505;">
 
     </div>    

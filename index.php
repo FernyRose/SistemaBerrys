@@ -166,8 +166,8 @@
                   <div class="carousel-item active">
                     <div class="cards-wrapper">
                       <div class="card">
-                        <div class="image-wrapper">
-                          <img src="Presentaciones/imagenes/index/arandano.jpg" alt="...">
+                        <div class="img-fluid">
+                          <img src="Presentaciones/imagenes/index/arandano.jpg" alt="Responsive image" style="height:100%; width:100%;">
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"></h5>
@@ -176,8 +176,8 @@
                         </div>
                       </div>
                       <div class="card">
-                        <div class="image-wrapper">
-                          <img src="Presentaciones/imagenes/index/aguacate.jpg" alt="...">
+                        <div class="img-fluid">
+                          <img src="Presentaciones/imagenes/index/aguacate.jpg" alt="Responsive image" style="height:100%; width:100%;">
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"></h5>
@@ -186,8 +186,8 @@
                         </div>
                       </div>
                       <div class="card">
-                        <div class="image-wrapper">
-                          <img src="Presentaciones/imagenes/index/frambuesa.jpeg" alt="...">
+                        <div class="img-fluid">
+                          <img src="Presentaciones/imagenes/index/frambuesa.jpeg" alt="Responsive image" style="height:100%; width:100%;">
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"></h5>
@@ -201,7 +201,7 @@
                         <div class="cards-wrapper">
                           <div class="card">
                               <div class="image-wrapper">
-                                <img src="Presentaciones/imagenes/index/manzanas.jpg" alt="...">
+                                <img src="Presentaciones/imagenes/index/manzanas.jpg" alt="Responsive image" style="height:100%; width:auto;">
                               </div>
                               <div class="card-body">
                                 <h5 class="card-title"></h5>
@@ -211,7 +211,7 @@
                             </div>
                             <div class="card">
                               <div class="image-wrapper">
-                                <img src="Presentaciones/imagenes/index/fresa.jpg" alt="...">
+                                <img src="Presentaciones/imagenes/index/fresa.jpg" alt="Responsive image" style="height:100%; width:auto;">
                               </div>
                               <div class="card-body">
                                 <h5 class="card-title"></h5>
@@ -221,7 +221,7 @@
                             </div>
                             <div class="card">
                               <div class="image-wrapper">
-                                <img src="Presentaciones/imagenes/index/pepino.jpeg" alt="...">
+                                <img src="Presentaciones/imagenes/index/pepino.jpeg" alt="Responsive image">
                               </div>
                               <div class="card-body">
                                 <h5 class="card-title"></h5>
@@ -235,7 +235,7 @@
                       <div class="cards-wrapper">
                         <div class="card">
                             <div class="image-wrapper">
-                              <img src="Imagenes/berrieCaja.png" alt="...">
+                              <img src="Imagenes/berrieCaja.png" alt="Responsive image">
                             </div>
                             <div class="card-body">
                               <h5 class="card-title"></h5>
@@ -245,7 +245,7 @@
                           </div>
                           <div class="card">
                             <div class="image-wrapper">
-                              <img src="Imagenes/ble3.png" alt="...">
+                              <img src="Imagenes/ble3.png" alt="Responsive image">
                             </div>
                             <div class="card-body">
                               <h5 class="card-title"></h5>
@@ -255,7 +255,7 @@
                           </div>
                           <div class="card">
                             <div class="image-wrapper">
-                              <img src="Imagenes/zarzamoraIndividual.png" alt="...">
+                              <img src="Imagenes/zarzamoraIndividual.png" alt="Responsive image">
                             </div>
                             <div class="card-body">
                               <h5 class="card-title lead"></h5>
