@@ -106,6 +106,7 @@
                       </select>
                       </div>
                       <input type="hidden" name="txtIdpre" id="txtIdpre" value="<?php echo $idpre;?>">
+                      <input type="hidden" name="txtExi" id="txtExi" value="<?php echo $existencias;?>">
                       <input type="hidden" name="txtNomPre" id="txtNomPre" value="<?php echo $nombrePre;?>">
                       <input type="hidden" name="txtFruta" id="txtFruta" value="<?php echo $nombreFruta;?>">
                       <input type="hidden" name="txtCalibre" id="txtCalibre" value="<?php echo $calibre;?>">

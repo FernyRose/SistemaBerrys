@@ -19,19 +19,17 @@
         }
     </style>
 </head>
-<?php 
-session_start();
-      if(isset($_SESSION["usuario"])){
-        if($_SESSION["usuario"]=="admin"){
-          include "../Layouts/nav.php";
-        } 
-      }
-      else{
-        include "../Layouts/nav2.php";
-      }
-?>
-<body>
   
+<body>
+<?php 
+        session_start();
+          if($_SESSION["usuario"]=="admin"){
+            include "../Layouts/nav.php";
+          } 
+        else{
+          include "../Layouts/nav2.php";
+        }
+  ?>
   
     <div class="container-fluid">
       <br>
@@ -58,16 +56,8 @@ session_start();
     </div>
 </body>           
 <footer>
-<?php 
-      if(isset($_SESSION["usuario"])){
-        if($_SESSION["usuario"]=="admin"){
-          
-        } 
-      }
-      else{
-        
-        include "../Layouts/footer.php";
-      }
+<?php
+  include "../Layouts/footer.php";
 ?>
 </footer>    
 

@@ -21,6 +21,8 @@
         $calibre=$_POST["txtCalibre"];
         $calidad=$_POST["txtCalidad"];
         $nomPre=$_POST["txtNomPre"];
+        $id=$idPre;
+        $exi=$_POST["txtExi"];
 
         //llenado carrito principal
         $_SESSION['carrito'][$_SESSION['n']][0]=$idPre;
@@ -35,6 +37,8 @@
         $_SESSION['carrito2'][$_SESSION['n2']][3]=$calidad;
         $_SESSION['carrito2'][$_SESSION['n2']][4]=$cantidad;
         $_SESSION['carrito2'][$_SESSION['n2']][5]=$precio;
+        $_SESSION['carrito2'][$_SESSION['n2']][6]=$id;
+        $_SESSION['carrito2'][$_SESSION['n2']][7]=$exi;
         ++$_SESSION['n2'];
     }
     else{
