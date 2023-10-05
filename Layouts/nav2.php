@@ -68,25 +68,7 @@
               <i class="fab fa-instagram"></i>
             </a>
           </li>
-        <?php
-          if(isset($_SESSION["usuario"])){
-            if($_SESSION["usuario"]!=NULL){
-              echo "<li class='nav-item'>
-              <a class='nav-link' href='../cerrarsesion.php'>Salir
-                <i class='fa-solid fa-right-to-bracket'></i>
-              </a>
-            </li>";
-            }
-          }
-            
-            else{
-              echo "<li class='nav-item'>
-              <a class='nav-link' href='../InicioSesion/iniciosesion.php'>Iniciar
-                <i class='fa-solid fa-right-to-bracket'></i>
-              </a>
-            </li>";
-            }
-          ?>
+       
         <?php
           if(isset($_SESSION["usuario"])){
             if($_SESSION["usuario"]!=NULL){
@@ -112,6 +94,25 @@
             }
           }
             ?>
+             <?php
+          if(isset($_SESSION["usuario"])){
+            if($_SESSION["usuario"]!=NULL){
+              echo "<li class='nav-item'>
+              <a class='nav-link' href='../cerrarsesion.php'>Salir
+                <i class='fa-solid fa-right-to-bracket'></i>
+              </a>
+            </li>";
+            }
+          }
+            
+            else{
+              echo "<li class='nav-item'>
+              <a class='nav-link' href='../InicioSesion/iniciosesion.php'>Iniciar
+                <i class='fa-solid fa-right-to-bracket'></i>
+              </a>
+            </li>";
+            }
+          ?>
         </ul>
       </div>
         </div>

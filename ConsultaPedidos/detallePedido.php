@@ -18,6 +18,7 @@
     </style>
 <body>
 <?php
+session_start();
       include "../Layouts/nav.php";
       include "../Conexion/conexion.php";
       $idpedido=$_GET["id"];

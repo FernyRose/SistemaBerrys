@@ -18,6 +18,7 @@
 </head>
 <body>
 <?php
+session_start();
     include "../Layouts/nav.php";
 ?>    
     <div class="row pt-5">

@@ -32,7 +32,7 @@
           <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.php">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Sobre Nosotros</a>
@@ -65,6 +65,30 @@
               <i class="fab fa-instagram"></i>
             </a>
           </li>
+          
+          <?php
+            if($_SESSION["usuario"]){
+              echo "<li class='nav-item'>
+              <a class='nav-link' href='Usuario/datosUsuario.php'>Perfil
+                <i class='fa-solid fa-user'></i>
+              </a>
+            </li>";
+            }
+            if(isset($_SESSION["n"])){
+              $var=$_SESSION["n"];
+            }
+            else {$var=0;}
+            if(isset($_SESSION["usuario"])){
+              if($_SESSION["usuario"]!=NULL){
+                echo"
+                <li class='nav-item'>
+              <a class='nav-link'href='Pedidos/verCarrito.php'>Carrito
+              <i class='fa-solid fa-cart-shopping'></i> ".$var."
+              </a>
+              </li>";
+              }
+            }
+          ?>
           <?php
             if($_SESSION["usuario"]!=NULL){
               echo "<li class='nav-item'>
@@ -77,15 +101,6 @@
               echo "<li class='nav-item'>
               <a class='nav-link' href='InicioSesion/iniciosesion.php'>Iniciar
                 <i class='fa-solid fa-right-to-bracket'></i>
-              </a>
-            </li>";
-            }
-          ?>
-          <?php
-            if($_SESSION["usuario"]){
-              echo "<li class='nav-item'>
-              <a class='nav-link' href='Usuario/datosUsuario.php'>Perfil
-                <i class='fa-solid fa-user'></i>
               </a>
             </li>";
             }

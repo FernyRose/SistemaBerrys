@@ -20,6 +20,7 @@
     </style>
 </head>
 <?php 
+session_start();
       if(isset($_SESSION["usuario"])){
         if($_SESSION["usuario"]=="admin"){
           include "../Layouts/nav.php";
