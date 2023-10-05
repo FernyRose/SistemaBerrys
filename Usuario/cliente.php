@@ -4,18 +4,18 @@
             <input type="text" class="form-control" id="txtNombre" name="txtNombre" maxlength="50" value="<?php echo $_SESSION['nombre']?>" required disabled>
         </div>
         <div class="col-4">
-            <label for="txtDir" class="form-label lg p-2">Direccion</label>
+            <label for="txtDir" class="form-label lg p-2">Dirección</label>
             <input type="text" class="form-control" id="txtDir" name="txtDir" maxlength="50" value="<?php echo $_SESSION["direccion"]?>" required disabled>
         </div>
         <div class="col-4">
-            <label for="txtCp" class="form-label lg p-2">Codigo postal</label>
+            <label for="txtCp" class="form-label lg p-2">Código postal</label>
             <input type="number" class="form-control" id="txtCp" name="txtCp" maxlength="5" value="<?php echo $_SESSION["cp"]?>" required disabled>
         </div>
         <div class="col-4">
             <label for="txtCiudad" class="form-label lg p-2">Ciudad</label>
             <select class="form-select" id="txtCiudad" name="txtCiudad" required disabled>
                 <option value="<?php echo $_SESSION["ciudad"]?>" selected><?php echo $_SESSION["ciudad"]?></option>
-                <option value="Ciudad Guzman">Ciudad Guzman</option>
+                <option value="Ciudad Guzman">Ciudad Guzmán</option>
             </select>
         </div>
         <div class="col-4">
@@ -26,11 +26,11 @@
             </select>
         </div>
         <div class="col-4">
-            <label for="txtTel" class="form-label lg p-2">Telefono Personal</label>
+            <label for="txtTel" class="form-label lg p-2">Teléfono Personal</label>
             <input type="number" class="form-control" id="txtTel" name="txtTel" maxlength="10" value="<?php echo $_SESSION["tel"]?>" required disabled>
         </div>
         <div class="col-4">
-            <label for="txtTelp" class="form-label lg p-2">Telefono Privado</label>
+            <label for="txtTelp" class="form-label lg p-2">Teléfono Privado</label>
             <input type="number" class="form-control" id="txtTelp" name="txtTelp" maxlength="10" value="<?php echo $_SESSION["telp"]?>" required disabled>
         </div>
         <div class="col-4">
@@ -81,9 +81,9 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Cambiar Contrasena</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <div class="modal-header bg-dark">
+                    <h5 class="modal-title text-light" id="exampleModalLabel">Cambiar Contrasena</h5>
+                    <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>

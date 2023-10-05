@@ -23,6 +23,24 @@
       h1{
         font-family: 'Inter', sans-serif !important;
       }
+      .direccion{
+            position: relative;
+        }
+        
+        .direccion::after{
+            content: '';
+            opacity: 0;
+            transition: all 0.2s;
+            height: 2px;
+            width: 100%;
+            background-color: #fff;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+      .direccion:hover::after{
+        opacity: 5;
+    }
     </style>
 </head>
 <body>
@@ -56,6 +74,9 @@
                 <div class="row col-12">
                     <div class="col-4 pb-5">
                         <h1 class="subtitulo">Nuestra Ubicacion</h1>
+                        <br>
+                        <br>
+                        <a class="text-secondary direccion">Domiclio: Quintanar #347, Ciudad Guzman, Jalisco, Mexico</a>
                     </div>
                     <div class="col-12 shadow-lg" id="map" style="width:100%; height:450px;">
                         

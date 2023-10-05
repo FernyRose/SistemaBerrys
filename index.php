@@ -121,7 +121,7 @@
                         <br>
                         <br>
                         <p class="portada h4">
-                          La mejor seleccion de frutas de toda la region.
+                          La mejor selección de frutas de toda la región
                         </p>
                         <p class="portada  pb-5">
                           Entregamos en cualquier parte de la ciudad.
@@ -160,7 +160,7 @@
           
         
           <div class="p-5 row-md-8 shadow-md bg-light">
-          <h2 class="card-title p-3 subtitulo text-dark">La major selecion de frutas de la region!</h2>
+          <h2 class="card-title p-3 subtitulo text-dark">La mayor selección de frutas de la región!</h2>
               <div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -171,7 +171,7 @@
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"></h5>
-                          <p class="card-text lead ">Clanche de Arandano.</p>
+                          <p class="card-text lead ">Clanche de Arándano.</p>
                           <a href="#" class="btn btn-primary">Ir a la Tienda</a>
                         </div>
                       </div>
@@ -182,7 +182,7 @@
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text lead">Kilo de aguacate.</p>
-                          <a href="#" class="btn btn-primary">Comprar</a>
+                          <a href="#" class="btn btn-primary">Ir a la Tienda</a>
                         </div>
                       </div>
                       <div class="card">
@@ -192,7 +192,7 @@
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text lead">Kilo Frambuesa.</p>
-                          <a href="#" class="btn btn-primary">Comprar</a>
+                          <a href="#" class="btn btn-primary">Ir a la Tienda</a>
                         </div>
                       </div>
                     </div>
@@ -200,33 +200,33 @@
                       <div class="carousel-item">
                         <div class="cards-wrapper">
                           <div class="card">
-                              <div class="image-wrapper">
-                                <img src="Presentaciones/imagenes/index/manzanas.jpg" alt="Responsive image" style="height:100%; width:auto;">
+                              <div class="img-fluid">
+                                <img src="Presentaciones/imagenes/index/manzanas.jpg" alt="Responsive image" style="height:100%; width:100%;">
                               </div>
                               <div class="card-body">
                                 <h5 class="card-title"></h5>
                                 <p class="card-text lead">Kilo de Manzana.</p>
-                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" class="btn btn-primary">Ir a la Tienda</a>
                               </div>
                             </div>
                             <div class="card">
-                              <div class="image-wrapper">
+                              <div class="img-fluid">
                                 <img src="Presentaciones/imagenes/index/fresa.jpg" alt="Responsive image" style="height:100%; width:auto;">
                               </div>
                               <div class="card-body">
                                 <h5 class="card-title"></h5>
                                 <p class="card-text lead">Kilo de Fresa</p>
-                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" class="btn btn-primary">Ir a la Tienda</a>
                               </div>
                             </div>
                             <div class="card">
-                              <div class="image-wrapper">
-                                <img src="Presentaciones/imagenes/index/pepino.jpeg" alt="Responsive image">
+                              <div class="img-fluid">
+                                <img src="Presentaciones/imagenes/index/pepino.jpeg" alt="Responsive image" style="height:100%; width:100%;">
                               </div>
                               <div class="card-body">
                                 <h5 class="card-title"></h5>
                                 <p class="card-text lead">Kilo de Pepino.</p>
-                                <a href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" class="btn btn-primary">Ir a la Tienda</a>
                           </div>
                         </div>
                         </div>
@@ -234,33 +234,33 @@
                     <div class="carousel-item">
                       <div class="cards-wrapper">
                         <div class="card">
-                            <div class="image-wrapper">
-                              <img src="Imagenes/berrieCaja.png" alt="Responsive image">
+                            <div class="img-fluid">
+                              <img src="Presentaciones/imagenes/manzanas.jpg" alt="Responsive image" style="height:100%; width:100%;">
                             </div>
                             <div class="card-body">
                               <h5 class="card-title"></h5>
-                              <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Comprar</a>
+                              <p class="card-text lead">Kilo de Manzana.</p>
+                              <a href="#" class="btn btn-primary">Ir a la Tienda</a>
                             </div>
                           </div>
                           <div class="card">
-                            <div class="image-wrapper">
-                              <img src="Imagenes/ble3.png" alt="Responsive image">
+                            <div class="img-fluid">
+                              <img src="Presentaciones/imagenes/index/arandano.jpg" alt="Responsive image" style="height:100%; width:100%;">
                             </div>
                             <div class="card-body">
                               <h5 class="card-title"></h5>
-                              <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Comprar</a>
+                              <p class="card-text lead">Kilo de Arandano.</p>
+                              <a href="#" class="btn btn-primary">Ir a la Tienda</a>
                             </div>
                           </div>
                           <div class="card">
-                            <div class="image-wrapper">
-                              <img src="Imagenes/zarzamoraIndividual.png" alt="Responsive image">
+                            <div class="img-fluid">
+                              <img src="Presentaciones/imagenes/index/pepino.jpeg" alt="Responsive image" style="height:100%; width:100%;">
                             </div>
                             <div class="card-body">
                               <h5 class="card-title lead"></h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Comprar</a>
+                              <p class="card-text lead">Kilo de Pepiono.</p>
+                              <a href="#" class="btn btn-primary">Ir a la Tienda</a>
                           </div>
                         </div>  
                       </div> 
@@ -287,22 +287,22 @@
     <div class="row">
       <div class="col-md-4 p-2">
         <h5>Quienes somos?</h5>
-        <p>Somos unas empresa orgullosamente Zapotlense, realizamos la venta de fruta a negocios chicos y medianos en toda la region sur de Jalisco.</p>
+        <p>Somos una empresa orgullosamente Zapotlense, realizamos la venta de fruta a negocios chicos y medianos en toda la región sur de Jalisco.</p>
       </div>
       <div class="col-md-4 p-2">
         <h5>Contacto</h5>
         <p>Email: selectosdelsur@gmail.com</p>
-        <p>Telefono: +52 (341)123-6846</p>
-        <p>Domiclio: Quintanar, Ciudad Guzman, Jalisco, Mexico</p>
+        <p>Teléfono: +52 (341)123-6846</p>
+        <p>Domicilio: Quintanar, Ciudad Guzmán, Jalisco, México</p>
       </div>
       <div class="col-md-4 p-2">
         <h5>Colaboradores</h5>
         <ul class="list-inline">
           <li class="list-inline-item"><a href="https://www.facebook.com/ababormarisqueriabar/?locale=es_LA" target="_blank">Grupo A Babor</a></li>
           <br>
-          <li class="list-inline-item"><a href="#">Grupo de Guzman</a></li>
+          <li class="list-inline-item"><a href="#">Grupo de Guzmán</a></li>
           <br>
-          <li class="list-inline-item"><a href="#">Meztiza</a></li>
+          <li class="list-inline-item"><a href="#">Mestizá</a></li>
         </ul>
       </div>
     </div>

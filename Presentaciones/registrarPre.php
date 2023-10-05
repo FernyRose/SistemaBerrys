@@ -30,7 +30,7 @@
   <div class="container-fluid row">
     <div class="col-sm-4 pt-5 ps-1 shadow-lg">
       <div class="text-center pb-2 subtitulo">
-            <h2 class="display-6">Registro de Presentacion</h2>
+            <h2 class="display-6">Registro de Presentación</h2>
       </div>
 
       <form class="row g-4 container-fluid pt-5" id="frm" method="POST" action="pre.php" enctype="multipart/form-data">
@@ -41,7 +41,7 @@
                 </select>
               </div>
               <div class="col-6">
-              <label for="comboEspe" class="input-group-text ps-3">Especificacion</label>
+              <label for="comboEspe" class="input-group-text ps-3"></label>
                 <select name="comboEspe" id="comboEspe" class="form-select">
                     
                 </select>
@@ -49,7 +49,7 @@
               
               <div class="row p-3">
                 <div class="col-md ps-2">
-                  <label for="inCali" class="form-label">Calibre (Tamano)</label>
+                  <label for="inCali" class="form-label">Calibre (Tamaño)</label>
                   <input type="text" class="form-control" id="inCali" name="inCali" maxlength="50" required disabled>
                 </div>
                 <div class="col-md  ps-3">
@@ -60,7 +60,7 @@
 
               <div class="row p-3">
                 <div class="col-md-7">
-                  <label for="inNom" class="form-label">Nombre Presentacion</label>
+                  <label for="inNom" class="form-label">Nombre Presentación</label>
                   <input type="text" class="form-control" id="inNom" name="inNom" maxlength="50" required>
                 </div>
                 <div class="col-md">
@@ -117,7 +117,7 @@
     <div class="modal-content">
     <form action="updateImg.php" method="POST" enctype="multipart/form-data">
       <div class="modal-header bg-dark">
-        <h5 class="modal-title  text-light" id="exampleModalLabel fw-bold">Editar Especificacion</h5>
+        <h5 class="modal-title  text-light" id="exampleModalLabel fw-bold">Editar Especificación</h5>
         <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -125,7 +125,7 @@
       <div class="modal-body">
         
       <div class="">
-                  <label for="modalid" class="form-label lg p-2 fw-bolder">idPresentacion</label>
+                  <label for="modalid" class="form-label lg p-2 fw-bolder">idPresentación</label>
                   <input type="text" class="form-control" id="modalid" name="modalid" maxlength="50" disabled>
       </div>
       <div class="">

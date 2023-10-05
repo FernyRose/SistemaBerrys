@@ -34,10 +34,13 @@
         <div class="text-center pb-2 subtitulo">
           <h2 class="display-6">Registro de Fruta</h2>
         </div>
-        <form class="row g-2 container-fluid" id="frm" method="POST">
-                <div class="col-sm-md-lg-4 p-3">
+        <form class="row g-2 container-fluid needs-validation" id="frm" method="POST" novalidate>
+                <div class="col-sm-md-lg-4 p-3 position-relative">
                   <label for="inputNom" class="form-label lg p-2">Nombre</label>
                   <input type="text" placeholder="Nombre Fruta" class="form-control" id="inNom" name="nombre" maxlength="50" required>
+                  <div class="invalid-tooltip">
+                      Es necesario llenar este campo
+                  </div>
                 </div>
                 <div class="row-2 text-center p-2">
                   <button class="btn btn-primary" type="button" id="btnAgregar" class="btn btn-danger" onclick="" name="Registrar">Registrar</button>
@@ -101,7 +104,29 @@
         document.getElementById("modalid").value=num; 
         let btnid=document.getElementById("btnActualizar");
   }
+</script> 
+<script>
+   // Example starter JavaScript for disabling form submissions if there are invalid fields
+   (() => {
+          'use strict'
+
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          const forms = document.querySelectorAll('.needs-validation')
+
+          // Loop over them and prevent submission
+          Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+
+              form.classList.add('was-validated')
+            }, false)
+          })
+        })()
 </script>
+
 </body>
 <script type="text/javascript" src="../Jquery/jquery-3.6.4.min.js"></script>
 <script type="text/javascript" src="metodosFruta.js"></script>
