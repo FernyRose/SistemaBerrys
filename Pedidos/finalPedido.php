@@ -50,7 +50,7 @@
                 $total=$total+$_SESSION['carrito2'][$i][4]*$_SESSION['carrito2'][$i][5];
                 }?>
           <li class="list-group-item d-flex justify-content-between">
-            <span>Envio</span>
+            <span>Envió</span>
             <?php
             if($total>=50){
               $envio=0;
@@ -89,7 +89,7 @@
             </div>
 
             <div class="col-12">
-              <label for="address" class="form-label">Direccion principal</label>
+              <label for="address" class="form-label">Dirección principal</label>
               <input type="text" class="form-control" id="address" value="<?php echo $_SESSION["direccion"]?>" required>
               <div class="invalid-feedback">
                 Please enter your shipping address.
@@ -100,13 +100,13 @@
             <div class="form-check">
             <input class="form-check-input" type="radio" name="rbDir" id="rbDir" checked>
             <label class="form-check-label" for="rbDir">
-                La direccion de envio es la misma que la direccion principal.
+                La dirección de envió es la misma que la dirección principal.
             </label>
             </div>
             <div class="form-check">
             <input class="form-check-input" type="radio" name="rbDir" id="rbDir2">
             <label class="form-check-label" for="rbDir2">
-                Utilizar otra direccion de envio.
+              Utilizar otra dirección de envió.
             </label>
             </div>
             <hr class="my-4">
@@ -141,7 +141,7 @@
               </div>
             </div>
             <div class="col-12">
-              <label for="address" class="form-label">Direccion</label>
+              <label for="address" class="form-label">Dirección</label>
               <input type="text" class="form-control" id="txtDir" name="txtDir" placeholder="1234 Main St" disabled required>
               <div class="invalid-feedback">
                 Please enter your shipping address.

@@ -32,20 +32,23 @@
       
       <div class="col-sm-4 pt-5 ps-1 entrada shadow-lg">
         <div class="text-center pb-2 subtitulo">
-          <h2 class="display-6">Registro de Especificacion</h2>
+          <h2 class="display-6">Registro de Especificación</h2>
         </div>
-        <form class="row g-4 container-fluid pt-5" id="frm" method="POST">
+        <form class="row g-4 container-fluid pt-5 needs-validation" id="frm" method="POST" novalidate>
           <div class="col-12">
             <label for="comboFruta" class="input-group-text">Fruta</label>
-              <select name="comboFruta" id="comboFruta" class="form-select">
+              <select name="comboFruta" id="comboFruta" class="form-select" required>
                 
               </select>
           </div>
           
           
-            <div class="col-md p-3">
-              <label for="inCali" class="form-label">Calibre (Tamano)</label>
+            <div class="col-md p-3 position-relative">
+              <label for="inCali" class="form-label">Calibre (Tamaño)</label>
               <input type="text" class="form-control pe-5" id="inCali" name="inCali" maxlength="50" required>
+              <div class="invalid-tooltip">
+                      Es necesario llenar este campo
+              </div>  
             </div>
             <div class="col-md p-3">
               <label for="inCal" class="form-label ps-2">Calidad</label>
@@ -65,7 +68,7 @@
                 <thead>
                   <h3 class="display-8 text-decoration-underline pb-2">Especificaciones Registradas</h3>
                 <tr class="m-5">
-                    <th>idEspecificacion</th>
+                    <th>id Especificación</th>
                     <th>Fruta</th>
                     <th>Calibre</th>
                     <th>Calidad</th>
@@ -84,14 +87,14 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header bg-dark">
-        <h5 class="modal-title text-light" id="exampleModalLabel">Editar Especificacion</h5>
+        <h5 class="modal-title text-light" id="exampleModalLabel">Editar Especificación</h5>
         <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
       <div class="">
-                  <label for="modalid" class="form-label lg p-2 fw-bolder">idEspecificacion</label>
+                  <label for="modalid" class="form-label lg p-2 fw-bolder">id Especificación</label>
                   <input type="text" class="form-control" id="modalid" name="nombre" maxlength="50" disabled>
       </div>
       <div class="">
@@ -119,6 +122,27 @@
         document.getElementById("modalcalidad").value=calidad;
         document.getElementById("modalid").value=num;
   }
+</script>
+<script>
+   // Example starter JavaScript for disabling form submissions if there are invalid fields
+   (() => {
+          'use strict'
+
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          const forms = document.querySelectorAll('.needs-validation')
+
+          // Loop over them and prevent submission
+          Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+
+              form.classList.add('was-validated')
+            }, false)
+          })
+        })()
 </script>
 </body>
 <script type="text/javascript" src="../Jquery/jquery-3.6.4.min.js"></script>

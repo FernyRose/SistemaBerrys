@@ -66,74 +66,128 @@
   
     <div class="container-fluid2">
       <div class="login shadow-lg">
-        <div class="h1 text-center text-primary  p-1 subtitulo">Registrate</div>
-        <form class="row g-2" id="frm" method="POST" action="registrarCliente.php">
+        <div class="h1 text-center text-primary  p-1 subtitulo">Registrarse</div>
+        <form class="row g-2 needs-validation" id="frm" method="POST" action="registrarCliente.php" novalidate>
             <div class="">    
                 <div class="form-group row pt-3 gap-1">
-                  <div class="col w-50 ">
+                  <div class="col w-50 position-relative">
                     <label for="inputId" class="form-label gap-1">Nombre</label>
                     <input type="text" class="form-control" placeholder="Nombre completo"  id="inputId" name="nombre" maxlength="50" required>
+                    <div class="invalid-tooltip">
+                      Es necesario llenar este campo
+                    </div>
                   </div>
-                  <div class="col w-50">
-                    <label for="inputDes" class="form-label">Dirección</label>
+                  <div class="col w-50 position-relative">
+                    <label for="inputDes" class="form-label">Diecciónr</label>
                     <div class="pl-0" style="margin-topt:15px;" >
                       <input type="text" class="form-control" placeholder="Domicilio"  id="inputDes" name="direccion" maxlength="50" required>
                     </div>
                     </div>
+                    <div class="invalid-tooltip">
+                      Es necesario llenar este campo
+                    </div>
                 </div>
 
                 <div class="row pt-3">
-                  <div class="col-md-4 w-50">
-                    <label for="inputDes" class="form-label">Codigo Postal</label>
+                  <div class="col-md-4 w-50 position-relative">
+                    <label for="inputDes" class="form-label">Código Postal</label>
                     <input type="number" class="form-control" placeholder="Codigo postal" id="inputDes" name="cp" maxlength="50" required>
+                    <div class="invalid-tooltip">
+                      Es necesario llenar este campo
+                    </div>
                   </div>
-                  <div class="col-md-4 w-50">
+                  <div class="col-md-4 w- position-relative">
                     <label for="inputDes" class="form-label">Ciudad</label>
                     <input type="text" class="form-control" placeholder="Ciudad" id="inputDes" name="ciudad" maxlength="50" required>
+                    <div class="invalid-tooltip">
+                      Es necesario llenar este campo
+                    </div>  
                   </div>
                 </div>  
 
                 <div class="row pt-3">
-                  <div class="col-md-4  w-50">
+                  <div class="col-md-4  w-50 position-relative">
                     <label for="inputDes" class="form-label">Estado</label>
                     <input type="text" class="form-control" placeholder="Estado" id="inputDes" name="estado" maxlength="50" required>
+                    <div class="invalid-tooltip">
+                      Es necesario llenar este campo
+                    </div>
                   </div>
-                  <div class="col-md-4 w-50">
-                    <label for="inputDes" class="form-label">Telefono Personal</label>
-                    <input type="numberf" class="form-control" placeholder="Telefono personal" id="inputDes" name="telp" maxlength="50" required>
+                  <div class="col-md-4 w-50 position-relative">
+                    <label for="inputDes" class="form-label">Teléfono Personal</label>
+                    <input type="number" class="form-control" placeholder="Telefono personal" id="inputDes" name="telp" maxlength="50" pattern="[0-9]" required>
+                    <div class="invalid-tooltip">
+                      Es necesario llenar este campo
+                    </div>
                   </div>
                 </div>
 
                 <div class="row">
-                  <div class="col-md-4 w-50">
-                    <label for="inputDes" class="form-label">Telefono Empresa</label>
+                  <div class="col-md-4 w-50 position-relative">
+                    <label for="inputDes" class="form-label">Teléfono Empresa</label>
                     <input type="number" class="form-control" placeholder="Telefono de empresa" id="inputDes" name="tele" maxlength="50" required>
+                    <div class="invalid-tooltip">
+                      Es necesario llenar este campo
+                    </div>
                   </div>
-                  <div class="col-md-4 w-50">
+                  <div class="col-md-4 w-50 position-relative">
                     <label for="inputDes" class="form-label">Años de servicio</label>
                     <input type="number" class="form-control" placeholder="Años de servicio"  id="inputDes" name="anos" maxlength="50" required>
+                    <div class="invalid-tooltip">
+                      Es necesario llenar este campo
+                    </div>
                   </div>
                 </div>
 
                 <div class="row">
-                  <div class="col-md-4 w-50 gap-2">
+                  <div class="col-md-4 w-50 gap-2 position-relative">
                     <label for="inputDes" class="form-label">Correo</label>
                     <input type="text" class="form-control" placeholder="Correo electrónico" id="inputDes" name="correo" maxlength="50" required>
+                    <div class="invalid-tooltip">
+                      Es necesario llenar este campo
+                    </div>
                   </div>
-                  <div class="col-md-4 w-50">
+                  <div class="col-md-4 w-50 position-relative">
                     <label for="inputDes" class="form-label">Contraseña</label>
                     <input type="password" class="form-control" placeholder="Contraseña" id="inputDes" name="contrasena" maxlength="50" required>
+                    <div class="invalid-tooltip">
+                      Es necesario llenar este campo
+                    </div>  
                   </div>
                 </div>  
                 <div class="d-flex flex-row align-items-center justify-content-center">
                   <div class="row pt-3">
-                    <button type="submit" class="btn btn-success w-100" onclick="" name="Registrar">Registrarte</button>
+                    <button type="submit" class="btn btn-success w-100" onclick="" name="Registrar">Registrarse</button>
                   </div>
                 </div>
+                <div class="invalid-tooltip">
+                      Es necesario llenar este campo
+                  </div>
             </div>    
         </form>
       </div> 
-    </div>    
+    </div>  
+    <script>
+              // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+          'use strict'
+
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          const forms = document.querySelectorAll('.needs-validation')
+
+          // Loop over them and prevent submission
+          Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+
+              form.classList.add('was-validated')
+            }, false)
+          })
+        })()
+    </script>  
 </body>
 <div class="pt-5">
   <?php

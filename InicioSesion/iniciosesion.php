@@ -73,15 +73,21 @@
 
     <div class="container-fluid2 mt-5">
         <div class="login shadow-lg">
-        <h1 class="text-center text-primary p-1 subtitulo">Iniciar Sesion</h1>
-        <form class="row g-2" id="frm" method="POST" action="../validarUsuario.php">
-                <div class="col-12 p-2">
+        <h1 class="text-center text-primary p-1 subtitulo">Iniciar Sesión</h1>
+        <form class="row g-2 needs-validation" id="frm" method="POST" action="../validarUsuario.php" novalidate>
+                <div class="col-12 p-2 position-relative">
                   <label for="inputDes" class="form-label">Correo</label>
                   <input type="text" class="form-control" placeholder="Correo electrónico"  id="inputDes" name="correo" maxlength="50" required>
+                  <div class="invalid-tooltip">
+                      Es necesario llenar este campo
+                  </div>  
                 </div>
-                <div class="col-12 p-2">
+                <div class="col-12 p-2 position-relative">
                   <label for="inputDes" class="form-label">Contraseña</label>
                   <input type="password" class="form-control" placeholder="Contraseña"  id="inputDes" name="contrasena" maxlength="50" required>
+                  <div class="invalid-tooltip">
+                      Es necesario llenar este campo
+                  </div>  
                 </div>
                   <div class="row-5 p-3">
                     <button type="submit" class="btn btn-primary w-100" onclick="" name="Registrar">Iniciar</button>
@@ -96,7 +102,28 @@
       function cuenta(){
         window.location.href="../Registro/registro.php";
       }
-    </script>    
+    </script>  
+    <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (() => {
+          'use strict'
+
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          const forms = document.querySelectorAll('.needs-validation')
+
+          // Loop over them and prevent submission
+          Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+
+              form.classList.add('was-validated')
+            }, false)
+          })
+        })()
+    </script>  
   </div>
 </body>
 <div class="pt-5">

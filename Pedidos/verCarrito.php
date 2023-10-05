@@ -47,7 +47,7 @@
                         </div>
                       </thead>
                       <tr class=" table-dark">
-                          <th>Presentacion</th>
+                          <th>Presentación</th>
                           <th>Fruta</th>
                           <th>Calibre</th>
                           <th>Calidad</th>

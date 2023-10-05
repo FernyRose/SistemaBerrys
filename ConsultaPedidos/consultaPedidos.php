@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/53b117a021.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./main.scss">
     <link rel="stylesheet" href="../style.css">
-    <title>Document</title>
+    <title>Pedidos</title>
     <style>
         .subtitulo{
             border-bottom: 0.2em solid #F3C577;
