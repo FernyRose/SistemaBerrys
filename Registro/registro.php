@@ -125,14 +125,14 @@
                 <div class="row">
                   <div class="col-md-4 w-50 position-relative">
                     <label for="inputDes" class="form-label">Teléfono Empresa</label>
-                    <input type="number" class="form-control" placeholder="Telefono de empresa" id="inputDes" name="tele" maxlength="50" required>
+                    <input type="number" class="form-control" placeholder="Telefono de empresa" id="inputDes" name="tele" maxlength="50">
                     <div class="invalid-tooltip">
                       Es necesario llenar este campo
                     </div>
                   </div>
                   <div class="col-md-4 w-50 position-relative">
                     <label for="inputDes" class="form-label">Años de servicio</label>
-                    <input type="number" class="form-control" placeholder="Años de servicio"  id="inputDes" name="anos" maxlength="50" required>
+                    <input type="number" class="form-control" placeholder="Años de servicio"  id="inputDes" name="anos" maxlength="50">
                     <div class="invalid-tooltip">
                       Es necesario llenar este campo
                     </div>
