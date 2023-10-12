@@ -172,8 +172,10 @@
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text lead ">Clanche de Arándano.</p>
-                          <a href="#" class="btn btn-primary">Ir a la Tienda</a>
+                          <br>
+                            <a href="Pedidos/pedidos3.php" class="btn btn-primary">Ir a la Tienda</a>
                         </div>
+                            
                       </div>
                       <div class="card">
                         <div class="img-fluid">
@@ -182,7 +184,7 @@
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text lead">Kilo de aguacate.</p>
-                          <a href="#" class="btn btn-primary">Ir a la Tienda</a>
+                          <a href="Pedidos/pedidos3.php" class="btn btn-primary">Ir a la Tienda</a>
                         </div>
                       </div>
                       <div class="card">
@@ -192,7 +194,7 @@
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text lead">Kilo Frambuesa.</p>
-                          <a href="#" class="btn btn-primary">Ir a la Tienda</a>
+                          <a href="Pedidos/pedidos3.php" class="btn btn-primary">Ir a la Tienda</a>
                         </div>
                       </div>
                     </div>
@@ -206,7 +208,7 @@
                               <div class="card-body">
                                 <h5 class="card-title"></h5>
                                 <p class="card-text lead">Kilo de Manzana.</p>
-                                <a href="#" class="btn btn-primary">Ir a la Tienda</a>
+                                <a href="Pedidos/pedidos3.php" class="btn btn-primary">Ir a la Tienda</a>
                               </div>
                             </div>
                             <div class="card">
@@ -216,7 +218,7 @@
                               <div class="card-body">
                                 <h5 class="card-title"></h5>
                                 <p class="card-text lead">Kilo de Fresa</p>
-                                <a href="#" class="btn btn-primary">Ir a la Tienda</a>
+                                <a href="Pedidos/pedidos3.php" class="btn btn-primary">Ir a la Tienda</a>
                               </div>
                             </div>
                             <div class="card">
@@ -226,7 +228,7 @@
                               <div class="card-body">
                                 <h5 class="card-title"></h5>
                                 <p class="card-text lead">Kilo de Pepino.</p>
-                                <a href="#" class="btn btn-primary">Ir a la Tienda</a>
+                                <a href="Pedidos/pedidos3.php" class="btn btn-primary">Ir a la Tienda</a>
                           </div>
                         </div>
                         </div>
@@ -240,7 +242,7 @@
                             <div class="card-body">
                               <h5 class="card-title"></h5>
                               <p class="card-text lead">Kilo de Manzana.</p>
-                              <a href="#" class="btn btn-primary">Ir a la Tienda</a>
+                              <a href="Pedidos/pedidos3.php" class="btn btn-primary">Ir a la Tienda</a>
                             </div>
                           </div>
                           <div class="card">
@@ -250,7 +252,7 @@
                             <div class="card-body">
                               <h5 class="card-title"></h5>
                               <p class="card-text lead">Kilo de Arandano.</p>
-                              <a href="#" class="btn btn-primary">Ir a la Tienda</a>
+                              <a href="Pedidos/pedidos3.php" class="btn btn-primary">Ir a la Tienda</a>
                             </div>
                           </div>
                           <div class="card">
@@ -260,7 +262,7 @@
                             <div class="card-body">
                               <h5 class="card-title lead"></h5>
                               <p class="card-text lead">Kilo de Pepiono.</p>
-                              <a href="#" class="btn btn-primary">Ir a la Tienda</a>
+                              <a href="Pedidos/pedidos3.php" class="btn btn-primary">Ir a la Tienda</a>
                           </div>
                         </div>  
                       </div> 
