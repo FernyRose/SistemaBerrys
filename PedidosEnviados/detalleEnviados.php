@@ -11,6 +11,11 @@
     <title>Detalle Pedido</title>
     
 </head>
+<style>
+    .subtitulo{
+        border-bottom: 0.2em solid #F3C577;
+    }
+</style>
 <body>
 <?php
 session_start();
@@ -24,41 +29,45 @@ session_start();
       $comando=mysqli_query($enlace,$r);
 ?>     
     <div class="container-fluid g-3 mt-3">
-        <div class="row">
-        <h3>Detalle del pedido</h3>
-            <div class="col-12">
-            <table id="tablaPedidos" class="table table-striped">
-            <tr>
-                <th>idPedido</th>
-                <th>Fruta</th>
-                <th>Presentacion</th>
-                <th>Calibre</th>
-                <th>Calidad</th>
-                <th>Cantidad</th>
-            </tr>
-            <tr>
-                <?php
-                $id=0;
-                    while($row=mysqli_fetch_array($comando)){
-                ?>
-                    <td class=""><?php $id=$row[0]; echo $row[0];?></td>
-                    <td><?php echo $row[1];?></td>
-                    <td><?php echo $row[2];?></td>
-                    <td><?php echo $row[3];?></td>
-                    <td><?php echo $row[4];?></td>
-                    <td><?php echo $row[5];?></td>
-            </tr>
-                <?php
-                    }   
-                ?>      
-            </table> 
-            </div>
-            <div class="col-3">
-                <form action="finalizarPedido.php" method="post">
-                    <input type="hidden" id="txtId" name="txtId" value="<?php echo $id;?>">
-                    <button type="submit" id="" class="btn btn-primary">Marcar Como Entregado</button>
-                </form>
-            </div>
+        <div class="row d-flex flex-row align-items-center justify-content-center">
+            <div class="col-10 shadow-lg p-5">
+                <div class="col-3 subtitulo">
+                    <h3>Detalle del pedido Enviado</h3>
+                </div>
+                <div class="col-12 pt-5">
+                <table id="tablaPedidos" class="table table-bordered table-striped">
+                <tr>
+                    <th>idPedido</th>
+                    <th>Fruta</th>
+                    <th>Presentacion</th>
+                    <th>Calibre</th>
+                    <th>Calidad</th>
+                    <th>Cantidad</th>
+                </tr>
+                <tr>
+                    <?php
+                    $id=0;
+                        while($row=mysqli_fetch_array($comando)){
+                    ?>
+                        <td class=""><?php $id=$row[0]; echo $row[0];?></td>
+                        <td><?php echo $row[1];?></td>
+                        <td><?php echo $row[2];?></td>
+                        <td><?php echo $row[3];?></td>
+                        <td><?php echo $row[4];?></td>
+                        <td><?php echo $row[5];?></td>
+                </tr>
+                    <?php
+                        }   
+                    ?>      
+                </table> 
+                </div>
+                <div class="col-3 pt-5">
+                    <form action="finalizarPedido.php" method="post">
+                        <input type="hidden" id="txtId" name="txtId" value="<?php echo $id;?>">
+                        <button type="submit" id="" class="btn btn-primary">Marcar Como Entregado</button>
+                    </form>
+                </div>
+            </div>    
         </div>
     </div>
 </body>

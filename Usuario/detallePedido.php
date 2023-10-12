@@ -36,9 +36,14 @@ include "../Conexion/conexion.php";
       }
 ?>
 <body>  
-    <div class="container d-flex flex-column min-vh-100">
+    <div class="container d-flex flex-column min-vh-100 ">
       <br>
-      <div class="row-10 d-flex flex-row align-items-center justify-content-center">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="row-10 d-flex flex-row align-items-center justify-content-center shadow-lg">
         <div class="row p-5">
             <div class="pb-5">
                 <h3 class="text-decoration-underline">Detalle del pedido</h3>
@@ -100,7 +105,7 @@ include "../Conexion/conexion.php";
     </div>       
          
 </body>
-<div class="pt-3 mt-auto">
+<div class="pt-3">
     <?php
         include "../Layouts/footer.php";
     ?> 

@@ -68,7 +68,7 @@
           
   ?>
   <div class="bg-image" 
-    style="background-image: url('/Imagenes/fondo5.jpg');
+    style="background-image: url('/Imagenes.jpg');
             ">
 
     <div class="container-fluid2 mt-5">
