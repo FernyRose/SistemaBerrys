@@ -46,11 +46,7 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Ayuda</a>
               </li>
-            </ul>
-          </div>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-          <li class="nav-item">
+              <li class="nav-item">
             <a class="nav-link" href="">
               <i class="fab fa-facebook-f"></i>
             </a>
@@ -65,6 +61,10 @@
               <i class="fab fa-instagram"></i>
             </a>
           </li>
+            </ul>
+          </div>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav">
           
           <?php
             if($_SESSION["usuario"]){
