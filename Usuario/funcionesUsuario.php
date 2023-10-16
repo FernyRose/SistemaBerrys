@@ -48,6 +48,7 @@
         $comando=mysqli_query($enlace ,$r);
         $cliente=mysqli_fetch_array($comando);
         $num=0;
+        
         if($cliente!=Null){
             $r="UPDATE clientes SET password='$contraN' WHERE idcliente=$idcliente";
             mysqli_query($enlace ,$r);

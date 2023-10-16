@@ -131,7 +131,7 @@
       </div>
   </div>    
 </body>
-<div class="pt-3">
+<div class="fixed-bottom">
     <?php
         include "../Layouts/footer.php";
     ?> 

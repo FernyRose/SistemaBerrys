@@ -78,7 +78,7 @@
                     </div>
                   </div>
                   <div class="col w-50 position-relative">
-                    <label for="inputDes" class="form-label">Diecciónr</label>
+                    <label for="inputDes" class="form-label">Diección</label>
                     <div class="pl-0" style="margin-topt:15px;" >
                       <input type="text" class="form-control" placeholder="Domicilio"  id="inputDes" name="direccion" maxlength="50" required>
                     </div>
@@ -122,34 +122,30 @@
                   </div>
                 </div>
 
-                <div class="row">
+                <div class="row pt-3">
                   <div class="col-md-4 w-50 position-relative">
                     <label for="inputDes" class="form-label">Teléfono Empresa</label>
-                    <input type="number" class="form-control" placeholder="Telefono de empresa" id="inputDes" name="tele" maxlength="50" required>
-                    <div class="invalid-tooltip">
-                      Es necesario llenar este campo
-                    </div>
+                    <input type="number" class="form-control" placeholder="Telefono de empresa" id="inputDes" name="tele" maxlength="50">
+                    
                   </div>
                   <div class="col-md-4 w-50 position-relative">
                     <label for="inputDes" class="form-label">Años de servicio</label>
-                    <input type="number" class="form-control" placeholder="Años de servicio"  id="inputDes" name="anos" maxlength="50" required>
-                    <div class="invalid-tooltip">
-                      Es necesario llenar este campo
-                    </div>
+                    <input type="number" class="form-control" placeholder="Años de servicio"  id="inputDes" name="anos" maxlength="50">
+                    
                   </div>
                 </div>
 
-                <div class="row">
+                <div class="row pt-3">
                   <div class="col-md-4 w-50 gap-2 position-relative">
                     <label for="inputDes" class="form-label">Correo</label>
-                    <input type="text" class="form-control" placeholder="Correo electrónico" id="inputDes" name="correo" maxlength="50" required>
+                    <input type="email" class="form-control" placeholder="Correo electrónico" id="inputDes" name="correo" maxlength="50" pattern=".+@globex\.com" required>
                     <div class="invalid-tooltip">
                       Es necesario llenar este campo
                     </div>
                   </div>
                   <div class="col-md-4 w-50 position-relative">
                     <label for="inputDes" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" placeholder="Contraseña" id="inputDes" name="contrasena" maxlength="50" required>
+                    <input type="password" class="form-control" placeholder="Contraseña" id="inputDes" name="contrasena" minlength="5" maxlength="50" required>
                     <div class="invalid-tooltip">
                       Es necesario llenar este campo
                     </div>  

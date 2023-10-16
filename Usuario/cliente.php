@@ -82,25 +82,47 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                 <div class="modal-header bg-dark">
-                    <h5 class="modal-title text-light" id="exampleModalLabel">Cambiar Contrasena</h5>
+                    <h5 class="modal-title text-light" id="exampleModalLabel">Cambiar Contraseña</h5>
                     <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                <div class="">
-                    <label for="txtActual" class="form-label lg p-2">Contrasena Actual</label>
-                    <input type="text" class="form-control" id="txtActual" name="txtActual" maxlength="50" required>
-                </div>
-                <div class="">
-                    <label for="txtNueva" class="form-label lg p-2">Nueva Contrasena</label>
-                    <input type="text" class="form-control" id="txtNueva" name="txtNueva" maxlength="50" required>
-                </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" id="btnContra" data-target="" class="btn btn-primary">Guardar Cambios</button>
-                </div>
+                    <form>    
+                        <div class="position-relative">
+                            <label for="txtActual" class="form-label lg p-2">Contraseña Actual</label>
+                            <input type="text" class="form-control" id="txtActual" name="txtActual" maxlength="50" required>
+                        </div>
+                        <div class="position-relative">
+                            <label for="txtNueva" class="form-label lg p-2">Nueva Contraseña</label>
+                            <input type="text" class="form-control" id="txtNueva" name="txtNueva" minlength="5" required>
+                            <div class="invalid-tooltip">
+                            Es necesario llenar este campo
+                            </div>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                            <script>
+                                const pass=document.getElementById('txtNueva')
+                                //e.preventDefault()
+                                function validarContrasena(){
+                                    form.addEventListener('submit', (e) => {
+                                        
+                                    let messages =[]
+                                    if (pass.value.length <=5){
+                                        messages.push('La contrseña de tener minimo 5 caracteres.')
+                                    }
+                                    if(messages.length > 0){
+                                        e.preventDefault()
+                                        errorElement.innerText =messages.join(', ')
+                                    }
+                                })
+                            </script>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" id="btnContra" data-target="" onclick="validarContrasena()" class="btn btn-primary">Guardar Cambios</button>
+                        </div>
+                          
+                    </form>    
                 </div>
             </div>
         </div>    
@@ -134,3 +156,4 @@
                     </div>
                 </div>
             </div>
+            

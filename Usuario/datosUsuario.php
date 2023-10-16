@@ -23,7 +23,7 @@
     </style>
 </head>
   
-<body>
+<body class="">
 <?php 
         
           if($_SESSION["usuario"]=="admin"){
@@ -32,8 +32,7 @@
         else{
           include "../Layouts/nav2.php";
         }
-  ?>
-  
+  ?>  
     <div class="container-fluid">
       <br>
       <div class="row-10 d-flex flex-row align-items-center justify-content-center">
@@ -58,10 +57,12 @@
       </div>  
     </div>
 </body>           
-<footer>
-<?php
-  include "../Layouts/footer.php";
-?>
+<footer class="fixed-bottom">
+  
+    <?php
+
+        include "../Layouts/footer.php";
+    ?>   
 </footer>    
 
 
