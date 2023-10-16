@@ -35,6 +35,7 @@ session_start();
                         <th>Nombre Cliente</th>
                         <th>Fecha Pedido</th>
                         <th>Importe</th>
+                        <th>Dirección</th>
                         <th>Opciones</th>
                     </tr>
                     </thead>
