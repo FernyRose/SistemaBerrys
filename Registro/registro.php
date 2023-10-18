@@ -89,16 +89,20 @@
                 </div>
 
                 <div class="row pt-3">
-                  <div class="col-md-4 w-50 position-relative">
-                    <label for="inputDes" class="form-label">Código Postal</label>
-                    <input type="number" class="form-control" placeholder="Codigo postal" id="inputDes" name="cp" maxlength="50" required>
+                <div class="col-md-4  w-50 position-relative">
+                    <label for="inputDes" class="form-label">Estado</label>
+                    <select name="estado" id="inputEst" class="form-select">
+                      <option value="JALISCO" selected>JALISCO</option>
+                    </select>
                     <div class="invalid-tooltip">
                       Es necesario llenar este campo
                     </div>
                   </div>
-                  <div class="col-md-4 w- position-relative">
+                  <div class="col-md-4 w-50 position-relative">
                     <label for="inputDes" class="form-label">Ciudad</label>
-                    <input type="text" class="form-control" placeholder="Ciudad" id="inputDes" name="ciudad" maxlength="50" required>
+                    <select name="ciudad" id="inputDes" class="form-select ">
+                      <option value="ZAPOTLAN EL GRANDE" selected>ZAPOTLAN EL GRANDE</option>
+                    </select>
                     <div class="invalid-tooltip">
                       Es necesario llenar este campo
                     </div>  
@@ -106,9 +110,9 @@
                 </div>  
 
                 <div class="row pt-3">
-                  <div class="col-md-4  w-50 position-relative">
-                    <label for="inputDes" class="form-label">Estado</label>
-                    <input type="text" class="form-control" placeholder="Estado" id="inputDes" name="estado" maxlength="50" required>
+                  <div class="col-md-4 w-50 position-relative">
+                    <label for="inputDes" class="form-label">Código Postal</label>
+                    <input type="number" class="form-control" placeholder="Codigo postal" id="inputDes" name="cp" maxlength="50" required>
                     <div class="invalid-tooltip">
                       Es necesario llenar este campo
                     </div>

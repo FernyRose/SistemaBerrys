@@ -126,7 +126,7 @@
     </script>  
   </div>
 </body>
-<footer class="fixed-bottom max-vh-40">
+<footer class="pt-4">
   <?php
       include "../Layouts/footer.php";
   ?> 

@@ -1,5 +1,6 @@
 <?php
     include "../Conexion/conexion.php";
+    session_start();
     ?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
@@ -131,7 +132,7 @@
       </div>
   </div>    
 </body>
-<div class="fixed-bottom">
+<div class="pt-3">
     <?php
         include "../Layouts/footer.php";
     ?> 
